@@ -226,7 +226,6 @@
 	        <div class="row">
 	        	<div id="map"></div>
 	        	<div id="timestamp">Last searched: </div>
-    			<div id="phplog">php log appers here</div>
 	        </div>
 	        <footer>	        	
 	            <p>Posted by: Power Tracking Services GmBH</p>
