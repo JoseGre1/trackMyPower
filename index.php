@@ -217,7 +217,7 @@
     <script src="scripts/main.js" type="text/javascript"></script>
 	<section class='container'>
 	          <hgroup>
-	            <h1>Welcome to your PHP application on OpenShift</h1>
+	            <h1>Power Tracking Services</h1>
 	          </hgroup>
 
 
@@ -272,10 +272,11 @@
 
 	          </section>
 	        </div>
-
-
 	        <footer>
-	          <div class="logo"><a href="https://www.openshift.com/"></a></div>
+	        	<small>© Copyright 2058, Example Corporation</small>
+	            <p>Posted by: Jose hernandez</p>
+			 	<p>Contact information: <a href="mailto:josegre.95@hotmail.com">
+			    josegre.95@hotmail.com</a>.</p>
 	        </footer>
 	</section>
 </body>
