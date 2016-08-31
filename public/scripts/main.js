@@ -1,7 +1,6 @@
 ﻿$(window).load(repeat());
 
 function repeat(){
-	alert("this thing is running");
 	getData();
 	var newtime = 10000;
    	setTimeout(repeat, newtime);
@@ -14,7 +13,6 @@ function getData(){
 }
 
 function processData(data){
-    alert(data);
 	if (typeof map != "undefined") {
 
 		var coord = data.split(" ");
