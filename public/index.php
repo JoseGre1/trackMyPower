@@ -229,10 +229,10 @@
     			<div id="phplog">php log appers here</div>
 	        </div>
 	        <footer>	        	
-	            <p>Posted by: Jose hernandez</p>
-			 	<p>Contact information: <a href="mailto:josegre.95@hotmail.com">
-			    josegre.95@hotmail.com</a>.</p>
-			    <small>© Copyright 2016, Power Tracking Services</small>
+	            <p>Posted by: Power Tracking Services GmBH</p>
+			 	<p>Contact information: <a href="mailto:powertracking@hotmail.com">
+			    powertracking@hotmail.com</a>.</p>
+			    <small style="text-align: left">© Copyright 2016, Power Tracking Services</small>
 	        </footer>
 	</section>
 </body>

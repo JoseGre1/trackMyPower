@@ -1,18 +1,20 @@
 ﻿$(window).load(repeat());
 
 function repeat(){
+	alert("this thing is running");
 	getData();
 	var newtime = 10000;
    	setTimeout(repeat, newtime);
 }
 
 function getData(){
-    $.post('php/getdata.php', function (data) {
+    $.post('mysql/getdata.php', function (data) {
         processData(data);
     });
 }
 
 function processData(data){
+    alert(data);
 	$("#phplog").append(data);
 	if (typeof map != "undefined") {
 
