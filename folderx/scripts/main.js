@@ -7,9 +7,9 @@ function repeat(){
 }
 
 function getData(){
-    // $.post('php/getdata.php', function (data) {
-    //     processData(data);
-    // });
+    $.post('php/getdata.php', function (data) {
+        processData(data);
+    });
 }
 
 function processData(data){
