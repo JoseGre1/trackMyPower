@@ -36,7 +36,6 @@ function processData(data){
 
 		// To add the marker to the map, call setMap();
 		marker.setMap(this.map);
-		map.setZoom(18);
 	    map.setCenter(marker.getPosition());
 	}
 }
