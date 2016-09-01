@@ -13,7 +13,6 @@ function getData(){
 }
 
 function processData(data){
-	$("div#phplog").append(data);
 	if (typeof map != "undefined") {
 
 		var coord = data.split(" ");
