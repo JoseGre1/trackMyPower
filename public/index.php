@@ -231,7 +231,7 @@
 	            <p>Posted by: Power Tracking Services GmBH</p>
 			 	<p>Contact information: <a href="mailto:powertracking@hotmail.com">
 			    powertracking@hotmail.com</a>.</p>
-			    <small style="text-align: left">© Copyright 2016, Power Tracking Services</small>
+			    <small style="text-align: right">© Copyright 2016, Power Tracking Services</small>
 	        </footer>
 	</section>
 </body>
