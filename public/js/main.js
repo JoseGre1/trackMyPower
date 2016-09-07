@@ -7,7 +7,7 @@ function repeat(){
 }
 
 function getData(){
-    $.post('mysql/getdata.php', function (data) {
+    $.post('mysql/dataFromDB.php', function (data) {
         processData(data);
     });
 }

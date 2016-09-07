@@ -218,7 +218,7 @@
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpsPSCq18ax-DZ0oqv8-O34sQTy_FtoFA&callback=initMap" type="text/javascript"></script>
-    <script src="scripts/main.js" type="text/javascript"></script>
+    <script src="js/main.js" type="text/javascript"></script>
 	<section class='container'>
 	          <hgroup>
 	            <h1>Power Tracking Services</h1>
