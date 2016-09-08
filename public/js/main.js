@@ -30,7 +30,7 @@ function processData(data){
 		lon = -74.851321;
 		var myLatlng = new google.maps.LatLng(lat,lon);
 		//clearing old markers
-		clearMarkers();
+		setMapOnAll(null);
 		markers = [];
 		//new marker
 		var marker = new google.maps.Marker({
