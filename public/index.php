@@ -215,6 +215,7 @@
             	center: defaultPos,
             	zoom: 5
         	});
+        	markers = [];
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpsPSCq18ax-DZ0oqv8-O34sQTy_FtoFA&callback=initMap" type="text/javascript"></script>

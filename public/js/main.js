@@ -14,24 +14,35 @@ function getData(){
 
 function processData(data){
 	$("div#phplog").append(data);
-	if (typeof map != "undefined") {
-		var coord = data.split(" ");
-		var lat = coord[0];
-		var lon = coord[1];
-		var date = coord[2];
-		var time = coord[3];
-
-		var timestp = document.getElementById("timestamp");
+	var coord = data.split(" ");
+	var voltage_med1 = coord[0];
+	var current_med1 = coord[1];
+	var power_med1 = coord[2];
+	var lat = coord[3];
+	var lon = coord[4];
+	alert(voltage_med1);
+	alert(current_med1);
+	alert(power_med1);
+	alert(lat);
+	alert(lon);
+	//Change timestp
+	var timestp = document.getElementById("timestamp");
 		var str1 = "Last searched: ";
-		timestp.innerHTML = str1.concat(date," ",time); 
-
+		timestp.innerHTML = str1.concat(date," ",time);
+	//refresh map (if already exists)
+	if (typeof map != "undefined") {
+		lat = 11.019979;
+		lon = -74.851321;
 		var myLatlng = new google.maps.LatLng(lat,lon);
-
+		//clearing old markers
+		clearMarkers();
+		markers = [];
+		//new marker
 		var marker = new google.maps.Marker({
 		    position: myLatlng,
 		    title:"Current Position"
 		});
-
+		markers.push(marker);
 		// To add the marker to the map, call setMap();
 		marker.setMap(this.map);
 	    map.setCenter(marker.getPosition());
