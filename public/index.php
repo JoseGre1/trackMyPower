@@ -225,9 +225,15 @@
 	            <h1>Power Tracking Services</h1>
 	          </hgroup>
 	        <div class="row">
+	        	<div id="charts"></div>
 	        	<div id="map"></div>
 	        	<div id="timestamp">Last searched: </div>
 	        	<div id="phplog"></div>
+	        	<div id="voltage_med1_log"></div>
+	        	<div id="current_med1_log"></div>
+	        	<div id="power_med1_log"></div>
+	        	<div id="lat_log"></div>
+	        	<div id="lon_log"></div>
 	        </div>
 	        <footer>	        	
 	            <p>Posted by: Power Tracking Services GmBH</p>
