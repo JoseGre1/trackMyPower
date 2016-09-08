@@ -1,17 +1,18 @@
 $(document).ready(function()
 {
-    $.post('mysql/dataFromDB.php', function (data) {
-        processJSON(data);
+    $(".getJdata").click(function(){
+        $.post('mysql/dataFromDB.php', function (data) {
+            processJSON(data);
+        });
     });
-
+    
     function processJSON(data){
         var JData = data;
         createTable();
     }
 
     function createTable(){
-        $(".getJdata").click(function()
-        {
+
             var strTable; 
             strTable = '';
             strTable += '<table border="2" class="table table-hover tbldata" style="padding:10px">';
@@ -34,6 +35,5 @@ $(document).ready(function()
             strTable += '</table>';        
 
            $("div#charts").html(strTable);
-        });
     }
 });
