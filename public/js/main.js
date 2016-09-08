@@ -20,11 +20,6 @@ function processData(data){
 	var power_med1 = coord[2];
 	var lat = coord[3];
 	var lon = coord[4];
-	alert(voltage_med1);
-	alert(current_med1);
-	alert(power_med1);
-	alert(lat);
-	alert(lon);
 	//Change timestp
 	var timestp = document.getElementById("timestamp");
 		var str1 = "Last searched: ";
@@ -35,8 +30,8 @@ function processData(data){
 		lon = -74.851321;
 		var myLatlng = new google.maps.LatLng(lat,lon);
 		//clearing old markers
-		clearMarkers();
-		markers = [];
+		//clearMarkers();
+		//markers = [];
 		//new marker
 		var marker = new google.maps.Marker({
 		    position: myLatlng,
