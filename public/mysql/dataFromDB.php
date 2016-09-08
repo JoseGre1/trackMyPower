@@ -17,5 +17,8 @@ while($row =mysqli_fetch_assoc($result))
     $emparray[] = $row;
 }
 echo json_encode($emparray);
+$script="var JData = ".$emparray.";";
+$fileName="../js/dbJsonData.js";
+file_put_contents($file, $script);
 
 ?>

@@ -7,7 +7,7 @@ $(document).ready(function()
     });
     
     function processJSON(data){
-        var JData = data;
+        JData = data;
         createTable();
     }
 
