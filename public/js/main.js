@@ -19,20 +19,24 @@ function setMapOnAll(map_v) {
 }
 
 function processData(data){
+	data.replace(',','\t');
+	data.replace(';','<br>');
 	$("div#phplog").append(data);
 
-	var coord = data.split(",");
-	var voltage_med1 = coord[0];
-	var current_med1 = coord[1];
-	var power_med1 = coord[2];
-	var lat = coord[3];
-	var lon = coord[4];
+	// var coord = data.split(";");
+
+
+	// var voltage_med1 = coord[0];
+	// var current_med1 = coord[1];
+	// var power_med1 = coord[2];
+	// var lat = coord[3];
+	// var lon = coord[4];
 	
-	$("div#voltage_med1_log").append(voltage_med1);
-	$("div#current_med1_log").append(current_med1);
-	$("div#power_med1_log").append(power_med1);
-	$("div#lat_log").append(lat);
-	$("div#lon_log").append(lon);
+	// $("div#voltage_med1_log").append(voltage_med1);
+	// $("div#current_med1_log").append(current_med1);
+	// $("div#power_med1_log").append(power_med1);
+	// $("div#lat_log").append(lat);
+	// $("div#lon_log").append(lon);
 
 	//Change timestp
 	// var timestp = document.getElementById("timestamp");
