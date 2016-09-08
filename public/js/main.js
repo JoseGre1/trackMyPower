@@ -7,7 +7,8 @@ function repeat(){
 }
 
 function getData(){
-    $.post('mysql/dataFromDB.php', function (data) {
+	var n_records = 10;
+    $.post('mysql/dataFromDB.php', {n_records: n_records}, function (data) {
         processData(data);
     });
 }
