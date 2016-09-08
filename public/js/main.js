@@ -12,6 +12,12 @@ function getData(){
     });
 }
 
+function setMapOnAll(map_v) {
+  for (var i = 0; i < markers.length; i++) {
+    markers[i].setMap(map_v);
+  }
+}
+
 function processData(data){
 	$("div#phplog").append(data);
 	var coord = data.split(" ");
