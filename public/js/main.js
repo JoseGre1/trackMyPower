@@ -19,8 +19,7 @@ function setMapOnAll(map_v) {
 }
 
 function processData(data){
-	
-	//$("div#phplog").append(data);
+	$("div#phplog").append(data);
 	//Change timestp
 	// var timestp = document.getElementById("timestamp");
 	// 	var str1 = "Last searched: ";
