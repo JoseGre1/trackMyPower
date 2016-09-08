@@ -7,7 +7,7 @@ $(document).ready(function()
     });
     
     function processJSON(data){
-        loadScripts(["js/dbJsonData.js"],function(){alert('dbJsonData.js loaded successfuly')});
+        //loadScripts(["js/dbJsonData.js"],function(){alert('dbJsonData.js loaded successfuly')});
         createTable(data);
     }
 
