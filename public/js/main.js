@@ -19,9 +19,10 @@ function setMapOnAll(map_v) {
 }
 
 function processData(data){
-	data.replace(",","\t");
-	data.replace(";"," <br> ");
-	$("div#phplog").append(data);
+	var data2;
+	data2 = data.replace(",","\t");
+	data2 = data.replace(";"," <br> ");
+	$("div#phplog").append(data2);
 
 	// var coord = data.split(";");
 
