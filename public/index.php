@@ -220,13 +220,20 @@
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpsPSCq18ax-DZ0oqv8-O34sQTy_FtoFA&callback=initMap" type="text/javascript"></script>
     <script src="js/main.js" type="text/javascript"></script>
+    <script src="js/html_from_json.js" type="text/javascript"></script>
+    <script src="js/create_table.js" type="text/javascript"></script>
 	<section class='container'>
 	          <hgroup>
 	            <h1>Power Tracking Services</h1>
 	          </hgroup>
 	        <div class="row">
-	        	<div id="charts"></div>
 	        	<div id="map"></div>
+	        	<div id="header_charts">
+	        		Show me the last  
+	        		<input type="text" id="num_reg"> values <br>
+	        		<button type="button" class="btn btn-primary getJdata">Get data</button>
+	        	</div>
+	        	<div id="charts"></div>
 	        	<div id="timestamp">Last searched: </div>
 	        	<div id="phplog"></div>
 	        	<div id="voltage_med1_log"></div>
