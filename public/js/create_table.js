@@ -8,7 +8,7 @@ $(document).ready(function()
     
     function processJSON(data){
         //loadScripts(["js/dbJsonData.js"],function(){alert('dbJsonData.js loaded successfuly')});
-        createTable(data);
+        createTable();
     }
 
     function loadScripts(array,callback){
@@ -31,7 +31,7 @@ $(document).ready(function()
     })();
     }
 
-    function createTable(JData){
+    function createTable(){
 
             var strTable; 
             strTable = '';
