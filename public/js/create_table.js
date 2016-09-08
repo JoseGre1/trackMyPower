@@ -1,7 +1,9 @@
 $(document).ready(function()
 {
     $(".getJdata").click(function(){
-        $.post('mysql/dataFromDB.php', function (data) {
+        var n_records = $('input#num_reg').val();
+        n_records = parseInt(n_records);
+        $.post('mysql/dataFromDB.php', {n_records: n_records}, function (data) {
             processJSON(data);
         });
     });

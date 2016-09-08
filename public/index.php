@@ -230,7 +230,7 @@
 	        	<div id="map"></div>
 	        	<div id="header_charts">
 	        		Show me the last  
-	        		<input type="text" id="num_reg"> values <br>
+	        		<input type="text" id="num_reg" value="10"> values <br>
 	        		<button type="button" class="btn btn-primary getJdata">Get data</button>
 	        	</div>
 	        	<div id="charts"></div>
