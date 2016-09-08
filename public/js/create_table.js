@@ -8,10 +8,10 @@ $(document).ready(function()
     
     function processJSON(data){
         JData = data;
-        createTable();
+        createTable(JData);
     }
 
-    function createTable(){
+    function createTable(JData){
 
             var strTable; 
             strTable = '';
