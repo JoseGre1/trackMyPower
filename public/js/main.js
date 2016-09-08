@@ -18,11 +18,16 @@ function setMapOnAll(map_v) {
   }
 }
 
+String.prototype.replaceAll = function(str1, str2, ignore) 
+{
+    return this.replace(new RegExp(str1.replace(/([\/\,\!\\\^\$\{\}\[\]\(\)\.\*\+\?\|\<\>\-\&])/g,"\\$&"),(ignore?"gi":"g")),(typeof(str2)=="string")?str2.replace(/\$/g,"$$$$"):str2);
+} 
+
 function processData(data){
-	var data2;
-	data2 = data.replace(",","\t");
-	data2 = data.replace(";"," <br> ");
-	$("div#phplog").append(data2);
+	data.replaceAll(",", " <pre> ");
+	data.replaceAll(";", " <br> ")
+	//convert data to regular expression
+	$("div#phplog").append(data);
 
 	// var coord = data.split(";");
 
