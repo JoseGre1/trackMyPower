@@ -21,17 +21,17 @@ function processData(data){
 	var lat = coord[3];
 	var lon = coord[4];
 	//Change timestp
-	var timestp = document.getElementById("timestamp");
-		var str1 = "Last searched: ";
-		timestp.innerHTML = str1.concat(date," ",time);
+	// var timestp = document.getElementById("timestamp");
+	// 	var str1 = "Last searched: ";
+	// 	timestp.innerHTML = str1.concat(date," ",time);
 	//refresh map (if already exists)
 	if (typeof map != "undefined") {
 		lat = 11.019979;
 		lon = -74.851321;
 		var myLatlng = new google.maps.LatLng(lat,lon);
 		//clearing old markers
-		//clearMarkers();
-		//markers = [];
+		clearMarkers();
+		markers = [];
 		//new marker
 		var marker = new google.maps.Marker({
 		    position: myLatlng,
