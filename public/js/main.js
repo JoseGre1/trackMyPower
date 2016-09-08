@@ -13,8 +13,8 @@ function getData(){
 }
 
 function processData(data){
+	$("div#phplog").append(data);
 	if (typeof map != "undefined") {
-
 		var coord = data.split(" ");
 		var lat = coord[0];
 		var lon = coord[1];
