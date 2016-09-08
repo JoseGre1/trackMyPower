@@ -19,8 +19,8 @@ function setMapOnAll(map_v) {
 }
 
 function processData(data){
-	data.replace(',','\t');
-	data.replace(';','<br>');
+	data.replace(",","\t");
+	data.replace(";"," <br> ");
 	$("div#phplog").append(data);
 
 	// var coord = data.split(";");
