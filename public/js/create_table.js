@@ -9,10 +9,11 @@ $(document).ready(function()
     });
     
     function processJSON(data){
-        createTable();
+        createTable(data);
     }
 
-    function createTable(){
+    function createTable(data){
+            ("div#phplog").html(data);
             var strTable; 
             strTable = '';
             strTable += '<table border="2" class="table table-hover tbldata" style="padding:10px">';
