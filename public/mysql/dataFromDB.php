@@ -11,6 +11,6 @@ while($row =mysqli_fetch_assoc($result))
     $emparray[] = $row;
 }
 //send json JData variable to javascript script 
-echo 'var JData = ', json_encode($emparray),
+echo 'JData = ', json_encode($emparray),
      ';';
 ?>
