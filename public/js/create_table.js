@@ -13,6 +13,7 @@ $(document).ready(function()
     }
 
     function createTable(data){
+            $("script#get_JSON_PHP").empty();  
             $("script#get_JSON_PHP").append(data);
             var strTable; 
             strTable = '';
