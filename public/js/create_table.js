@@ -34,6 +34,7 @@ $(document).ready(function()
         strTable = '';
         strTable += '<table border="2" class="table table-hover tbldata" style="padding:10px">';
         strTable += '<tr>';
+        strTable += '<th >ID</th>';
         strTable += '<th >Voltage</th>';
         strTable += '<th >Current</th>';
         strTable += '<th >Power</th>';
@@ -42,6 +43,7 @@ $(document).ready(function()
         $.each(JData, function(i, field)
         {
             strTable += '<tr>';
+            strTable += '<td >'+(i+1)+'</td>';
             strTable += '<td >'+JData[i]['voltage_med1']+'</td>';
             strTable += '<td >'+JData[i]['curr_med1']+'</td>';
             strTable += '<td >'+JData[i]['power_med1']+'</td>';     
