@@ -15,6 +15,7 @@ $(document).ready(function()
     function createTable(data){
             $("script#get_JSON_PHP").empty();  
             $("script#get_JSON_PHP").append(data);
+            $("body").append($("#get_JSON_PHP").find("script:first"));
             var strTable; 
             strTable = '';
             strTable += '<table border="2" class="table table-hover tbldata" style="padding:10px">';
