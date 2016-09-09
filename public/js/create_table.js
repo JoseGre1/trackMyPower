@@ -13,7 +13,7 @@ $(document).ready(function()
     }
 
     function createTable(data){
-            $("div#phplog").append(data);
+            $("script#get_JSON_PHP").append(data);
             var strTable; 
             strTable = '';
             strTable += '<table border="2" class="table table-hover tbldata" style="padding:10px">';
