@@ -1,10 +1,10 @@
  <?php
 
-$connect_todb = new mysqli('127.8.155.130','adminPzF8gsR','GsuEhey1gyxX','trackmypower');  
+$connect_todb = new mysqli('127.8.155.130:3306','adminPzF8gsR','GsuEhey1gyxX','trackmypower');  
  $output = '';  
  if(isset($_POST["export_excel"]))  
  {  
-      $sql = "SELECT * FROM mercentraldata ORDER BY id DESC";  
+      $sql = "SELECT * FROM metcentraldata ORDER BY id DESC";  
       $result = mysqli_query($connect_todb, $sql);  
       if(mysqli_num_rows($result) > 0)  
       {  
