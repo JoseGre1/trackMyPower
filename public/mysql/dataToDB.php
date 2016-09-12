@@ -11,6 +11,7 @@ $energy_med1 = htmlspecialchars($_GET["energy"]);
 $power_med1 = htmlspecialchars($_GET["power"]);
 $latitude = htmlspecialchars($_GET["latitude"]);
 $longitude = htmlspecialchars($_GET["longitude"]);
+$timestamp = htmlspecialchars($_GET["DateTime"]);
 //mysql query --> insert data into db
 $result = mysqli_query($connect_todb, 
 	"INSERT INTO `metcentraldata` (`id`, `temperature`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '1', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');"
