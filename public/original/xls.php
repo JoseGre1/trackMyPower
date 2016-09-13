@@ -1,43 +1,35 @@
  <?php
-
-$connect_todb = new mysqli('127.8.155.130:3306','adminPzF8gsR','GsuEhey1gyxX','trackmypower');  
+ $connect = mysqli_connect("localhost", "root", "", "trackmypower");    
  $output = '';  
+
  if(isset($_POST["export_excel"]))  
  {  
       $sql = "SELECT * FROM metcentraldata ORDER BY id DESC";  
-      $result = mysqli_query($connect_todb, $sql);  
+      $result = mysqli_query($connect, $sql);  
       if(mysqli_num_rows($result) > 0)  
-      {  
-           $output .= '  
-                <table class="table" bordered="1">  
-                     <tr>  
-                          <th>id</th>
-                          <th>temperature</th>
-                          <th>wind_speed</th>
-                          <th>voltage_med1</th>
-                          <th>curr_med1</th>
-                          <th>energy_med1</th>
-                          <th>power_med1</th>
-                          <th>latitude</th>
-                          <th>longitude</th>  
-                     </tr>  
-           ';  
+      {     
+
+       $output .= ' <table class="table" bordered="1">  
+                     <tr> ';
+          for($i=1;$i<10;$i++){
+            if($_POST['para'.$i]!='0'){
+                
+                $output .='<th>'.$_POST['para'.$i].'</th>';
+            }
+          }        
+           $output .='</tr>';  
+
+
            while($row = mysqli_fetch_array($result))  
-           {  
-                $output .= '  
-                     <tr>  
-                          
-                          <td>'.$row["id"].'</td>
-                          <td>'.$row["temperature"].'</td>
-                          <td>'.$row["wind_speed"].'</td>
-                          <td>'.$row["voltage_med1"].'</td>
-                          <td>'.$row["curr_med1"].'</td>
-                          <td>'.$row["energy_med1"].'</td>
-                          <td>'.$row["power_med1"].'</td>
-                          <td>'.$row["latitude"].'</td>
-                          <td>'.$row["longitude"].'</td>  
-                     </tr>  
-                ';  
+           {         $output.='<tr>
+                  ';
+                      for($i=1;$i<10;$i++){
+                          if($_POST['para'.$i]!='0'){
+                              
+                              $output .='<td>'.$row[$_POST['para'.$i]].'</td>';
+                          }
+                      }    
+                        $output.='</tr>';
            }  
            $output .= '</table>';  
            header("Content-Type: application/xls");   
