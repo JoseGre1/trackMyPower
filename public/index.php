@@ -225,7 +225,7 @@
     <script id="get_JSON_PHP" type="text/javascript"></script>
 	<section class='container'>
 	          <hgroup>
-	            <h1>Power Tracking Services</h1>
+	            <h1>Power Tracking Services - ESTO FUE ENVIADO A AMBOS REPOSITORIOS</h1>
 	          </hgroup>
 	        <div class="row">
 	        	<div id="map"></div>
