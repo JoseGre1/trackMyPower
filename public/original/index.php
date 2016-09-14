@@ -234,7 +234,7 @@
 	        		Show me the last  
 	        		<input type="text" id="num_reg" value="10"> values <br>
 	        		<button type="button" class="btn btn-primary getJdata">Get data</button>
-	        		<button type="button" class="btn btn-primary SendData">Send data</button>
+	        		<button type="button" id="SendData">Send data</button>
 	        	</div>
 	        	<div id="charts"></div>
 	        	<div id="timestamp">Last searched: </div>
