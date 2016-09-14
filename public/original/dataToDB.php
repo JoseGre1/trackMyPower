@@ -16,10 +16,10 @@ $timestamp = htmlspecialchars($_GET["date_time"]);
 $temperature = htmlspecialchars($_GET["temperature"]);
 $humidity = htmlspecialchars($_GET["humidity"]);
 //change datetime string --> date SQL format
-$date_time = date("Y-m-d H:i:s", strtotime($timestamp));
+//$date_time = date("Y-m-d h:i:s", strtotime($timestamp));
 //mysql query --> insert data into db
-$result = mysqli_query($connect_todb, 
-	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity` `wind_speed`, `voltage_med1`, `curr_med1`, `energasasay_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, NULL, '$temperature', '$humidity', '0' ,'$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');"
+$result = mysqli_query($connect_todb,
+	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '2016-09-15 01:02:03', '4', '5', '6', '7', '8', '9', '10', '11', '12');"
 );
 echo mysql_errno($connect_todb) . ": " . mysql_error($connect_todb) . "\n";
 ?>
