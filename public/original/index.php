@@ -219,9 +219,10 @@
       }
     </script>
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDpsPSCq18ax-DZ0oqv8-O34sQTy_FtoFA&callback=initMap" type="text/javascript"></script>
-    <script src="js/main.js" type="text/javascript"></script>
-    <script src="js/html_from_json.js" type="text/javascript"></script>
-    <script src="js/create_table.js" type="text/javascript"></script>
+    <script src="js_original/main.js" type="text/javascript"></script>
+    <script src="js_original/html_from_json.js" type="text/javascript"></script>
+    <script src="js_original/create_table.js" type="text/javascript"></script>
+    <script src="js_original/sendData.js" type="text/javascript"></script>
     <script id="get_JSON_PHP" type="text/javascript"></script>
 	<section class='container'>
 	          <hgroup>
@@ -233,6 +234,7 @@
 	        		Show me the last  
 	        		<input type="text" id="num_reg" value="10"> values <br>
 	        		<button type="button" class="btn btn-primary getJdata">Get data</button>
+	        		<button type="button" class="btn btn-primary SendData">Send data</button>
 	        	</div>
 	        	<div id="charts"></div>
 	        	<div id="timestamp">Last searched: </div>
