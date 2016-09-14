@@ -4,6 +4,7 @@ $user = htmlspecialchars($_GET["user"]);
 $pssd = htmlspecialchars($_GET["pssd"]);
 //mysql connection
 $connect_todb = new mysqli('127.5.177.130:3306',$user,$pssd,'trackmypower');
+echo mysql_errno($connect_todb) . ": " . mysql_error($connect_todb) . "\n";
 //obtain data from arduino
 $voltage_med1  = htmlspecialchars($_GET["voltage"]);
 $current_med1 = htmlspecialchars($_GET["current"]);
