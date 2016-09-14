@@ -25,5 +25,5 @@ echo $row;
 ?>
 <!--
 WEBSITE:
-http://track-mypower.rhcloud.com/database/dataToDB.php?user=mpardo&pssd=pardo1234&
+http://trackmypower-sharkmeter.rhcloud.com/dataToDB.php?user=mpardo&pssd=pardo1234&
 -->
