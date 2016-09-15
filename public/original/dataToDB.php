@@ -21,11 +21,9 @@ echo $date_time . "\n";
 //mysql query --> insert data into db
 if ($timestamp == 0) {
 	echo 'Wrong date-time received from Arduino';
-	$result = mysqli_query($connect_todb,
-	"
-	SET  SESSION time_zone = '-5:00';
-	INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, NOW(), '$temperature', '$humidity', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');
-	");
+	$query = "SET  SESSION time_zone = '-5:00';";
+	$query .= "INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, NOW(), '$temperature', '$humidity', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');";
+	$result = mysqli_multi_query($connect_todb,$query);
 }
 else
 {
