@@ -25,6 +25,8 @@
     <link href="../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- starrr -->
     <link href="../vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <!-- favicon icon -->
+    <link rel="icon" href="favicon.png" type="image/png">
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
@@ -36,7 +38,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-beer"></i> <span>TrackMyPower</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -155,7 +157,8 @@
                         </span>
                         <span class="message">
                           <br>
-                          Hola Mauro, ¿Te satisface esta página? <br>
+                          Hola Mauro, <br>
+                          ¿Te satisface esta página? <br>
                           S2 <br>
                           DG
                         </span>
