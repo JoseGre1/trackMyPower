@@ -340,7 +340,7 @@
                                   for($i=1;$i<11;$i++){
                                     if($_POST['para'.$i]!='0'){
                                         
-                                        $output .='<th>'.$_POST['para'.$i].'</th>';
+                                        $output .='<th  class="sorting" tabindex="0" aria-controls="datatable-checkbox" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">'.$_POST['para'.$i].'</th>';
                                     }
                                   }        
                                    $output .='</tr>
