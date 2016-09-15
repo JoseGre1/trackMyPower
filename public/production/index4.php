@@ -206,60 +206,63 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Elegir columnas:
-                  </div>
-           
-
-                    <div class="checkbox">
+                      Please choose the fields to be shown: <br>
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                         <label>
-                          <input type="checkbox" class="flat" id="par1" name="par1" value="id"> ID<br>
+                          <input type="checkbox" class="flat" id="par1" name="par1" value="id"> 
+                          ID<br>
                         </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                         <label>
-                          <input type="checkbox" class="flat" id="par2" name="par2" value="date_time"> Fecha<br>
+                          <input type="checkbox" class="flat" id="par2" name="par2" value="date_time"> Date and Time<br>
                         </label>
                     </div>            
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                         <label>
                          <input type="checkbox" class="flat" id="par3" name="par3" value="temperature"> Temperature<br>
                         </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                       <label>
-                        <input type="checkbox" class="flat" id="par4" name="par4" value="wind_speed"> Velocidad del viento<br>
+                        <input type="checkbox" class="flat" id="par4" name="par4" value="wind_speed"> 
+                        Wind Speed<br>
                       </label>
                     </div> 
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                       <label> 
-                        <input type="checkbox" class="flat" id="par5" name="par5" value="voltage_med1"> Voltage medidor 1<br>
+                        <input type="checkbox" class="flat" id="par5" name="par5" value="voltage_med1"> Voltage (Meter 1)<br>
                       </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                       <label>  
-                        <input type="checkbox" class="flat" id="par6" name="par6" value="curr_med1"> Corriente medidor 1<br>
+                        <input type="checkbox" class="flat" id="par6" name="par6" value="curr_med1"> Current (Meter 1)<br>
                        </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                       <label>    
-                        <input type="checkbox" class="flat" id="par7" name="par7" value="energy_med1"> Energia/Vatios hora<br>
+                        <input type="checkbox" class="flat" id="par7" name="par7" value="energy_med1"> Energy (Meter 1)<br>
                       </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                       <label>    
-                        <input type="checkbox" class="flat" id="par8" name="par8" value="power_med1"> Potencia<br>
+                        <input type="checkbox" class="flat" id="par8" name="par8" value="power_med1"> 
+                        Power<br>
                       </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                       <label>    
-                        <input type="checkbox" class="flat" id="par9" name="par9" value="latitude"> Latitud<br>
+                        <input type="checkbox" class="flat" id="par9" name="par9" value="latitude"> 
+                        Latitud<br>
                       </label>
                     </div>
-                    <div class="checkbox">
+                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                       <label>    
-                        <input type="checkbox" class="flat" id="par10" name="par10" value="longitude"> Longutud
+                        <input type="checkbox" class="flat" id="par10" name="par10" value="longitude"> Longitude <br>
                       </label>
                     </div>
+                  </div>
+                    
                     <form method="post" action="">
                     <div class="checkbox">
                         <label>
