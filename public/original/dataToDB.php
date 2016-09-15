@@ -19,7 +19,7 @@ $humidity = htmlspecialchars($_GET["humidity"]);
 //$date_time = date("Y-m-d h:i:s", strtotime($timestamp));
 //mysql query --> insert data into db
 $result = mysqli_query($connect_todb,
-	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '2016-09-15 01:02:03', '4', '5', '6', '7', '8', '9', '10', '11', '12');"
+	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '2016-09-15 01:02:03', '$temperature', '5', '6', '7', '8', '9', '10', '11', '12');"
 );
 echo mysql_errno($connect_todb) . ": " . mysql_error($connect_todb) . "\n";
 ?>
