@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Track My Power | </title>
+    <title>Power Tracking Services</title>
 
     <!-- Bootstrap -->
     <link href="../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -36,7 +36,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-beer"></i> <span>TrackMyPower!</span></a>
+              <a href="index.html" class="site_title"><i class="fa fa-beer"></i> <span>TrackMyPower</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -44,11 +44,11 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="images/pard.png" alt="..." class="img-circle profile_img">
+                <img src="images/pardo.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                <span>Willkommen,</span>
-                <h2>Pardix</h2>
+                <span>Welcome,</span>
+                <h2>Mauricio</h2>
               </div>
             </div>
             <!-- /menu profile quick info -->
@@ -125,7 +125,7 @@
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
                   <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="images/pard.png" alt="">Pardix
+                    <img src="images/pardo.jpg" alt="">Mauricio
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
@@ -148,13 +148,15 @@
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
                     <li>
                       <a>
-                        <span class="image"><img src="images/lucho.png" alt="Profile Image" /></span>
+                        <span class="image"><img src="images/diego.jpg" alt="Profile Image" /></span>
                         <span>
-                          <span>Lucho Torres</span>
+                          <span>Diego Gómez</span>
                           <span class="time">1 year ago</span>
                         </span>
                         <span class="message">
-                          Bienvenido a su clase de mediciones e instrumentacion
+                          Hola Mauro, ¿Te satisface esta página? <br>
+                          S2 <br>
+                          DG
                         </span>
                       </a>
                     </li>
@@ -318,7 +320,7 @@
                     </p>
                     <!-- Crear la tabla con el phpe  -->
                          <?php
-                         $connect = mysqli_connect("localhost", "root", "", "trackmypower");    
+                         $connect = mysqli_connect("127.5.177.130:3306","mpardo","pardo1234","trackmypower");    
                          $output = '';  
                          $a=1;
 
