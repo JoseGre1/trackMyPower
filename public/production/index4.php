@@ -154,6 +154,7 @@
                           <span class="time">1 year ago</span>
                         </span>
                         <span class="message">
+                          <br>
                           Hola Mauro, ¿Te satisface esta página? <br>
                           S2 <br>
                           DG
