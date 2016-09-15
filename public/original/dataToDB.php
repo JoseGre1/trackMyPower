@@ -21,7 +21,7 @@ $date_time = date("Y-m-d h:i:s", strtotime($timestamp));
 echo $date_time . "\n";
 //mysql query --> insert data into db
 $result = mysqli_query($connect_todb,
-	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '2016-09-15 01:02:03', '$temperature', '$humidity', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');"
+	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '$date_time', '$temperature', '$humidity', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');"
 );
 echo mysql_errno($connect_todb) . ": " . mysql_error($connect_todb) . "\n";
 ?>
