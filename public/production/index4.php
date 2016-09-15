@@ -258,7 +258,7 @@
                     <form method="post" action="">
                     <div class="checkbox">
                         <label>
-                          <button onclick="seltodo()" name="partodo" class="btn btn-success" value="tutti" >Seleccionar todo</button>
+                          <button onclick="seltodo()" name="export_excel" id="submit" class="btn btn-success" >Seleccionar todo</button>
                         </label>
                     </div>
                     
