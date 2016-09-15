@@ -16,12 +16,20 @@ $timestamp = htmlspecialchars($_GET["date_time"]);
 $temperature = htmlspecialchars($_GET["temperature"]);
 $humidity = htmlspecialchars($_GET["humidity"]);
 //change datetime string --> date SQL format
-echo $timestamp . "\n";
 $date_time = date("Y-m-d h:i:s", strtotime($timestamp));
 echo $date_time . "\n";
 //mysql query --> insert data into db
-$result = mysqli_query($connect_todb,
-	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '$date_time', '$temperature', '$humidity', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');"
+if ($timestamp == 0) {
+	echo 'Wrong date-time received from Arduino';
+	$result = mysqli_query($connect_todb,
+	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, NOW(), '$temperature', '$humidity', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');");
+}
+else
+{
+	echo 'Right date-time received Arduino';
+	$result = mysqli_query($connect_todb,
+	"INSERT INTO `metcentraldata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `voltage_med1`, `curr_med1`, `energy_med1`, `power_med1`, `latitude`, `longitude`) VALUES (NULL, '$date_time', '$temperature', '$humidity', '1', '$voltage_med1', '$current_med1', '$energy_med1', '$power_med1', '$latitude', '$longitude');");
+}
 );
 echo mysql_errno($connect_todb) . ": " . mysql_error($connect_todb) . "\n";
 ?>
