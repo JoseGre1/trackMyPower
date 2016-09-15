@@ -335,12 +335,12 @@
                               if(mysqli_num_rows($result) > 0)  
                               {     
 
-                               $output .= '                    <table id="datatable-buttons" class="table table-striped table-bordered">                               <thead>  
-                                             <tr> ';
+                               $output .= '                    <table id="datatable-buttons" class="table table-striped table-bordered bulk_action dataTable no-footer" role="grid">                               <thead>  
+                                             <tr role="row"> ';
                                   for($i=1;$i<11;$i++){
                                     if($_POST['para'.$i]!='0'){
                                         
-                                        $output .='<th  class="sorting" tabindex="0" aria-controls="datatable-checkbox" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">'.$_POST['para'.$i].'</th>';
+                                        $output .='<th  class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">'.$_POST['para'.$i].'</th>';
                                     }
                                   }        
                                    $output .='</tr>
@@ -382,7 +382,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            © Copyright 2016, Power Tracking Services GmbH
           </div>
           <div class="clearfix"></div>
         </footer>
