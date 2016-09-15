@@ -335,7 +335,7 @@
                               if(mysqli_num_rows($result) > 0)  
                               {     
 
-                               $output .= '                    <table id="datatable-buttons" class="table table-striped table-bordered bulk_action dataTable no-footer" role="grid">                               <thead>  
+                               $output .= '                    <table id="datatable" class="table table-striped table-bordered bulk_action dataTable no-footer" role="grid">                               <thead>  
                                              <tr role="row"> ';
                                   for($i=1;$i<11;$i++){
                                     if($_POST['para'.$i]!='0'){
