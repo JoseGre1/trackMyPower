@@ -64,7 +64,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    <li><a href="TablaExcel.php">Tablas</a></li>
+                    <li><a href="plain_page.html">Home</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
@@ -72,23 +72,9 @@
 
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> UI Elements <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-desktop"></i> Tablas <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-table"></i> Tables <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-
+                      <li><a href="index4.php">Tablas</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -153,7 +139,7 @@
                         <span class="image"><img src="images/diego.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>Diego Gómez</span>
-                          <span class="time">1 year ago</span>
+                          <span class="time">1 hour ago</span>
                         </span>
                         <span class="message">
                           <br>
@@ -269,12 +255,13 @@
                         <input type="checkbox" class="flat" id="par10" name="par10" value="longitude"> Longutud
                       </label>
                     </div>
+                    <form method="post" action="">
                     <div class="checkbox">
                         <label>
                           <button onclick="seltodo()" name="partodo" class="btn btn-success" value="tutti" >Seleccionar todo</button>
                         </label>
                     </div>
-                    <form method="post" action="">
+                    
                                   <input type="hidden"  id="para1" name="para1">
                                   <input type="hidden"  id="para2" name="para2">
                                   <input type="hidden"  id="para3" name="para3">
@@ -462,7 +449,7 @@
                             for(var i= 1 ; i<11 ; i++){
                                 document.getElementById("par"+i).checked=true;
                             }
-                            document.getElementById("par1").checked = true;
+                            conta()
 
                         }
 
