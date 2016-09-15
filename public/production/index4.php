@@ -76,7 +76,7 @@
                       <li><a href="index4.php">Tables</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="chartjs.html">Data Charts</a></li>
                     </ul>
@@ -176,7 +176,7 @@
           <div class="">
             <div class="page-title">
               <div class="title_left">
-                <h3>Descargas</h3>
+                <h3>Export to file</h3>
               </div>
 
             </div>
@@ -187,7 +187,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Descargar Excel</h2>
+                    <h2>Filter results</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -206,7 +206,8 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                      Please choose the fields to be shown: <br>
+                      Please choose the fields to be shown:
+                    <div class="checkbox col-md-12 col-sm-12 col-xs-12"></div>
                     <div class="checkbox col-md-3 col-sm-4 col-xs-12">
                         <label>
                           <input type="checkbox" class="flat" id="par1" name="par1" value="id"> 
@@ -269,7 +270,6 @@
                           <button onclick="seltodo()" name="export_excel" id="submit" class="btn btn-success" >Seleccionar todo</button>
                         </label>
                     </div>
-                    
                                   <input type="hidden"  id="para1" name="para1">
                                   <input type="hidden"  id="para2" name="para2">
                                   <input type="hidden"  id="para3" name="para3">
@@ -280,8 +280,6 @@
                                   <input type="hidden"  id="para8" name="para8">
                                   <input type="hidden"  id="para9" name="para9">
                                   <input type="hidden"  id="para10" name="para10">
-
-
                     <div class="ln_solid"></div>
                         <div class="form-group">
                           <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
