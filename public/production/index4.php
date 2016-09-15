@@ -69,12 +69,16 @@
                   </li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-desktop"></i> Tablas <span class="fa fa-chevron-down"></span></a>
+                  <li><a><i class="fa fa-desktop"></i> Tables <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index4.php">Tablas</a></li>
+                      <li><a href="index4.php">Tables</a></li>
+                    </ul>
+                  </li>
+                  <li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="chartjs.html">Data Charts</a></li>
                     </ul>
                   </li>
                 </ul>
