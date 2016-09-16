@@ -412,6 +412,7 @@
       </div>
     </div>
 
+
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
@@ -424,6 +425,16 @@
     <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
     <script src="../vendors/iCheck/icheck.min.js"></script>
+    <script src="../vendors/iCheck/icheck.js"></script>
+    <!-- iCheck plugin launch -->
+    <script>
+      $(document).ready(function(){
+        $('input').iCheck({
+          checkboxClass: 'icheckbox_flat',
+          radioClass: 'iradio_flat'
+        });
+      });
+    </script>
     <!-- bootstrap-daterangepicker -->
     <script src="js/moment/moment.min.js"></script>
     <script src="js/datepicker/daterangepicker.js"></script>
@@ -469,6 +480,3 @@
     <script src="../build/js/table_management.js"></script>
   </body>
 </html>
-TablaExcel.php
-Abrir con
-Mostrando TablaExcel.php.
