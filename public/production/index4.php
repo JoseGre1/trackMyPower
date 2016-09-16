@@ -264,30 +264,32 @@
                     </div>
                   </div>
                     
-                    <form method="post" action="">
-                    <div class="checkbox">
-                        <label>
-                          <button onclick="seltodo()" name="export_excel" id="submit" class="btn btn-success" >Seleccionar todo</button>
-                        </label>
+                  <form method="post" action="">
+                   <div class="checkbox">
+                       <label>
+                         <button onclick="SelectAll()" name="export_excel" id="submit" class="btn btn-success" >Select All</button>
+                       </label>
+                   </div>
+                   <input type="hidden"  id="para1" name="para1">
+                   <input type="hidden"  id="para2" name="para2">
+                   <input type="hidden"  id="para3" name="para3">
+                   <input type="hidden"  id="para4" name="para4">
+                   <input type="hidden"  id="para5" name="para5">
+                   <input type="hidden"  id="para6" name="para6">
+                   <input type="hidden"  id="para7" name="para7">
+                   <input type="hidden"  id="para8" name="para8">
+                   <input type="hidden"  id="para9" name="para9">
+                   <input type="hidden"  id="para10" name="para10">
+                   <div class="ln_solid"></div>
+                   <div class="form-group">
+                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                       <button type="submit" class="btn btn-primary" ><a href="index.html"></a>Cancel
+                       </button>
+                       <button onclick="conta()" name="export_excel" id="submit" class="btn btn-success" value="Descargar excel" >Submit
+                       </button>
                     </div>
-                                  <input type="hidden"  id="para1" name="para1">
-                                  <input type="hidden"  id="para2" name="para2">
-                                  <input type="hidden"  id="para3" name="para3">
-                                  <input type="hidden"  id="para4" name="para4">
-                                  <input type="hidden"  id="para5" name="para5">
-                                  <input type="hidden"  id="para6" name="para6">
-                                  <input type="hidden"  id="para7" name="para7">
-                                  <input type="hidden"  id="para8" name="para8">
-                                  <input type="hidden"  id="para9" name="para9">
-                                  <input type="hidden"  id="para10" name="para10">
-                    <div class="ln_solid"></div>
-                        <div class="form-group">
-                          <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                            <button type="submit" class="btn btn-primary" ><a href="index.html"></a>Cancel</button>
-                            <button onclick="conta()" name="export_excel" id="submit" class="btn btn-success" value="Descargar excel" >Submit</button>
-                          </div>
-                        </div>
-                    </form>
+                   </div>
+                  </form>
 
               <!-- Tablaa-->
               <div class="col-md-12 col-sm-12 col-xs-12">
@@ -435,112 +437,9 @@
 
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-
-    <script>
-
-                                function conta() {
-                          var count=0;
-                          for(var i= 1 ; i<11 ; i++){
-                            if(document.getElementById("par"+i).checked==false){
-                              document.getElementById("para"+i).value=0;
-                              count++;
-                            }
-                            else{
-                              document.getElementById("para"+i).value=document.getElementById("par"+i).value; 
-                            }
-                          }
-                        }
-
-                        function seltodo(){
-                            for(var i= 1 ; i<11 ; i++){
-                                document.getElementById("par"+i).checked=true;
-                            }
-                            conta()
-
-                        }
-
-
-
-        $(document).ready(function() {
-        var handleDataTableButtons = function() {
-          if ($("#datatable-buttons").length) {
-            $("#datatable-buttons").DataTable({
-              dom: "Bfrtip",
-              buttons: [
-                {
-                  extend: "copy",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "csv",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "excel",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "pdfHtml5",
-                  className: "btn-sm"
-                },
-                {
-                  extend: "print",
-                  className: "btn-sm"
-                },
-              ],
-              responsive: true
-            });
-          }
-        };
-
-        TableManageButtons = function() {
-          "use strict";
-          return {
-            init: function() {
-              handleDataTableButtons();
-            }
-          };
-        }();
-
-        $('#datatable').dataTable();
-
-        $('#datatable-keytable').DataTable({
-          keys: true
-        });
-
-        $('#datatable-responsive').DataTable();
-
-        $('#datatable-scroller').DataTable({
-          ajax: "js/datatables/json/scroller-demo.json",
-          deferRender: true,
-          scrollY: 380,
-          scrollCollapse: true,
-          scroller: true
-        });
-
-        $('#datatable-fixed-header').DataTable({
-          fixedHeader: true
-        });
-
-        var $datatable = $('#datatable-checkbox');
-
-        $datatable.dataTable({
-          'order': [[ 1, 'asc' ]],
-          'columnDefs': [
-            { orderable: false, targets: [0] }
-          ]
-        });
-        $datatable.on('draw.dt', function() {
-          $('input').iCheck({
-            checkboxClass: 'icheckbox_flat-green'
-          });
-        });
-
-        TableManageButtons.init();
-      });      
-
-    </script>      
-
+ 
+    <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
+    <script src="../build/js/table_management.js"></script>
   </body>
 </html>
 TablaExcel.php
