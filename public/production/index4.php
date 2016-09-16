@@ -209,7 +209,7 @@
                   
                   <div class="x_content">
                     </br>
-                      Please choose the fields to be shown.
+                      Please choose the fields to be shown. </br>
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
 
                     <label>Fields:</label>
@@ -304,23 +304,14 @@
                       </div>
                     </div>
                   </div>
-                    
+                  
+                  <!--
                   <form method="post" action="">
                    <div class="checkbox">
                        <label>
                          <button onclick="SelectAll()" name="export_excel" id="submit" class="btn btn-success" >Select All</button>
                        </label>
                    </div>
-                   <input type="hidden"  id="para1" name="para1">
-                   <input type="hidden"  id="para2" name="para2">
-                   <input type="hidden"  id="para3" name="para3">
-                   <input type="hidden"  id="para4" name="para4">
-                   <input type="hidden"  id="para5" name="para5">
-                   <input type="hidden"  id="para6" name="para6">
-                   <input type="hidden"  id="para7" name="para7">
-                   <input type="hidden"  id="para8" name="para8">
-                   <input type="hidden"  id="para9" name="para9">
-                   <input type="hidden"  id="para10" name="para10">
                    <div class="ln_solid"></div>
                    <div class="form-group">
                     <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
@@ -331,6 +322,7 @@
                     </div>
                    </div>
                   </form>
+                  -->
 
               <!-- Tablaa-->
               <div class="col-md-12 col-sm-12 col-xs-12">
@@ -437,6 +429,8 @@
     <script src="../vendors/nprogress/nprogress.js"></script>
     <!-- bootstrap-progressbar -->
     <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <!-- iCheck -->
+    <script src="../vendors/iCheck/icheck.min.js"></script>
     <!-- bootstrap-daterangepicker -->
     <script src="js/moment/moment.min.js"></script>
     <script src="js/datepicker/daterangepicker.js"></script>
