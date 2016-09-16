@@ -469,8 +469,8 @@
     <script>
       $(document).ready(function(){
         $('input').iCheck({
-          checkboxClass: 'icheckbox_flat',
-          radioClass: 'iradio_flat'
+          checkboxClass: 'icheckbox_minimal-green',
+          radioClass: 'iradio_flat-green'
         });
       });
     </script>
