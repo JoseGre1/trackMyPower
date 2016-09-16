@@ -207,61 +207,88 @@
                   </div>
                   <div class="x_content">
                       Please choose the fields to be shown:
-                    <div class="checkbox col-md-12 col-sm-12 col-xs-12"></div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
+                    <div class="col-md-12 col-sm-12 col-xs-12"></div>
+                                        
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" id="par1" name="par1" value="id"> 
-                          ID<br>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> ID
                         </label>
+                      </div>
                     </div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
+
+                   <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" id="par2" name="par2" value="date_time"> Date and Time<br>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Date and Time
                         </label>
-                    </div>            
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
+                      </div>
+                    </div>         
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
                         <label>
-                         <input type="checkbox" class="flat" id="par3" name="par3" value="temperature"> Temperature<br>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Temperature
                         </label>
+                      </div>
                     </div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
-                      <label>
-                        <input type="checkbox" class="flat" id="par4" name="par4" value="wind_speed"> 
-                        Wind Speed<br>
-                      </label>
-                    </div> 
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
-                      <label> 
-                        <input type="checkbox" class="flat" id="par5" name="par5" value="voltage_med1"> Voltage (Meter 1)<br>
-                      </label>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Wind Speed
+                        </label>
+                      </div>
                     </div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
-                      <label>  
-                        <input type="checkbox" class="flat" id="par6" name="par6" value="curr_med1"> Current (Meter 1)<br>
-                       </label>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Voltage (Meter 1)
+                        </label>
+                      </div>
                     </div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
-                      <label>    
-                        <input type="checkbox" class="flat" id="par7" name="par7" value="energy_med1"> Energy (Meter 1)<br>
-                      </label>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Current (Meter 1)
+                        </label>
+                      </div>
                     </div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
-                      <label>    
-                        <input type="checkbox" class="flat" id="par8" name="par8" value="power_med1"> 
-                        Power<br>
-                      </label>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Energy (Meter 1)
+                        </label>
+                      </div>
                     </div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
-                      <label>    
-                        <input type="checkbox" class="flat" id="par9" name="par9" value="latitude"> 
-                        Latitud<br>
-                      </label>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Power (Meter 1)
+                        </label>
+                      </div>
                     </div>
-                    <div class="checkbox col-md-3 col-sm-4 col-xs-12">
-                      <label>    
-                        <input type="checkbox" class="flat" id="par10" name="par10" value="longitude"> Longitude <br>
-                      </label>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Latitude
+                        </label>
+                      </div>
                     </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="id"> Longitude
+                        </label>
+                      </div>
+                    </div>
+
                   </div>
                     
                   <form method="post" action="">
