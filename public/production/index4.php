@@ -211,7 +211,8 @@
                     </br>
                       Please choose the fields to be shown. </br>
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
-
+                    <!-- JUST ANOTHER WAY TO ADD CHECKBOX IN BOOTSTRAP -->
+                    <!--
                     <label>Fields:</label>
                     <p style="padding: 5px;">
                     <input type="checkbox" name="hobbies[]" id="hobby1" value="ski" data-parsley-mincheck="2" required class="flat" /> Skiing
@@ -223,6 +224,7 @@
                     <input type="checkbox" name="hobbies[]" id="hobby4" value="sleep" class="flat" /> Sleeping
                     <br />
                         <p>
+                        -->
                                         
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
@@ -305,7 +307,7 @@
                     </div>
                   </div>
                   
-                  <!--
+                  <!-- THIS IS CAUSING ERRORS -> CORRECT LATER
                   <form method="post" action="">
                    <div class="checkbox">
                        <label>
@@ -470,20 +472,8 @@
     <script src="../vendors/pdfmake/build/vfs_fonts.js"></script>    
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
-    <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
-    <script src="../vendors/iCheck/icheck.js"></script>
-    <!-- iCheck plugin launch -->
-    <script>
-      $(document).ready(function(){
-        $('input').iCheck({
-          checkboxClass: 'icheckbox_minimal-green',
-          radioClass: 'iradio_flat-green'
-        });
-      });
-    </script>
- 
     <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
     <script src="../build/js/table_management.js"></script>
+    
   </body>
 </html>
