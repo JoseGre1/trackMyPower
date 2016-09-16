@@ -12,7 +12,8 @@ function conta() {
 
 function SelectAll() {
     for (var i = 1; i < 11; i++) {
-        document.getElementById("par" + i).checked = true;
+        var checkbtn = document.getElementById("par" + i);
+        checkbtn.checked = true;
     }
     conta()
 
