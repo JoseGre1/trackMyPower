@@ -38,7 +38,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
+              <a href="index4.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -64,7 +64,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    <li><a href="plain_page.html">Home</a></li>
+                    <li><a href="index4.php">Home</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
@@ -174,15 +174,16 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <div class="">
+            <!-- page title -->
             <div class="page-title">
               <div class="title_left">
                 <h3>Export to file</h3>
               </div>
-
             </div>
+            <!-- page title -->
 
+            <!-- panel: Filter Results-->
             <div class="clearfix"></div>
-
             <div class="row">
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
@@ -205,9 +206,23 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
+                  
                   <div class="x_content">
-                      Please choose the fields to be shown:
+                    </br>
+                      Please choose the fields to be shown.
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
+
+                    <label>Fields:</label>
+                    <p style="padding: 5px;">
+                    <input type="checkbox" name="hobbies[]" id="hobby1" value="ski" data-parsley-mincheck="2" required class="flat" /> Skiing
+                    <br />
+                    <input type="checkbox" name="hobbies[]" id="hobby2" value="run" class="flat" /> Running
+                    <br />
+                    <input type="checkbox" name="hobbies[]" id="hobby3" value="eat" class="flat" /> Eating
+                    <br />
+                    <input type="checkbox" name="hobbies[]" id="hobby4" value="sleep" class="flat" /> Sleeping
+                    <br />
+                        <p>
                                         
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
@@ -217,7 +232,7 @@
                       </div>
                     </div>
 
-                   <div class="col-md-3 col-sm-4 col-xs-12">
+                    <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
                           <input type="checkbox" class="flat" name="toShow" value="id"> Date and Time
@@ -288,7 +303,6 @@
                         </label>
                       </div>
                     </div>
-
                   </div>
                     
                   <form method="post" action="">
