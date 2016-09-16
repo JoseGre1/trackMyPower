@@ -15,8 +15,6 @@ function SelectAll() {
         var checkbtn = document.getElementById("par" + i);
         checkbtn.checked = true;
     }
-    conta()
-
 }
 
 $(document).ready(function() {
