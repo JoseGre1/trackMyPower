@@ -1,6 +1,6 @@
 
 <?php
-$connect = mysqli_connect("localhost", "root", "", "trackmypower");
+$connect = mysqli_connect("localhost", "mpardo", "pardo1234", "trackmypower");
 
 
 $usr = "admin";
@@ -8,7 +8,7 @@ $psw = "password";
 $username = $_POST["username"];
 $password = $_POST["password"];
 
-$sql= "SELECT username, password FROM accounts where username='".$_POST["username"]."'";
+$sql= "SELECT username, password FROM account where username='".$_POST["username"]."'";
 $result = mysqli_query($connect, $sql);
 $row = mysqli_fetch_array($result);  
 session_start();
