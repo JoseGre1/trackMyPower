@@ -1,3 +1,4 @@
+/*
 function conta() {
     var count = 0;
     for (var i = 1; i < 11; i++) {
@@ -9,11 +10,12 @@ function conta() {
         }
     }
 }
-
+*/
 function SelectAll() {
     $('.checkbox').iCheck('check'); 
 }
 
+/*
 $(document).ready(function() {
     var handleDataTableButtons = function() {
         if ($("#datatable-buttons").length) {
