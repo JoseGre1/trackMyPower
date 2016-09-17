@@ -206,10 +206,8 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                  
                   <div class="x_content">
-                    </br>
-                      Please choose the fields to be shown. </br>
+                    Please choose the fields to be shown. </br>
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
                     <!-- JUST ANOTHER WAY TO ADD CHECKBOX IN BOOTSTRAP -->
                     <!--
@@ -305,104 +303,16 @@
                         </label>
                       </div>
                     </div>
-                  </div>
-                  <label>
-                    <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
-                  </label>
-                  <div class="ln_solid"></div>
-                  
-                  <form method="post" action="">
-                    <div class="form-group">
-                      <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                        <button type="submit" class="btn btn-primary" ><a href="index.html"></a>Cancel
-                        </button>
-                        <button onclick="conta()" name="export_excel" id="submit" class="btn btn-success" value="Descargar excel" >Submit
-                        </button>
-                      </div>
-                    </div>
-                  </form>
-
-              <!-- Tablaa-->
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Tabla<small>metcentraldata</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="x_content">
-                    <p class="text-muted font-13 m-b-30">
-                      The Buttons extension for DataTables provides a common set of options, API methods and styling to display buttons on a page that will interact with a DataTable. The core library provides the based framework upon which plug-ins can built.
-                    </p>
-                    <!-- Crear la tabla con el phpe  -->
-                         <?php
-                         $connect = mysqli_connect("127.5.177.130:3306","mpardo","pardo1234","trackmypower");    
-                         $output = '';  
-                         $a=1;
-
-                              if(isset($_POST["export_excel"]))  {
-
-                              $sql = "SELECT * FROM metcentraldata ORDER BY id DESC";  
-                              $result = mysqli_query($connect, $sql);  
-                              if(mysqli_num_rows($result) > 0)  
-                              {     
-
-                               $output .= '                    <table id="datatable-buttons" class="table table-striped table-bordered bulk_action dataTable no-footer" role="grid">                               <thead>  
-                                             <tr role="row"> ';
-                                  for($i=1;$i<11;$i++){
-                                    if($_POST['para'.$i]!='0'){
-                                        
-                                        $output .='<th  class="sorting" tabindex="0" aria-controls="datatable" rowspan="1" colspan="1" aria-label="Position: activate to sort column ascending">'.$_POST['para'.$i].'</th>';
-                                    }
-                                  }        
-                                   $output .='</tr>
-                                   </thead>
-                                   <tbody>';  
-
-
-                                   while($row = mysqli_fetch_array($result))  
-                                   {         $output.='<tr>
-                                          ';
-                                              for($i=1;$i<11;$i++){
-                                                  if($_POST['para'.$i]!='0'){
-                                                      
-                                                      $output .='<td>'.$row[$_POST['para'.$i]].'</td>';
-                                                  }
-                                              }    
-                                                $output.='</tr>';
-                                   }  
-                                   $output .= '</tbody> 
-                                   </table> ';   
-                                   echo $output;  
-                              }  
-                            }
-
-                           
-                        ?>  
-                      <!-- Fin del phpe -->
-                        </div>
-                      </div>
-                    </div>
-                    <!-- Fin de la tabla -->             
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+                    <label>
+                      <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
+                    </label>
+                    <div class="ln_solid"></div>
+                  </div> <!-- closing class="x_content"-->
+                </div> <!-- closing class="x_panel"-->
+              </div> <!-- closing class="col-md-12 col-sm-12 col-xs-12"-->
+            </div> <!-- closing class="row"-->
+          </div> <!--closing class=""-->
+        </div> <!-- closing class="right_col" role="main" -->
         <!-- /page content -->
 
         <!-- footer content -->

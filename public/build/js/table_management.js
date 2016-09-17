@@ -1,16 +1,3 @@
-/*
-function conta() {
-    var count = 0;
-    for (var i = 1; i < 11; i++) {
-        if (document.getElementById("par" + i).checked == false) {
-            document.getElementById("para" + i).value = 0;
-            count++;
-        } else {
-            document.getElementById("para" + i).value = document.getElementById("par" + i).value;
-        }
-    }
-}
-*/  
 function SelectAll() {
     if ( document.getElementById("sel-all-btn").classList.contains('btn-success') ) {
         $('.checkbox').iCheck('check'); 
