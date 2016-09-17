@@ -417,6 +417,7 @@
     <script src="../build/js/custom.min.js"></script>
     <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
     <script src="../build/js/table_management.js"></script>
+    <script src="../build/js/refreshTable.js"></script>
     <!-- Datatables -->
     <script>
       $(document).ready(function() {
@@ -463,6 +464,8 @@
         }();
 
         TableManageButtons.init();
+
+        $("#datatable_wrapper").css("opacity",0);
 
         /* USED TO ADD CHECKBOXES TO TABLES
         var $datatable = $('#datatable-checkbox');
