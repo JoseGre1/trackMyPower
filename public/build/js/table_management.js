@@ -12,7 +12,7 @@ function conta() {
 
 function SelectAll() {
     for (var i = 1; i < 11; i++) {
-        $("input#par"+i).prop('checked', $(this).prop('checked'));
+        $(".checkbox").prop('checked', $(this).prop('checked'));
     }
 }
 
