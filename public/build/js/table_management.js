@@ -11,7 +11,7 @@ function conta() {
 }
 
 function SelectAll() {
-        $(".checkbox").prop("checked", true);
+    $('.checkbox').iCheck('check'); 
 }
 
 $(document).ready(function() {
