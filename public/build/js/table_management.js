@@ -10,7 +10,7 @@ function conta() {
         }
     }
 }
-*/
+*/  
 function SelectAll() {
     $('.checkbox').iCheck('check'); 
 }
@@ -90,3 +90,5 @@ $(document).ready(function() {
 
     TableManageButtons.init();
 });
+
+*/
