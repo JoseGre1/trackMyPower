@@ -188,7 +188,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Filter Results</h2>
+                    <h2>Tables <small>Filter Results</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -207,7 +207,7 @@
                     <div class="clearfix"></div>
                   </div>
                   <div class="x_content">
-                    Please choose the fields to be shown. </br>
+                    Please choose the fields to be shown/exported: </br>
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
                     <!-- JUST ANOTHER WAY TO ADD CHECKBOX IN BOOTSTRAP -->
                     <!--
@@ -235,7 +235,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Date and Time
+                          <input type="checkbox" class="flat" name="toShow" value="date_time"> Date and Time
                         </label>
                       </div>
                     </div>         
@@ -243,7 +243,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Temperature
+                          <input type="checkbox" class="flat" name="toShow" value="temperature"> Temperature
                         </label>
                       </div>
                     </div>
@@ -251,7 +251,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Wind Speed
+                          <input type="checkbox" class="flat" name="toShow" value="humidity"> Humidity
                         </label>
                       </div>
                     </div>
@@ -259,7 +259,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Voltage (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="wind_speed"> Wind Speed
                         </label>
                       </div>
                     </div>
@@ -267,7 +267,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Current (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="voltage_med1"> Voltage (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -275,7 +275,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Energy (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="curr_med1"> Current (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -283,7 +283,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Power (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="energy_med1"> Energy (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -291,7 +291,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Latitude
+                          <input type="checkbox" class="flat" name="toShow" value="power_med1"> Power (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -299,7 +299,15 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id"> Longitude
+                          <input type="checkbox" class="flat" name="toShow" value="latitude"> Latitude
+                        </label>
+                      </div>
+                    </div>
+
+                    <div class="col-md-3 col-sm-4 col-xs-12">
+                      <div class="checkbox">
+                        <label>
+                          <input type="checkbox" class="flat" name="toShow" value="longitude"> Longitude
                         </label>
                       </div>
                     </div>
