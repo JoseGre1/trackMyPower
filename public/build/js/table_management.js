@@ -27,7 +27,7 @@ function SelectAll() {
 }
 
 function toggleTextOfButton(button_id)  {
-   var text = document.getElementById(button_id).innerHTML;
+   var text = document.getElementById(button_id).value;
    text = text == "Select All" ? "Unselect All" : "Select All";
 }
 
