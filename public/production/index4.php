@@ -35,7 +35,7 @@
   <body class="nav-md">
     <div class="container body">
       <div class="main_container">
-        <div class="col-md-3 left_col">
+        <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
               <a href="index4.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
@@ -177,7 +177,7 @@
             <!-- page title -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Export to file</h3>
+                <h3>Export Data to File</h3>
               </div>
             </div>
             <!-- page title -->
@@ -188,7 +188,7 @@
               <div class="col-md-12 col-sm-12 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
-                    <h2>Filter results</h2>
+                    <h2>Filter Results</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -307,7 +307,9 @@
                     </div>
                   </div>
                   <label>
-                    <button onclick="SelectAll()" name="export_excel" id="submit" class="btn btn-success" >Select All</button>
+                    <button id="sel-all-btn" onclick="SelectAll()" type="button" class="btn btn-success">
+                      Select All
+                    </button>
                   </label>
                   <div class="ln_solid"></div>
                   
