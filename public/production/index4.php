@@ -306,13 +306,12 @@
                       </div>
                     </div>
                   </div>
-                  
+                  <label>
+                    <button onclick="SelectAll()" name="export_excel" id="submit" class="btn btn-success" >Select All</button>
+                  </label>
+                  <div class="ln_solid"></div>
                   
                   <form method="post" action="">
-                    <label>
-                      <button onclick="SelectAll()" name="export_excel" id="submit" class="btn btn-success" >Select All</button>
-                    </label>
-                    <div class="ln_solid"></div>
                     <div class="form-group">
                       <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
                         <button type="submit" class="btn btn-primary" ><a href="index.html"></a>Cancel
