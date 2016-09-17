@@ -177,7 +177,7 @@
             <!-- page title -->
             <div class="page-title">
               <div class="title_left">
-                <h3>Export Data to File</h3>
+                <h3>Export Data</h3>
               </div>
             </div>
             <!-- page title -->
