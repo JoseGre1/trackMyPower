@@ -27,8 +27,8 @@ function SelectAll() {
 }
 
 function toggleTextOfButton(button_id)  {
-   var text = document.getElementById(button_id).firstChild;
-   text.data = text.data == "Select All" ? "Unselect All" : "Select All";
+   var text = document.getElementById(button_id).innerHTML;
+   text = text == "Select All" ? "Unselect All" : "Select All";
 }
 
 /*
