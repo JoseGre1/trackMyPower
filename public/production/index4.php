@@ -307,24 +307,21 @@
                     </div>
                   </div>
                   
-                  <!-- THIS IS CAUSING ERRORS -> CORRECT LATER
+                  
                   <form method="post" action="">
-                   <div class="checkbox">
-                       <label>
-                         <button onclick="SelectAll()" name="export_excel" id="submit" class="btn btn-success" >Select All</button>
-                       </label>
-                   </div>
-                   <div class="ln_solid"></div>
-                   <div class="form-group">
-                    <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
-                       <button type="submit" class="btn btn-primary" ><a href="index.html"></a>Cancel
-                       </button>
-                       <button onclick="conta()" name="export_excel" id="submit" class="btn btn-success" value="Descargar excel" >Submit
-                       </button>
+                    <label>
+                      <button onclick="SelectAll()" name="export_excel" id="submit" class="btn btn-success" >Select All</button>
+                    </label>
+                    <div class="ln_solid"></div>
+                    <div class="form-group">
+                      <div class="col-md-9 col-sm-9 col-xs-12 col-md-offset-3">
+                        <button type="submit" class="btn btn-primary" ><a href="index.html"></a>Cancel
+                        </button>
+                        <button onclick="conta()" name="export_excel" id="submit" class="btn btn-success" value="Descargar excel" >Submit
+                        </button>
+                      </div>
                     </div>
-                   </div>
                   </form>
-                  -->
 
               <!-- Tablaa-->
               <div class="col-md-12 col-sm-12 col-xs-12">
@@ -474,6 +471,6 @@
     <script src="../build/js/custom.min.js"></script>
     <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
     <script src="../build/js/table_management.js"></script>
-    
-  </body>
+
+  </  body>
 </html>
