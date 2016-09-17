@@ -448,12 +448,7 @@
               ],
               keys: true,
               responsive: true,
-              fixedHeader: true,
-              ajax: "js/datatables/json/scroller-demo.json",
-              deferRender: true,
-              scrollY: 380,
-              scrollCollapse: true,
-              scroller: true
+              fixedHeader: true
             });
           }
         };
