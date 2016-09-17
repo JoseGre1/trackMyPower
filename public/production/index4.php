@@ -306,9 +306,9 @@
                     <div class="col-md-12 col-sm-12 col-xs-12"> 
                       <label>
                         <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
+                        <div class="ln_solid"></div>
                       </label>
                     </div>
-                    <div class="ln_solid"></div>
                   </div> <!-- closing class="x_content"-->
                 </div> <!-- closing class="x_panel"-->
               </div> <!-- closing class="col-md-12 col-sm-12 col-xs-12"-->
