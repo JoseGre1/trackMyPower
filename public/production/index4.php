@@ -303,7 +303,7 @@
                         </label>
                       </div>
                     </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12"></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12"> <br> <br> </div>
                     <label>
                       <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
                     </label>
