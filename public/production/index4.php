@@ -307,7 +307,7 @@
                     </div>
                   </div>
                   <label>
-                    <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success"></button>
+                    <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
                   </label>
                   <div class="ln_solid"></div>
                   
