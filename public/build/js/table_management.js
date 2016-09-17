@@ -11,9 +11,7 @@ function conta() {
 }
 
 function SelectAll() {
-    for (var i = 1; i < 11; i++) {
-        $(".checkbox").prop('checked', $(this).prop('checked'));
-    }
+        $(".checkbox").prop("checked", true);
 }
 
 $(document).ready(function() {
