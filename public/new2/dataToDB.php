@@ -75,10 +75,11 @@ if ( preg_match('|<span class="wx-data" data-station="IATLNTIC4" data-variable="
         $humidity=$cap[1];
         echo 'Humidity = '.$humidity.'%.'."<br>"; //Toma la variable Wind Speed, cap es un array que solo tiene 1 posición.
 }
+
 $queryw = "SET  SESSION time_zone = '-5:00';";
 $queryw .= "INSERT INTO `wundergrounddata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `uv_index`, `solar_radiation`) VALUES (NULL, NOW(), '$temperature', '$humidity', '$windspeed', '$uvindex', '$solarradiation');";
 
-$resultw = mysqli_multi_query($connect_todb,$query);
+$resultw = mysqli_multi_query($connect_todb,$queryw);
 
 
 echo mysql_errno($connect_todb) . ": " . mysql_error($connect_todb) . "\n";
