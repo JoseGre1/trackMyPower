@@ -8,7 +8,7 @@ $(document).ready(function()
                 checked_ids.push($(this).attr("value"));
             } 
         });
-        if(checked_ids!=null){
+        if(checked_ids.length!=0){
             checked_ids = checked_ids.join(',');
             $.post('mysql/exportTable.php',{checked_ids: checked_ids}, function(data){
                 processJSON(data);
