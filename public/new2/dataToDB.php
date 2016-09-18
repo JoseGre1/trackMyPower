@@ -17,11 +17,11 @@ $longitude = htmlspecialchars($_GET["longitude"]);
 $timestamp = htmlspecialchars($_GET["date_time"]);
 $temperature = htmlspecialchars($_GET["temperature"]);
 $humidity = htmlspecialchars($_GET["humidity"]);
+//call wunder
+wunder();
 //change datetime string --> date SQL format
 $date_time = date("Y-m-d h:i:s", strtotime($timestamp));
 echo $date_time . "\n";
-//call wunder
-wunder();
 //mysql query --> insert data into db
 if ($timestamp == 0) {
 	echo 'Wrong date-time received from Arduino'."<br>";
