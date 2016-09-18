@@ -8,7 +8,7 @@ $(document).ready(function()
                 alert("The button mentioned was checked " + $(this).attr("value"));
             }
             else{
-                alert("The button mentioned was unchecked " + $(this)..attr("value"));
+                alert("The button mentioned was unchecked " + $(this).attr("value"));
             }    
         });
 
