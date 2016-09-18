@@ -45,13 +45,14 @@ if ( preg_match('|<span class="wx-data" data-station="IATLNTIC4" data-variable="
 }
 
 //CONECTION TO DB 
-$user='danielach0309';
-$pssd='Danielach0309';
-$connect_todb = new mysqli('192.168.0.31',$user,$pssd,'trackmypower');
+$user='mpardo';
+$pssd='pardo1234';
+$connect_todb = new mysqli('127.5.177.130:3306',$user,$pssd,'trackmypower');
 
 $query = "SET  SESSION time_zone = '-5:00';";
 $query .= "INSERT INTO `wundergrounddata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `uv_index`, `solar_radiation`) VALUES (NULL, NOW(), '$temperature', '$humidity', '$windspeed', '$uvindex', '$solarradiation');";
-        $result = mysqli_multi_query($connect_todb,$query);
+
+$result = mysqli_multi_query($connect_todb,$query);
 
 ?>
 
