@@ -51,9 +51,11 @@ function processJSON(data){
     for (i = 0; i < checked_keys.length; i++){
         headers.push({title: checked_keys[i]});
     }
+    /*
     //Set dataSet and headers as inputs of DataTable()
     $('#datatable').DataTable({
         data: dataSet,
         columns: headers
     });
+    */
 }
