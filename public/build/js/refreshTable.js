@@ -1,17 +1,11 @@
 $(document).ready(function()
 {
     $('.checkbox').on('ifToggled', function(event){
-        var val1 = $(this).closest("input").attr('checked', true);
         var val2 = $(".checkbox").is(':checked');
-        if(val1){
-            alert("This is checked - val1");
+        if(!val2){
+            alert("This was checked - val2");
         }else{
-            alert("This is not checked - val1");
-        }
-        if(val2){
-            alert("This is checked - val2");
-        }else{
-            alert("This is not checked - val2");
+            alert("This was not checked - val2");
         }
         $("#datatable_wrapper").css("opacity",100);
         //$.post('mysql_original/dataFromDB.php', {n_records: n_records}, function (data) {
