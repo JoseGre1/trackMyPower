@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
     $('.checkbox').on('ifToggled', function(event){
-        var val2 = $(".checkbox").is(':checked');
+        var val2 = $("#id").is(':checked');
         if(!val2){
             alert("This was checked - val2");
         }else{
