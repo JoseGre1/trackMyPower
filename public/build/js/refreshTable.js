@@ -49,7 +49,7 @@ function processJSON(data){
     //Getting the headers --> inputs of DataTable() function
     var headers = [];
     for (i = 0; i < checked_keys.length; i++){
-        headers.({title: checked_keys[i]});
+        headers.push({title: checked_keys[i]});
     }
     //Set dataSet and headers as inputs of DataTable()
     $('#datatable').DataTable({
