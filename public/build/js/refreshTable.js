@@ -57,8 +57,9 @@ function createTable(data){
     strTable += '</table>';        
 
    $("div#charts").html(strTable);
-   */
+   
 }
+*/
 
 /*
     function reloadScript(data,id_script) {
