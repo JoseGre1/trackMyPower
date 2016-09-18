@@ -1,7 +1,7 @@
 $(document).ready(function()
 {
     $('.checkbox').on('ifToggled', function(event){
-        var checked_ids = [];
+        var checked_ids;
         $("input.flat:checkbox").each(function(i){
             var val = $(this).is(':checked');
             if(val){
