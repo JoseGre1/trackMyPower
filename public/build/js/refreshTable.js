@@ -17,9 +17,9 @@ $(document).ready(function()
         //$.post('mysql_original/dataFromDB.php', {n_records: n_records}, function (data) {
         //    processJSON(data);
         //});
-        });
     });
-
+});
+/*
     function reloadScript(data,id_script) {
         // Check for existing script element and delete it if it exists
         var js = document.getElementById(id_script);
@@ -67,3 +67,5 @@ $(document).ready(function()
        $("div#charts").html(strTable);
     }
 });
+
+*/
