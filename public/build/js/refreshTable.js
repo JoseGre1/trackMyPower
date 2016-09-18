@@ -6,6 +6,7 @@ $(document).ready(function()
             var val = $(this).is(':checked');
             if(val){
                 alert("The button mentioned was checked " + $(this).attr("value"));
+                checked_ids = [checked_ids , $(this).attr("value")];
             }
             else{
                 alert("The button mentioned was unchecked " + $(this).attr("value"));
