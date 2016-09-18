@@ -1,6 +1,5 @@
 <?php
 include 'dbconnection.php';
-$checked_ids = $_POST['checked_ids'];
 $result = mysqli_query($connect_todb, 
 	"SELECT * FROM metcentraldata ORDER BY id DESC"
 );
