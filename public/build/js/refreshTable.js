@@ -5,10 +5,10 @@ $(document).ready(function()
         $("input.flat:checkbox").each(function(i){
             var val = $(this).is(':checked');
             if(val){
-                alert("The button mentioned was checked" + $(this).name);
+                alert("The button mentioned was checked " + $(this).attr("value"));
             }
             else{
-                alert("The button mentioned was unchecked" + $(this).name);
+                alert("The button mentioned was unchecked " + $(this)..attr("value"));
             }    
         });
 
