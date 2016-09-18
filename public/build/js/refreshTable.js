@@ -17,7 +17,7 @@ $(document).ready(function()
         //$.post('mysql_original/dataFromDB.php', {n_records: n_records}, function (data) {
         //    processJSON(data);
         //});
-        }
+        });
     });
 
     function reloadScript(data,id_script) {
