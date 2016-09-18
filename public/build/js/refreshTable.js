@@ -1,7 +1,6 @@
 $(document).ready(function()
 {
-    $('.checkbox').on('ifChecked', function(event){
-        alert(event.type + ' callback');
+    $('.checkbox').on('ifToggled', function(event){
         $("#datatable_wrapper").css("opacity",100);
         //$.post('mysql_original/dataFromDB.php', {n_records: n_records}, function (data) {
         //    processJSON(data);
