@@ -2,7 +2,7 @@ $(document).ready(function()
 {
     $('.checkbox').on('ifToggled', function(event){
         var val1 = $(this).closest("input").attr('checked', true);
-        var val2 = ckb = $("#ickb").is(':checked');
+        var val2 = $(".checkbox").is(':checked');
         if(val1){
             alert("This is checked - val1");
         }else{
