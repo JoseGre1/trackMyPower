@@ -76,7 +76,7 @@ function createTable (){
     myTable = $('#datatable').DataTable({
         data: dataSet,
         columns: headers,
-        dom: "Bfrtip",
+        dom: "lBfrtip",
               buttons: [
                 {
                   extend: "copy",
