@@ -27,6 +27,9 @@ $(document).ready(function()
             if (wrapper_element !== null){
                 $("#datatable_wrapper").css("opacity",0);
             }
+            if (press_deselect_all){
+                press_deselect_all = true;
+            }
         }
     });
 });
