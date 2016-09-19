@@ -18,7 +18,11 @@ $(document).ready(function()
         }
         else
         {
-            $("#datatable_wrapper").css("opacity",0);    
+            var wrapper_element = document.getElementById('datatable_wrapper');
+            if (wrapper_element !== null){
+                $("#datatable_wrapper").css("opacity",0);
+            }
+             
         }
     });
 });
@@ -34,17 +38,17 @@ function processJSON(data){
     }
     //Getting name of the checked keys (title of the columns)
     var checked_keys = [];
-    for (i = 0; i < postions.length; i++){
-        checked_keys.push(keys(positions[i]));
+    for (i = 0; i < positions.length; i++){
+        checked_keys.push(keys[positions[i]]);
     }
     //Getting data set from the JSON Object
     var dataSet = [];
     for(i = 0; i < JData.length; i++){
-        var new_row = [];
-        for(j = 0; j < positions.length; j++){
-            new_row.push(JData[i][keys[positions[j]]]);
-        }
-        dataSet.push(new_row);
+         var new_row = [];
+         for(j = 0; j < positions.length; j++){
+            new_row.push(JData[i][checked_keys[j]]);
+         }
+         dataSet.push(new_row);
     }
     //Getting the headers --> inputs of DataTable() function
     var headers = [];
