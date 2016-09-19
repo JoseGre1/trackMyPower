@@ -318,9 +318,11 @@
                         </label>
                       </div>
                       <div class="ln_solid"></div>
-                      <table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;">
-                      </table>
-                    </div>
+                      <div id="refreshTable">
+                        <table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;">
+                        </table>
+                      </div> <!-- closing id="refreshTable"-->
+                    </div> <!-- closing class="col-md-12 col-sm-12 col-xs-12" -->
                   </div> <!-- closing class="x_content"-->
                 </div> <!-- closing class="x_panel"-->
               </div> <!-- closing class="col-md-12 col-sm-12 col-xs-12"-->

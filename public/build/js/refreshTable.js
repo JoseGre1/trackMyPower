@@ -57,7 +57,9 @@ function createTable (){
     }
     if (typeof(myTable) !== 'undefined'){
         myTable.destroy();
-        $('#datatable_wrapper').remove();
+        $('#datatable').remove();
+        var tabledef = '<table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;"> </table>';
+        $("div#refreshTable").append(tabledef);
     }
     //Set dataSet and headers as inputs of DataTable()
     myTable = $('#datatable').DataTable({
