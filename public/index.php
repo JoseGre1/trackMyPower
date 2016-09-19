@@ -70,7 +70,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    <li><a href="index4.php">Home</a></li>
+                    <li><a href="index.php">Home</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
@@ -79,12 +79,12 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Data Charts</a></li>
+                      <li><a href="index.php">Data Charts</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-download"></i> Export <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index4.php">Tables</a></li>
+                      <li><a href="index.php">Tables</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -401,5 +401,93 @@
     <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
     <script src="build/js/table_management.js"></script>
     <script src="build/js/refreshTable.js"></script>
+    <!-- bootstrap-daterangepicker -->
+    <!--
+    <script>
+      $(document).ready(function() {
+        var cb = function(start, end, label) {
+          console.log(start.toISOString(), end.toISOString(), label);
+          $('#reportrange_right span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+        };
+
+        var optionSet1 = {
+          startDate: moment().subtract(29, 'days'),
+          endDate: moment(),
+          minDate: '01/07/2016',
+          
+          dateLimit: {
+            days: 365
+          },
+          showDropdowns: true,
+          showWeekNumbers: true,
+          timePicker: true,
+          timePickerIncrement: 10,
+          timePicker12Hour: false,
+          ranges: {
+            'Today': [moment(), moment()],
+            'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
+            'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
+          },
+          opens: 'right',
+          buttonClasses: ['btn btn-default'],
+          applyClass: 'btn-small btn-primary',
+          cancelClass: 'btn-small',
+          format: 'MM/DD/YYYY',
+          separator: ' to ',
+          locale: {
+            applyLabel: 'Submit',
+            cancelLabel: 'Clear',
+            fromLabel: 'From',
+            toLabel: 'To',
+            customRangeLabel: 'Custom',
+            daysOfWeek: ['Su', 'Mo', 'Tu', 'We', 'Th', 'Fr', 'Sa'],
+            monthNames: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'],
+            firstDay: 1
+          }
+        };
+
+        $('#reportrange_right span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+
+        $('#reportrange_right').daterangepicker(optionSet1, cb);
+
+        $('#reportrange_right').on('show.daterangepicker', function() {
+          console.log("show event fired");
+        });
+        $('#reportrange_right').on('hide.daterangepicker', function() {
+          console.log("hide event fired");
+        });
+        $('#reportrange_right').on('apply.daterangepicker', function(ev, picker) {
+          var startdate = picker.startDate.format('YYYY-MM-DD h:mm');
+          var enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+
+          $.post('MakeTable.php',{ startdate: startdate, enddate: enddate },function(data)
+          {
+                alert(data);  
+         });
+
+
+        });
+        $('#reportrange_right').on('cancel.daterangepicker', function(ev, picker) {
+          console.log("cancel event fired");
+        });
+
+        $('#options1').click(function() {
+          $('#reportrange_right').data('daterangepicker').setOptions(optionSet1, cb);
+        });
+
+        $('#options2').click(function() {
+          $('#reportrange_right').data('daterangepicker').setOptions(optionSet2, cb);
+        });
+
+        $('#destroy').click(function() {
+          $('#reportrange_right').data('daterangepicker').remove();
+        });
+
+      });
+    </script>
+    -->
   </body>
 </html>
