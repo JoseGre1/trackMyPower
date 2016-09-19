@@ -429,7 +429,7 @@
             });
           }
         };
-
+        /*
         TableManageButtons = function() {
           "use strict";
           return {
@@ -440,7 +440,7 @@
         }();
 
         TableManageButtons.init();
-
+        */
         $("#datatable_wrapper").css("opacity",0);
 
         /* USED TO ADD CHECKBOXES TO TABLES
