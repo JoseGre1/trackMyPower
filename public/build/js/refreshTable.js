@@ -12,7 +12,6 @@ $(document).ready(function()
             $.post('mysql/exportTable.php', function(phpdata){
                 processJSON(phpdata);
             });
-            createTable();
             $("#datatable_wrapper").css("opacity",100);
         }
         else
@@ -27,6 +26,7 @@ $(document).ready(function()
 
 function processJSON(phpdata){
     eval(phpdata);
+    createTable();
 }
 
 function createTable (){
