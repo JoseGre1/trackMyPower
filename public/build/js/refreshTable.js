@@ -55,7 +55,7 @@ function createTable (){
     for (i = 0; i < checked_keys.length; i++){
         headers.push({title: checked_keys[i]});
     }
-    if (myTable !== 'undefined'){
+    if (typeof(myTable) !== 'undefined'){
         myTable.destroy();
     }
     //Set dataSet and headers as inputs of DataTable()
