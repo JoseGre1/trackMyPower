@@ -9,7 +9,7 @@ $(document).ready(function()
             } 
         });
         if(checked_ids.length!=0){
-            if(typeof JData !== 'undefined'){
+            if(typeof JData === 'undefined'){
                 $.post('mysql/exportTable.php', function(data){
                     processJSON(data);
                 });
