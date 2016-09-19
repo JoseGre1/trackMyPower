@@ -10,8 +10,8 @@ $(document).ready(function()
         });
         if(checked_ids.length!=0){
             if(typeof JData === 'undefined'){
-                $.post('mysql/exportTable.php', function(data){
-                    processJSON(data);
+                $.post('mysql/exportTable.php', function(phpdata){
+                    processJSON(phpdata);
                 });
             }
             $("#datatable_wrapper").css("opacity",100);
@@ -27,8 +27,8 @@ $(document).ready(function()
     });
 });
 
-function processJSON(data){
-    eval(data);
+function processJSON(phpdata){
+    eval(phpdata);
     var positions = [];
     //keys: "headers" of the JSON Object e.g. "id", "date_time", ...
     keys = Object.keys(JData[0]); 
