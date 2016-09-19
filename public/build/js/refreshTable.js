@@ -57,6 +57,7 @@ function createTable (){
     }
     if (typeof(myTable) !== 'undefined'){
         myTable.destroy();
+        $('#datatable_wrapper').remove();
     }
     //Set dataSet and headers as inputs of DataTable()
     myTable = $('#datatable').DataTable({
