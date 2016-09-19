@@ -9,11 +9,9 @@ $(document).ready(function()
             } 
         });
         if(checked_ids.length!=0){
-            if(typeof JData === 'undefined'){
-                $.post('mysql/exportTable.php', function(phpdata){
-                    processJSON(phpdata);
-                });
-            }
+            $.post('mysql/exportTable.php', function(phpdata){
+                processJSON(phpdata);
+            });
             createTable();
             $("#datatable_wrapper").css("opacity",100);
         }
@@ -31,7 +29,7 @@ function processJSON(phpdata){
     eval(phpdata);
 }
 
-function createTable(){
+function createTable (){
     var positions = [];
     //keys: "headers" of the JSON Object e.g. "id", "date_time", ...
     keys = Object.keys(JData[0]); 
