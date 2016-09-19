@@ -90,4 +90,5 @@ function createTable (){
         fixedHeader: true
     });
     $("#datatable_wrapper").css("opacity",100);
+    $("#datatable").css("opacity",100);
 }

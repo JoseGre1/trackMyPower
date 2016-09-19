@@ -318,7 +318,6 @@
                         </label>
                       </div>
                       <div class="ln_solid"></div>
-
                       <table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;">
                       </table>
                     </div>
