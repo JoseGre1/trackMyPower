@@ -1,6 +1,14 @@
 $(document).ready(function()
 {
+    press_select_all = false;
+    press_deselect_all = false;
     $('.checkbox').on('ifToggled', function(event){
+        if (!($("input.flat:checkbox").is(':checked')) && press_select_all){
+            return;
+        }
+        if ($("input.flat:checkbox").length == 0 && press_deselect_all){
+            return;
+        }
         checked_ids = [];
         $("input.flat:checkbox").each(function(i){
             var val = $(this).is(':checked');
@@ -94,4 +102,6 @@ function createTable (){
     });
     $("#datatable_wrapper").css("opacity",100);
     $("#datatable").css("opacity",100);
+    press_select_all = false;
+    press_deselect_all = false;
 }
