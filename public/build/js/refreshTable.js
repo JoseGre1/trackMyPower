@@ -14,6 +14,7 @@ $(document).ready(function()
                     processJSON(phpdata);
                 });
             }
+            createTable();
             $("#datatable_wrapper").css("opacity",100);
         }
         else
@@ -22,13 +23,15 @@ $(document).ready(function()
             if (wrapper_element !== null){
                 $("#datatable_wrapper").css("opacity",0);
             }
-             
         }
     });
 });
 
 function processJSON(phpdata){
     eval(phpdata);
+}
+
+function createTable(){
     var positions = [];
     //keys: "headers" of the JSON Object e.g. "id", "date_time", ...
     keys = Object.keys(JData[0]); 
