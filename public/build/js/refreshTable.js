@@ -3,10 +3,10 @@ $(document).ready(function()
     press_select_all = false;
     press_deselect_all = false;
     $('.checkbox').on('ifToggled', function(event){
-        if ($("input.flat:checked").length == $("input.flat:checkbox").length && press_select_all){
+        if (!($("input.flat:checked").length == $("input.flat:checkbox").length) && press_select_all){
             return;
         }
-        if ($("input.flat:checked").length == 0 && press_deselect_all){
+        if (!($("input.flat:checked").length == 0) && press_deselect_all){
             return;
         }
         checked_ids = [];
