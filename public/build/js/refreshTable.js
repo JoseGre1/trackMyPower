@@ -79,15 +79,15 @@ function createTable (){
         dom: "lBfrtip",
               buttons: [
                 {
-                  extend: "copy",
+                  extend: "copyHtml5",
                   className: "btn-sm"
                 },
                 {
-                  extend: "csv",
+                  extend: "csvHtml5",
                   className: "btn-sm"
                 },
                 {
-                  extend: "excel",
+                  extend: "excelHtml5",
                   className: "btn-sm"
                 },
                 {
