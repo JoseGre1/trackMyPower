@@ -397,6 +397,8 @@
     <!-- Datatables -->
     <script>
       $(document).ready(function() {
+        a = 1;
+        /*
         var handleDataTableButtons = function() {
           if ($("#datatable").length) {
             $("#datatable").DataTable({
@@ -429,6 +431,7 @@
             });
           }
         };
+        */
         /*
         TableManageButtons = function() {
           "use strict";
@@ -441,7 +444,7 @@
 
         TableManageButtons.init();
         */
-        $("#datatable_wrapper").css("opacity",0);
+        //$("#datatable_wrapper").css("opacity",0);
 
         /* USED TO ADD CHECKBOXES TO TABLES
         var $datatable = $('#datatable-checkbox');

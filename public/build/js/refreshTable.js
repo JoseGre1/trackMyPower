@@ -12,7 +12,6 @@ $(document).ready(function()
             $.post('mysql/exportTable.php', function(phpdata){
                 processJSON(phpdata);
             });
-            $("#datatable_wrapper").css("opacity",100);
         }
         else
         {
@@ -56,9 +55,39 @@ function createTable (){
     for (i = 0; i < checked_keys.length; i++){
         headers.push({title: checked_keys[i]});
     }
+    if (myTable !== 'undefined'){
+        myTable.destroy();
+    }
     //Set dataSet and headers as inputs of DataTable()
-    $('#datatable').DataTable({
+    myTable = $('#datatable').DataTable({
         data: dataSet,
-        columns: headers
+        columns: headers,
+        dom: "Bfrtip",
+              buttons: [
+                {
+                  extend: "copy",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "csv",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "excel",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "pdfHtml5",
+                  className: "btn-sm"
+                },
+                {
+                  extend: "print",
+                  className: "btn-sm"
+                },
+              ],
+        keys: true,
+        responsive: true,
+        fixedHeader: true
     });
+    $("#datatable_wrapper").css("opacity",100);
 }
