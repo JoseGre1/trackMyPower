@@ -319,14 +319,14 @@
                     </div>
 
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
-                    <div class="col-md-12 col-sm-12 col-xs-12"> 
-                        <label>
-                          <button id="sel-all-btn" class="pull-left" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
-                        </label>
-                        <div id="calendar" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                        <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                           <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                           <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
                         </div>
+                        <label>
+                          <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success pull-right">Select All</button>
+                        </label>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="ln_solid"></div>
@@ -461,10 +461,10 @@
         $('#calendar').daterangepicker(optionSet1, cb);
 
         $('#calendar').on('apply.daterangepicker', function(ev, picker) {
-              startdate = picker.startDate.format('YYYY-MM-DD h:mm');
-              enddate = picker.endDate.format('YYYY-MM-DD h:mm');
-              picker_obj = picker;
-            });
+          startdate = picker.startDate.format('YYYY-MM-DD h:mm');
+          enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+          picker_obj = picker;
+        });
 
         $('#calendar').on('show.daterangepicker', function() {
           console.log("show event fired");
