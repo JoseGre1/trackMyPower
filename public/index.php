@@ -463,6 +463,7 @@
         $('#calendar').on('apply.daterangepicker', function(ev, picker) {
               startdate = picker.startDate.format('YYYY-MM-DD h:mm');
               enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+              picker_obj = picker;
             });
 
         $('#calendar').on('show.daterangepicker', function() {
