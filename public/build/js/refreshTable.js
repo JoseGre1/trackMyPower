@@ -61,7 +61,7 @@ var JSON2Array = function (ids_array){
     //Getting name of the checked keys (title of the columns)
     var keys_array = [];
     for (i = 0; i < positions.length; i++){
-        keys_array.push(keys[positions[i]]);
+        keys_array.push(keys_array[positions[i]]);
     }
     //Getting data set from the JSON Object
     var dataSet = [];
