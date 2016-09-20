@@ -326,9 +326,11 @@
                         </div>
                       </div>
                       <div class="col-md-6 col-xs-6">
-                        <label>
-                          <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn pull-right btn-success">Select All</button>
-                        </label>
+                        <div class="text-right">
+                          <label>
+                            <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
+                          </label>
+                        </div>
                       </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
