@@ -77,6 +77,8 @@ var JSON2Array = function (ids_array){
     for (i = 0; i < keys_array.length; i++){
         headers.push({title: keys_array[i]});
     }
+    headers_copy = headers;
+    dataSet_copy = dataSet;
     return {
         headers: headers,
         dataSet: dataSet
