@@ -17,6 +17,16 @@ $(document).ready(function()
             } 
         });
         if(checked_ids.length!=0){
+            startdate = 0;
+            enddate = 0;
+            if (typeof picker === 'undefined'){
+                startdate = moment().subtract(1, 'month');
+                enddate = moment();
+            }
+            else{
+                startdate = picker.startDate.format('YYYY-MM-DD h:mm');
+                enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+            }
             $.post('mysql/exportTable.php', { startdate: startdate, enddate: enddate }, function(phpdata){
                 processJSON(phpdata);
             });
