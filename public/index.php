@@ -317,16 +317,19 @@
                         </label>
                       </div>
                     </div>
-
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                        <div id="calendar" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                    <div class="row">
+                      <div class="col-md-6 col-xs-6">
+                        <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                           <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                           <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
                         </div>
+                      </div>
+                      <div class="col-md-6 col-xs-6">
                         <label>
                           <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success pull-right">Select All</button>
                         </label>
+                      </div>
                     </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="ln_solid"></div>
