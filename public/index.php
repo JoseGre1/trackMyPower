@@ -317,22 +317,21 @@
                         </label>
                       </div>
                     </div>
+
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
                     <div class="col-md-12 col-sm-12 col-xs-12"> 
-                      <div class="center-block" style="text-align:center">
                         <label>
-                          <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
+                          <button id="sel-all-btn" class="pull-left" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
                         </label>
-                      </div>
-                      <div class="ln_solid"></div>
-                      <div class="col-md-12 col-sm-12 col-xs-12"></div>
-                      <div class="col-md-4">
-                        <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                        <div id="calendar" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                           <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                           <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
                         </div>
-                      </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                       <div class="ln_solid"></div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
                       <div id="refreshTable">
                         <table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;">
                         </table>
@@ -342,8 +341,8 @@
                 </div> <!-- closing class="x_panel"-->
               </div> <!-- closing class="col-md-12 col-sm-12 col-xs-12"-->
             </div> <!-- closing class="row"-->
-          </div> <!--closing class=""-->
-        </div> <!-- closing class="right_col" role="main" -->
+          </div> <!--closing class=""--> 
+        </div> <!-- closing class="right_col" role="main" --> 
         <!-- /page content -->
         <!-- footer content -->
         <footer>
@@ -353,8 +352,8 @@
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
-      </div>
-    </div>
+      </div> <!-- closing class="main_container" --> 
+    </div> <!-- closing class="container body" -->
 
     <!-- jQuery -->
     <script src="vendors/jquery/dist/jquery.min.js"></script>
@@ -419,9 +418,9 @@
         };
 
         var optionSet1 = {
-          startDate: moment().subtract(29, 'days'),
+          startDate: moment().subtract(1, 'month'),
           endDate: moment(),
-          minDate: '01/07/2016',
+          minDate: '07/01/2016',
           
           dateLimit: {
             days: 365
@@ -460,6 +459,11 @@
         $('#calendar span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 
         $('#calendar').daterangepicker(optionSet1, cb);
+
+        $('#calendar').on('apply.daterangepicker', function(ev, picker) {
+              startdate = picker.startDate.format('YYYY-MM-DD h:mm');
+              enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+            });
 
         $('#calendar').on('show.daterangepicker', function() {
           console.log("show event fired");

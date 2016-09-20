@@ -17,10 +17,6 @@ $(document).ready(function()
             } 
         });
         if(checked_ids.length!=0){
-            $('#calendar').on('apply.daterangepicker', function(ev, picker) {
-                var startdate = picker.startDate.format('YYYY-MM-DD h:mm');
-                var enddate = picker.endDate.format('YYYY-MM-DD h:mm');
-            });
             $.post('mysql/exportTable.php', { startdate: startdate, enddate: enddate }, function(phpdata){
                 processJSON(phpdata);
             });
