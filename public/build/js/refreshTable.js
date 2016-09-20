@@ -20,8 +20,8 @@ $(document).ready(function()
             startdate = 0;
             enddate = 0;
             if (typeof picker === 'undefined'){
-                startdate = moment().subtract(1, 'month');
-                enddate = moment();
+                startdate = moment().subtract(1, 'month').format('YYYY-MM-DD h:mm');
+                enddate = moment().format('YYYY-MM-DD h:mm');
             }
             else{
                 startdate = picker.startDate.format('YYYY-MM-DD h:mm');

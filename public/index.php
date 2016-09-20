@@ -438,8 +438,8 @@
           ranges: {
             'Today': [moment(), moment()],
             'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
-            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'Last 7 Days': [moment().subtract(7, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(1, 'month'), moment()],
             'This Month': [moment().startOf('month'), moment().endOf('month')],
             'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
           },
@@ -461,7 +461,7 @@
           }
         };
 
-        $('#calendar span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+        $('#calendar span').html(moment().subtract(1, 'month').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 
         $('#calendar').daterangepicker(optionSet1, cb);
 
