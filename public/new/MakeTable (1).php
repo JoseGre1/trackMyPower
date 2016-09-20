@@ -1,6 +1,5 @@
 <?php
 	$connect_todb = new mysqli("localhost","root","uninorte","trackmypower");
-	$format="Y-m-d H:i";
 	$startdate = $_POST["startdate"];
 	$enddate = $_POST["enddate"];
 	$startdate = date("Y-m-d H:i:s", strtotime($startdate));

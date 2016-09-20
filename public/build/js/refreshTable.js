@@ -17,7 +17,11 @@ $(document).ready(function()
             } 
         });
         if(checked_ids.length!=0){
-            $.post('mysql/exportTable.php', function(phpdata){
+            $('#calendar').on('apply.daterangepicker', function(ev, picker) {
+                var startdate = picker.startDate.format('YYYY-MM-DD h:mm');
+                var enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+            });
+            $.post('mysql/exportTable.php', { startdate: startdate, enddate: enddate }, function(phpdata){
                 processJSON(phpdata);
             });
         }
@@ -36,36 +40,44 @@ $(document).ready(function()
 
 function processJSON(phpdata){
     eval(phpdata);
-    createTable();
+    array_object = JSON2Array(checked_ids);
+    createTable(array_object.headers,array_object.dataSet);
 }
 
-function createTable (){
+var JSON2Array = function (ids_array){
     var positions = [];
     //keys: "headers" of the JSON Object e.g. "id", "date_time", ...
-    keys = Object.keys(JData[0]); 
-    //Getting positions in "keys" array where the checked id's are
-    for (i = 0; i < checked_ids.length; i++) {
-        positions.push(keys.indexOf(checked_ids[i]));   
+    var JSONkeys = Object.keys(JData[0]); 
+    //Getting positions in "keys" array where the id's are
+    for (i = 0; i < ids_array.length; i++) {
+        positions.push(JSONkeys.indexOf(ids_array[i]));   
     }
     //Getting name of the checked keys (title of the columns)
-    var checked_keys = [];
+    var keys_array = [];
     for (i = 0; i < positions.length; i++){
-        checked_keys.push(keys[positions[i]]);
+        keys_array.push(keys[positions[i]]);
     }
     //Getting data set from the JSON Object
     var dataSet = [];
     for(i = 0; i < JData.length; i++){
          var new_row = [];
          for(j = 0; j < positions.length; j++){
-            new_row.push(JData[i][checked_keys[j]]);
+            new_row.push(JData[i][keys_array[j]]);
          }
          dataSet.push(new_row);
     }
     //Getting the headers --> inputs of DataTable() function
     var headers = [];
-    for (i = 0; i < checked_keys.length; i++){
-        headers.push({title: checked_keys[i]});
+    for (i = 0; i < keys_array.length; i++){
+        headers.push({title: keys_array[i]});
     }
+    return {
+        headers: headers,
+        dataSet: dataSet
+    };
+}
+
+function createTable(headers,dataSet){
     if (typeof(myTable) !== 'undefined'){
         myTable.destroy();
         $('#datatable').remove();

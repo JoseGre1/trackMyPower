@@ -317,11 +317,20 @@
                         </label>
                       </div>
                     </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12"></div>
                     <div class="col-md-12 col-sm-12 col-xs-12"> 
                       <div class="center-block" style="text-align:center">
                         <label>
                           <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
                         </label>
+                      </div>
+                      <div class="ln_solid"></div>
+                      <div class="col-md-12 col-sm-12 col-xs-12"></div>
+                      <div class="col-md-4">
+                        <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                          <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                        </div>
                       </div>
                       <div class="ln_solid"></div>
                       <div id="refreshTable">
@@ -399,15 +408,14 @@
     <!-- Custom Theme Scripts -->
     <script src="build/js/custom.min.js"></script>
     <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
-    <script src="build/js/table_management.js"></script>
+    <script src="build/js/manage_button.js"></script>
     <script src="build/js/refreshTable.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <!--
     <script>
       $(document).ready(function() {
         var cb = function(start, end, label) {
           console.log(start.toISOString(), end.toISOString(), label);
-          $('#reportrange_right span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          $('#calendar span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         };
 
         var optionSet1 = {
@@ -449,45 +457,33 @@
           }
         };
 
-        $('#reportrange_right span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+        $('#calendar span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
 
-        $('#reportrange_right').daterangepicker(optionSet1, cb);
+        $('#calendar').daterangepicker(optionSet1, cb);
 
-        $('#reportrange_right').on('show.daterangepicker', function() {
+        $('#calendar').on('show.daterangepicker', function() {
           console.log("show event fired");
         });
-        $('#reportrange_right').on('hide.daterangepicker', function() {
+        $('#calendar').on('hide.daterangepicker', function() {
           console.log("hide event fired");
         });
-        $('#reportrange_right').on('apply.daterangepicker', function(ev, picker) {
-          var startdate = picker.startDate.format('YYYY-MM-DD h:mm');
-          var enddate = picker.endDate.format('YYYY-MM-DD h:mm');
-
-          $.post('MakeTable.php',{ startdate: startdate, enddate: enddate },function(data)
-          {
-                alert(data);  
-         });
-
-
-        });
-        $('#reportrange_right').on('cancel.daterangepicker', function(ev, picker) {
+        $('#calendar').on('cancel.daterangepicker', function(ev, picker) {
           console.log("cancel event fired");
         });
 
         $('#options1').click(function() {
-          $('#reportrange_right').data('daterangepicker').setOptions(optionSet1, cb);
+          $('#calendar').data('daterangepicker').setOptions(optionSet1, cb);
         });
 
         $('#options2').click(function() {
-          $('#reportrange_right').data('daterangepicker').setOptions(optionSet2, cb);
+          $('#calendar').data('daterangepicker').setOptions(optionSet2, cb);
         });
 
         $('#destroy').click(function() {
-          $('#reportrange_right').data('daterangepicker').remove();
+          $('#calendar').data('daterangepicker').remove();
         });
 
       });
     </script>
-    -->
   </body>
 </html>
