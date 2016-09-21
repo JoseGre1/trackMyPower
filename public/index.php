@@ -479,7 +479,6 @@
           enddate = picker.endDate.format('YYYY-MM-DD h:mm');
           //searching the date range insinde the table
           drawTable(ev,picker);
-          }
         });
 
         $('#options1').click(function() {
