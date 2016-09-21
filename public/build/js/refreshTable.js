@@ -37,8 +37,8 @@ $(document).ready(function()
             var wrapper_element = document.getElementById('datatable_wrapper');
             if (wrapper_element !== null){
                 $("#datatable_wrapper").css("opacity",0);
+                $("div#datatable_wrapper").remove();
                 myTable.destroy();
-                $('#datatable').remove();
             }
             if (press_deselect_all){
                 press_deselect_all = false;
@@ -88,14 +88,14 @@ var JSON2Array = function (ids_array){
 }
 
 function createTable(headers,dataSet){
-    $('#datatable').remove();
+    $("div#datatable_wrapper").remove();
     var tabledef = '<table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;"> </table>';
     $("div#refreshTable").append(tabledef);
     if (typeof(myTable) !== 'undefined'){
         myTable.destroy();
     }
     //Set dataSet and headers as inputs of DataTable()
-    myTable = $('#datatable').DataTable({
+    myTable = $("#datatable").DataTable({
         data: dataSet,
         columns: headers,
         dom: "lBfrtip",
@@ -126,7 +126,7 @@ function createTable(headers,dataSet){
         fixedHeader: true
     });
     $("#datatable_wrapper").css("opacity",100);
-    $("#datatable").css("opacity",100);
+    $("table#datatable").css("opacity",100);
     press_select_all = false;
     press_deselect_all = false;
 }
