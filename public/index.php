@@ -465,11 +465,13 @@
         $('#calendar').daterangepicker(optionSet1, cb);
 
         $('#calendar').on('apply.daterangepicker', function(ev, picker) {
+          /*
           picker_obj = picker;
           startdate = picker.startDate.format('YYYY-MM-DD H:mm');
           enddate = picker.endDate.format('YYYY-MM-DD H:mm');
           //searching the date range insinde the table
           drawTable(ev,picker);
+          */
         });
 
         $('#calendar').on('hide.daterangepicker', function(ev, picker) {
