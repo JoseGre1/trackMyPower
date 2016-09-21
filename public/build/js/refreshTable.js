@@ -55,6 +55,7 @@ var JSON2Array = function (ids_array){
     var position;
     //keys: "headers" of the JSON Object e.g. "id", "date_time", ...
     var JSONkeys = Object.keys(JData[0]); 
+    var keys_array= [];
     //Getting positions in "keys" array where the id's are
     //Getting name of the checked keys (title of the columns)
     for (i = 0; i < ids_array.length; i++) {
