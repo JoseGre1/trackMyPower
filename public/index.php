@@ -466,8 +466,8 @@
 
         $('#calendar').on('apply.daterangepicker', function(ev, picker) {
           picker_obj = picker;
-          startdate = picker.startDate.format('YYYY-MM-DD h:mm');
-          enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+          startdate = picker.startDate.format('YYYY-MM-DD H:mm');
+          enddate = picker.endDate.format('YYYY-MM-DD H:mm');
           //searching the date range insinde the table
           drawTable(ev,picker);
         });
@@ -475,8 +475,8 @@
         $('#calendar').on('hide.daterangepicker', function(ev, picker) {
           console.log("hide event fired");
           picker_obj = picker;
-          startdate = picker.startDate.format('YYYY-MM-DD h:mm');
-          enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+          startdate = picker.startDate.format('YYYY-MM-DD H:mm');
+          enddate = picker.endDate.format('YYYY-MM-DD H:mm');
           //searching the date range insinde the table
           drawTable(ev,picker);
         });
@@ -507,8 +507,8 @@
         function drawTable(ev,picker) {
           if ((typeof (myTable) !== 'undefined') && ($("input#date_time").is(':checked'))) {
             $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
-              var min = picker.startDate.format('YYYY-MM-DD h:mm');
-              var max = picker.endDate.format('YYYY-MM-DD h:mm');
+              var min = picker.startDate.format('YYYY-MM-DD H:mm');
+              var max = picker.endDate.format('YYYY-MM-DD H:mm');
               if($("input#id").is(':checked')){
                var date_column = parseFloat( data[1] ) || 0; // use data for the date/time column
               }
