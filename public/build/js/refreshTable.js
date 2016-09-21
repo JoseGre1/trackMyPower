@@ -38,6 +38,7 @@ $(document).ready(function()
             if (wrapper_element !== null){
                 $("#datatable_wrapper").css("opacity",0);
                 myTable.destroy();
+                $('#datatable').remove();
             }
             if (press_deselect_all){
                 press_deselect_all = false;
