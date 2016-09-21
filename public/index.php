@@ -512,13 +512,13 @@
               var min = picker.startDate.format('YYYY-MM-DD H:mm');
               var max = picker.endDate.format('YYYY-MM-DD H:mm');
               if($("input#id").is(':checked')){
-               var date_column = parseFloat( data[1] ) || 0; // use data for the date/time column
+               var date_column = data[1] || 0; // use data for the date/time column
               }
               else
               {
-                var date_column = parseFloat( data[0] ) || 0; // use data for the date/time column
+                var date_column = data[0] || 0; // use data for the date/time column
               }
-              if ( ( isNaN( min ) && isNaN( max ) ) || ( isNaN( min ) && date_column <= max ) || ( min <= date_column   && isNaN( max ) ) || ( min <= date_column   && date_column <= max ) )
+              if (( min <= date_column && date_column <= max ))
               {
                 return true;
               }
