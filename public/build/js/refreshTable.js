@@ -75,7 +75,7 @@ var JSON2Array = function (ids_array){
     var headers = [];
     var c_title;
     for (i = 0; i < keys_array.length; i++){
-        c_title = $(keys_array[i]).attr("value");
+        c_title = $("#"+keys_array[i]).attr("value");
         headers.push({title: c_title});
     }
     return {
