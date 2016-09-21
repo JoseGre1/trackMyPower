@@ -18,8 +18,7 @@ $(document).ready(function()
             } 
         });
         if(checked_ids.length!=0){
-            startdate = 0;
-            enddate = 0;
+            /*
             if (typeof picker === 'undefined'){
                 startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
                 enddate = moment().format('YYYY-MM-DD H:mm');
@@ -28,7 +27,8 @@ $(document).ready(function()
                 startdate = picker_obj.startDate.format('YYYY-MM-DD H:mm');
                 enddate = picker_obj.endDate.format('YYYY-MM-DD H:mm');
             }
-            $.post('mysql/exportTable.php', { startdate: startdate, enddate: enddate }, function(phpdata){
+            */
+            $.post('mysql/exportTable.php', function(phpdata){
                 processJSON(phpdata);
             });
         }
