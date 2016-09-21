@@ -21,12 +21,12 @@ $(document).ready(function()
             startdate = 0;
             enddate = 0;
             if (typeof picker === 'undefined'){
-                startdate = moment().subtract(1, 'month').format('YYYY-MM-DD h:mm');
-                enddate = moment().format('YYYY-MM-DD h:mm');
+                startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
+                enddate = moment().format('YYYY-MM-DD H:mm');
             }
             else{
-                startdate = picker_obj.startDate.format('YYYY-MM-DD h:mm');
-                enddate = picker_obj.endDate.format('YYYY-MM-DD h:mm');
+                startdate = picker_obj.startDate.format('YYYY-MM-DD H:mm');
+                enddate = picker_obj.endDate.format('YYYY-MM-DD H:mm');
             }
             $.post('mysql/exportTable.php', { startdate: startdate, enddate: enddate }, function(phpdata){
                 processJSON(phpdata);
@@ -39,8 +39,6 @@ $(document).ready(function()
                 $("#datatable_wrapper").css("opacity",0);
                 myTable.destroy();
                 $('#datatable').remove();
-                var tabledef = '<table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;"> </table>';
-                $("div#refreshTable").append(tabledef);
             }
             if (press_deselect_all){
                 press_deselect_all = false;
