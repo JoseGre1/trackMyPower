@@ -25,8 +25,8 @@ $(document).ready(function()
                 enddate = moment().format('YYYY-MM-DD h:mm');
             }
             else{
-                startdate = picker.startDate.format('YYYY-MM-DD h:mm');
-                enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+                startdate = picker_obj.startDate.format('YYYY-MM-DD h:mm');
+                enddate = picker_obj.endDate.format('YYYY-MM-DD h:mm');
             }
             $.post('mysql/exportTable.php', { startdate: startdate, enddate: enddate }, function(phpdata){
                 processJSON(phpdata);
@@ -37,12 +37,17 @@ $(document).ready(function()
             var wrapper_element = document.getElementById('datatable_wrapper');
             if (wrapper_element !== null){
                 $("#datatable_wrapper").css("opacity",0);
+                myTable.destroy();
+                $('#datatable').remove();
+                var tabledef = '<table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;"> </table>';
+                $("div#refreshTable").append(tabledef);
             }
             if (press_deselect_all){
                 press_deselect_all = false;
             }
         }
     });
+
 });
 
 function processJSON(phpdata){
@@ -84,19 +89,12 @@ var JSON2Array = function (ids_array){
     };
 }
 
-function changeHeader(header){
-    switch(header){
-        case 'id':
-            return 'ID';
-    }
-}
-
 function createTable(headers,dataSet){
+    $('#datatable').remove();
+    var tabledef = '<table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;"> </table>';
+    $("div#refreshTable").append(tabledef);
     if (typeof(myTable) !== 'undefined'){
         myTable.destroy();
-        $('#datatable').remove();
-        var tabledef = '<table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;"> </table>';
-        $("div#refreshTable").append(tabledef);
     }
     //Set dataSet and headers as inputs of DataTable()
     myTable = $('#datatable').DataTable({

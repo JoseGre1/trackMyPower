@@ -440,7 +440,6 @@
             'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
             'Last 7 Days': [moment().subtract(7, 'days'), moment()],
             'Last 30 Days': [moment().subtract(1, 'month'), moment()],
-            'This Month': [moment().startOf('month'), moment().endOf('month')],
             'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
           },
           opens: 'right',
@@ -466,19 +465,21 @@
         $('#calendar').daterangepicker(optionSet1, cb);
 
         $('#calendar').on('apply.daterangepicker', function(ev, picker) {
+          picker_obj = picker;
           startdate = picker.startDate.format('YYYY-MM-DD h:mm');
           enddate = picker.endDate.format('YYYY-MM-DD h:mm');
-          picker_obj = picker;
+          //searching the date range insinde the table
+          drawTable(ev,picker);
         });
 
-        $('#calendar').on('show.daterangepicker', function() {
-          console.log("show event fired");
-        });
-        $('#calendar').on('hide.daterangepicker', function() {
+        $('#calendar').on('hide.daterangepicker', function(ev, picker) {
           console.log("hide event fired");
-        });
-        $('#calendar').on('cancel.daterangepicker', function(ev, picker) {
-          console.log("cancel event fired");
+          picker_obj = picker;
+          startdate = picker.startDate.format('YYYY-MM-DD h:mm');
+          enddate = picker.endDate.format('YYYY-MM-DD h:mm');
+          //searching the date range insinde the table
+          drawTable(ev,picker);
+          }
         });
 
         $('#options1').click(function() {
@@ -493,7 +494,40 @@
           $('#calendar').data('daterangepicker').remove();
         });
 
+        // Event listener to the two range filtering inputs to redraw on input
+        $('#calendar').on('show.daterangepicker', function() {
+          console.log("show event fired");
+          
+        });
+        
+        $('#calendar').on('cancel.daterangepicker', function(ev, picker) {
+          console.log("cancel event fired");
+        });
+
+        //search and draw table function
+        function drawTable(ev,picker) {
+          if ((typeof (myTable) !== 'undefined') && ($("input#date_time").is(':checked'))) {
+            $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
+              var min = picker.startDate.format('YYYY-MM-DD h:mm');
+              var max = picker.endDate.format('YYYY-MM-DD h:mm');
+              if($("input#id").is(':checked')){
+               var date_column = parseFloat( data[1] ) || 0; // use data for the date/time column
+              }
+              else
+              {
+                var date_column = parseFloat( data[0] ) || 0; // use data for the date/time column
+              }
+              if ( ( isNaN( min ) && isNaN( max ) ) || ( isNaN( min ) && date_column <= max ) || ( min <= date_column   && isNaN( max ) ) || ( min <= date_column   && date_column <= max ) )
+              {
+                return true;
+              }
+              return false;
+            });
+            myTable.draw();
+          }
+        }
       });
     </script>
   </body>
 </html>
+
