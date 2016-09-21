@@ -10,10 +10,11 @@ $(document).ready(function()
             return;
         }
         checked_ids = [];
+        column_header = [];
         $("input.flat:checkbox").each(function(i){
             var val = $(this).is(':checked');
             if(val){
-                checked_ids.push($(this).attr("value"));
+                checked_ids.push($(this).attr("id"));
             } 
         });
         if(checked_ids.length!=0){
@@ -51,38 +52,42 @@ function processJSON(phpdata){
 }
 
 var JSON2Array = function (ids_array){
-    var positions = [];
+    var position;
     //keys: "headers" of the JSON Object e.g. "id", "date_time", ...
     var JSONkeys = Object.keys(JData[0]); 
     //Getting positions in "keys" array where the id's are
-    for (i = 0; i < ids_array.length; i++) {
-        positions.push(JSONkeys.indexOf(ids_array[i]));   
-    }
     //Getting name of the checked keys (title of the columns)
-    var keys_array = [];
-    for (i = 0; i < positions.length; i++){
-        keys_array.push(JSONkeys[positions[i]]);
+    for (i = 0; i < ids_array.length; i++) {
+        position = JSONkeys.indexOf(ids_array[i]);
+        keys_array.push(JSONkeys[position]);
     }
     //Getting data set from the JSON Object
     var dataSet = [];
     for(i = 0; i < JData.length; i++){
          var new_row = [];
-         for(j = 0; j < positions.length; j++){
+         for(j = 0; j < keys_array.length; j++){
             new_row.push(JData[i][keys_array[j]]);
          }
          dataSet.push(new_row);
     }
     //Getting the headers --> inputs of DataTable() function
     var headers = [];
+    var c_title;
     for (i = 0; i < keys_array.length; i++){
-        headers.push({title: keys_array[i]});
+        c_title = $(keys_array[i]).attr("value");
+        headers.push({title: c_title});
     }
-    headers_copy = headers;
-    dataSet_copy = dataSet;
     return {
         headers: headers,
         dataSet: dataSet
     };
+}
+
+function changeHeader(header){
+    switch(header){
+        case 'id':
+            return 'ID';
+    }
 }
 
 function createTable(headers,dataSet){

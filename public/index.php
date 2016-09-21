@@ -233,7 +233,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="id" id="id"> ID
+                          <input type="checkbox" class="flat" name="toShow" value="ID" id="id"> ID
                         </label>
                       </div>
                     </div>
@@ -241,7 +241,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="date_time" id="date_time"> Date and Time
+                          <input type="checkbox" class="flat" name="toShow" value="Date and Time" id="date_time">Date and Time
                         </label>
                       </div>
                     </div>         
@@ -249,7 +249,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="temperature" id="temperature"> Temperature
+                          <input type="checkbox" class="flat" name="toShow" value="Temperature" id="temperature"> Temperature
                         </label>
                       </div>
                     </div>
@@ -257,7 +257,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="humidity" id="humidity"> Humidity
+                          <input type="checkbox" class="flat" name="toShow" value="Humidity" id="humidity">Humidity
                         </label>
                       </div>
                     </div>
@@ -265,7 +265,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="wind_speed" id="wind_speed"> Wind Speed
+                          <input type="checkbox" class="flat" name="toShow" value="Wind Speed" id="wind_speed">Wind Speed
                         </label>
                       </div>
                     </div>
@@ -273,7 +273,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="voltage_med1" id="voltage_med1"> Voltage (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="Voltage (Meter 1)" id="voltage_med1">Voltage (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -281,7 +281,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="curr_med1" id="curr_med1"> Current (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="Current (Meter 1)" id="curr_med1">Current (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -289,7 +289,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="energy_med1" id="energy_med1"> Energy (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="Energy (Meter 1)" id="energy_med1">Energy (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -297,7 +297,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="power_med1" id="power_med1"> Power (Meter 1)
+                          <input type="checkbox" class="flat" name="toShow" value="Power (Meter 1)" id="power_med1">Power (Meter 1)
                         </label>
                       </div>
                     </div>
@@ -305,7 +305,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="latitude" id="latitude"> Latitude
+                          <input type="checkbox" class="flat" name="toShow" value="Latitude" id="latitude">Latitude
                         </label>
                       </div>
                     </div>
@@ -313,7 +313,7 @@
                     <div class="col-md-3 col-sm-4 col-xs-12">
                       <div class="checkbox">
                         <label>
-                          <input type="checkbox" class="flat" name="toShow" value="longitude" id="longitude"> Longitude
+                          <input type="checkbox" class="flat" name="toShow" value="Longitude" id="longitude">Longitude
                         </label>
                       </div>
                     </div>
@@ -405,7 +405,7 @@
     <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
     <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
     <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <script src="vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script>
+    <!--<script src="vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script> -->
     <script src="vendors/jszip/dist/jszip.min.js"></script>
     <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
     <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
