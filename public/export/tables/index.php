@@ -44,7 +44,7 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="../../index.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
+              <a href="../../Home.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -130,7 +130,7 @@
                       </a>
                     </li>
                      <li><a href="../../javascript:;">Help</a></li>
-                    <li><a href="../../login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="../../index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul> 
                 </li>
 
