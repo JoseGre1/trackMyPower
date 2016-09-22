@@ -273,7 +273,7 @@
                     <div class="x_content">
                       <div class="dashboard-widget-content">
                         
-                              <div  style="height: 225px;" id="map"></div>
+                              <div  style="height: 230px;" id="map"></div>
                                       <script type="text/javascript">
 
                                   var map;
@@ -427,18 +427,20 @@
                                   }
 // Electrical data refresh
 
-                                      function auto_loadmed(variable){
+                                        function auto_loadmed(variable){
                                         //var variable = "temperature";
                                           $.ajax({
-
                                             url: "centraldata.php",
                                             method: "POST",
                                             data: { variable : variable },
                                             cache: false,
                                             success: function(data){
+                                              if(variable == "gauge-text"){
+                                                gauge.set(data);
+                                              }else{
                                               var element = "#".concat(variable);
                                               $(element).html(data);
-                                              
+                                              }
                                               //alert(data);
                                             } 
                                           });
