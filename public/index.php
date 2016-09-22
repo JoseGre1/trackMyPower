@@ -273,7 +273,7 @@
                     <div class="x_content">
                       <div class="dashboard-widget-content">
                         
-                              <div  style="height: 200px;" id="map"></div>
+                              <div  style="height: 250px;" id="map"></div>
                                       <script type="text/javascript">
 
                                   var map;
