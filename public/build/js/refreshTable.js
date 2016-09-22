@@ -127,6 +127,7 @@ function createTable(headers,dataSet){
     });
     $("#datatable_wrapper").css("opacity",100);
     $("table#datatable").css("opacity",100);
+    drawTable();
     press_select_all = false;
     press_deselect_all = false;
 }

@@ -428,6 +428,7 @@
 
         startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
         enddate = moment().format('YYYY-MM-DD H:mm');
+        drawTable();
 
         var optionSet1 = {
           startDate: moment().subtract(1, 'month'),
@@ -507,6 +508,7 @@
         function drawTable() {
           if (typeof (myTable) !== 'undefined') {
             $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
+              
               if (typeof picker_obj === 'undefined'){
                 startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
                 enddate = moment().format('YYYY-MM-DD H:mm');
@@ -515,6 +517,10 @@
                 startdate = picker_obj.startDate.format('YYYY-MM-DD H:mm');
                 enddate = picker_obj.endDate.format('YYYY-MM-DD H:mm');
               }
+
+              dateMin = startdate.substring(0,4) + startdate.substring(5,7) + startdate.substring(8,10) + startdate.substring(11,12)+startdate.substring(13,15);
+              dateMax = enddate.substring(0,4) + enddate.substring(5,7) + enddate.substring(8,10) + enddate.substring(11,12)+enddate.substring(13,15);
+              
               if($("input#id").is(':checked')){
                var date_column = data[1] || 0; // use data for the date/time column
               }
@@ -522,7 +528,22 @@
               {
                 var date_column = data[0] || 0; // use data for the date/time column
               }
-              if (( min <= date_column && date_column <= max ))
+
+              date_column = date_column.substring(0,4) + date_column.substring(5,7) + date_column.substring(8,10) + date_column.substring(11,12)+date_column.substring(13,15);
+              
+              if ( dateMin === "" && dateMax === "" )
+              {
+                return true;
+              }
+              else if ( dateMin <= date_column && dateMax === "")
+              {
+                return true;
+              }
+              else if ( dateMax >= date_column && dateMin === "")
+              {
+                return true;
+              }
+              else if (dateMin <= date_column && dateMax >= date_column)
               {
                 return true;
               }
