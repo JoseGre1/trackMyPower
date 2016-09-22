@@ -413,7 +413,7 @@
                                             success: function(data){
                                               var element = "#".concat(variable);
                                               $(element).html(data);
-                                              //alert(element);
+                                              alert(element);
                                             } 
                                           });
                                   }
