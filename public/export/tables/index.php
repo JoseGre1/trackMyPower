@@ -32,7 +32,7 @@
     <!-- starrr -->
     <link href="../../vendors/starrr/dist/starrr.css" rel="stylesheet">
     <!-- favicon icon -->
-    <link rel="icon" href="favicon.png" type="image/png">
+    <link rel="icon" href="../../favicon.png" type="image/png">
 
     <!-- Custom Theme Style -->
     <link href="../../build/css/custom.min.css" rel="stylesheet">
@@ -211,6 +211,12 @@
                   <div class="x_content">
                     Please choose the fields to be shown/exported: </br>
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                     <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
+                          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
+                          <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
+                      </div>
+                    </div>
                     <!-- JUST ANOTHER WAY TO ADD CHECKBOX IN BOOTSTRAP -->
                     <!--
                     <label>Fields:</label>
@@ -316,10 +322,7 @@
                     <div class="col-md-12 col-sm-12 col-xs-12"></div>
                     <div class="row">
                       <div class="col-md-6 col-xs-6">
-                        <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                          <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
-                        </div>
+                        </br>
                       </div>
                       <div class="col-md-6 col-xs-6">
                         <div class="text-right">
@@ -417,6 +420,9 @@
           console.log(start.toISOString(), end.toISOString(), label);
           $('#calendar span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         };
+
+        startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
+        enddate = moment().format('YYYY-MM-DD H:mm');
 
         var optionSet1 = {
           startDate: moment().subtract(1, 'month'),
