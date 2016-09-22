@@ -377,7 +377,7 @@
                         </div>
                         <div class="col-sm-3">
                           <div class="daily-weather">
-                            <h2 class="day">% Humidity</h2>
+                            <h2 class="day">Humidity %</h2>
                             <h3 class=" " id=humidity></h3>
                             <canvas height="32" width="32" id="snow"></canvas>
                             
@@ -385,7 +385,7 @@
                         </div>
                         <div class="col-sm-3">
                           <div class="daily-weather">
-                            <h2 class="day">Wind Speed</h2>
+                            <h2 class="day">Wind  KM/H</h2>
                             <h3 class="" id=wind_speed></h3>
                             <canvas height="32" width="32" id="wind"></canvas>
                            
@@ -790,7 +790,7 @@
 
       gauge.maxValue = 170;
       gauge.animationSpeed = 32;
-      gauge.set(120);
+      //gauge.set(120);
       gauge.setTextField(document.getElementById("gauge-text"));
     </script>
     <!-- /gauge.js -->
