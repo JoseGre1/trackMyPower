@@ -2,7 +2,7 @@
 
 
   $variable = $_POST["variable"];
-  $connect_todb = new mysqli('localhost','root','uninorte','trackmypower');
+  $connect_todb = new mysqli('127.5.177.130:3306','mpardo','pardo1234','trackmypower');
   $output = '';
     if($variable=="gauge-text"){
     $result = mysqli_query($connect_todb, "SELECT * FROM `metcentraldata` ORDER BY `id` DESC LIMIT 1");
