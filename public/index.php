@@ -7,7 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Power Tracking Services</title>
+    <title>Gentellela Alela! | </title>
 
     <!-- Bootstrap -->
     <link href="vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
@@ -17,25 +17,13 @@
     <link href="vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
     <link href="vendors/iCheck/skins/flat/green.css" rel="stylesheet">
-    <!-- Datatables -->
-    <link href="vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
-    <!-- bootstrap-wysiwyg -->
-    <link href="vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
-    <!-- Select2 -->
-    <link href="vendors/select2/dist/css/select2.min.css" rel="stylesheet">
-    <!-- Switchery -->
-    <link href="vendors/switchery/dist/switchery.min.css" rel="stylesheet">
-    <!-- starrr -->
-    <link href="vendors/starrr/dist/starrr.css" rel="stylesheet">
-    <!-- favicon icon -->
-    <link rel="icon" href="favicon.png" type="image/png">
+    <!-- bootstrap-progressbar -->
+    <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
+    <!-- JQVMap -->
+    <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
 
     <!-- Custom Theme Style -->
-    <link href="build/css/custom.min.css" rel="stylesheet">
+    <link href="../build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -44,7 +32,7 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="index4.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
+              <a href="index.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -73,10 +61,6 @@
                     <li><a href="index.php">Home</a></li>
                     </ul>
                   </li>
-                  <li><a><i class="fa fa-edit"></i> Forms <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                    </ul>
-                  </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="index.php">Data Charts</a></li>
@@ -84,7 +68,7 @@
                   </li>
                   <li><a><i class="fa fa-download"></i> Export <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.php">Tables</a></li>
+                      <li><a href="export/tables/index.php">Tables</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -179,270 +163,507 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="">
-            <!-- page title -->
-            <div class="page-title">
-              <div class="title_left">
-                <h3>Export Data</h3>
+          <!-- top tiles -->
+          <div class="row tile_count">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Users</span>
+              <div class="count">2500</div>
+              <span class="count_bottom"><i class="green">4% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-clock-o"></i> Average Time</span>
+              <div class="count">123.50</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Males</span>
+              <div class="count green">2,500</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+              <div class="count">4,567</div>
+              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
+              <div class="count">2,315</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div>
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+              <div class="count">7,325</div>
+              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+            </div>
+          </div>
+          <!-- /top tiles -->
+
+          <div class="row">
+            <div class="col-md-12 col-sm-12 col-xs-12">
+             
+             <!-- Electrical widget-->
+            <div class="col-md-4 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                  <h2>Electrical info</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+ 
+                      </ul>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="dashboard-widget-content">
+                    <ul class="quick-list">
+                      <li><i class="fa fa-calendar-o" id="voltage_med1"></i></li>
+                      <li><i class="fa fa-bars" id="power_med1"></i></li>
+                      <li><i class="fa fa-bar-chart" id="energy_med1"></i></li>
+                      <li><i class="fa fa-line-chart" id="fp_med1"></i>FP</li>
+                    
+                    </ul>
+
+                    <div class="sidebar-widget">
+                      <h4>Power</h4>
+                      <canvas width="150" height="80" id="foo" class="" style="width: 160px; height: 100px;"></canvas>
+                      <div class="goal-wrapper">
+                        <span class="gauge-value pull-left"></span>
+                        <span id="gauge-text" class="gauge-value pull-left"></span>
+                        <span id="goal-text" class="goal-value pull-right">170</span>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
-            <!-- page title -->
 
-            <!-- panel: Filter Results-->
-            <div class="clearfix"></div>
-            <div class="row">
-              <div class="col-md-12 col-sm-12 col-xs-12">
-                <div class="x_panel">
-                  <div class="x_title">
-                    <h2>Tables <small>Filter Results</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
+
+
+   
+
+                
+
+                               
+                <!-- start of weather widget -->
+                <div class="col-md-6 col-sm-6 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Weather Report</h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                          </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>                    <div class="x_content">
+                      <div class="row">
+                        <div class="col-sm-12">
+
+
+
+                          <div class="temperature"><b>Monday</b>, 07:30 AM
+                            <span>F</span>
+                            <span><b>C</b></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="weather-icon">
+                            <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
+                          </div>
+                        </div>
+                        <div class="col-sm-8">
+                          <div class="weather-text">
+                            <h2>Universidad del Norte <br><i>Km 5 Vía Pto Colombia</i></h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="weather-text pull-right" id=temperature>
+                        </div>
+                          </div>
+
+                      <div class="clearfix"></div>
+
+                      <div class="row weather-days">
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">UV<br> Index</h2>
+                            <h3 class=" " id=uv_index></h3>
+                            <canvas id="clear-day" width="32" height="32"></canvas>
+                           
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">Solar radiation</h2>
+                            <h3 class=" " id=solar_radiation></h3>
+                            <canvas height="32" width="32" id="rain"></canvas>
+                           
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">% Humidity</h2>
+                            <h3 class=" " id=humidity></h3>
+                            <canvas height="32" width="32" id="snow"></canvas>
+                            
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">Wind Speed</h2>
+                            <h3 class="" id=wind_speed></h3>
+                            <canvas height="32" width="32" id="wind"></canvas>
+                           
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
                   </div>
-                  <div class="x_content">
-                    Please choose the fields to be shown/exported: </br>
-                    <div class="col-md-12 col-sm-12 col-xs-12"></div>
-                    <!-- JUST ANOTHER WAY TO ADD CHECKBOX IN BOOTSTRAP -->
-                    <!--
-                    <label>Fields:</label>
-                    <p style="padding: 5px;">
-                    <input type="checkbox" name="hobbies[]" id="hobby1" value="ski" data-parsley-mincheck="2" required class="flat" /> Skiing
-                    <br />
-                    <input type="checkbox" name="hobbies[]" id="hobby2" value="run" class="flat" /> Running
-                    <br />
-                    <input type="checkbox" name="hobbies[]" id="hobby3" value="eat" class="flat" /> Eating
-                    <br />
-                    <input type="checkbox" name="hobbies[]" id="hobby4" value="sleep" class="flat" /> Sleeping
-                    <br />
-                        <p>
-                        -->
-                                        
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="ID" id="id"> ID
-                        </label>
-                      </div>
-                    </div>
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Date/Time" id="date_time"> Date and Time
-                        </label>
-                      </div>
-                    </div>         
+                </div>
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Temperature" id="temperature">  Temperature
-                        </label>
-                      </div>
-                    </div>
+                                                  <script type="text/javascript"
+                                      src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+                                  <script>
+                                      function auto_load(variable){
+                                        //var variable = "temperature";
+                                          $.ajax({
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Humidity" id="humidity"> Humidity
-                        </label>
-                      </div>
-                    </div>
+                                            url: "loaddata.php",
+                                            method: "POST",
+                                            data: { variable : variable },
+                                            cache: false,
+                                            success: function(data){
+                                              var element = "#".concat(variable);
+                                              $(element).html(data);
+                                              //alert(element);
+                                            } 
+                                          });
+                                  }
+                                  function ShowWheather()
+                                  {
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Wind Spd" id="wind_speed"> Wind Speed
-                        </label>
-                      </div>
-                    </div>
+                                    auto_load("temperature"); //Call auto_load() function when DOM is Ready
+                                    auto_load("humidity");
+                                    auto_load("wind_speed");
+                                    auto_load("uv_index");
+                                    auto_load("solar_radiation");
+     
+                                  }
+// Electrical data refresh
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Voltage (M.1)" id="voltage_med1"> Voltage (Meter 1)
-                        </label>
-                      </div>
-                    </div>
+                                      function auto_loadmed(variable){
+                                        //var variable = "temperature";
+                                          $.ajax({
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Current (M.1)" id="curr_med1"> Current (Meter 1)
-                        </label>
-                      </div>
-                    </div>
+                                            url: "centraldata.php",
+                                            method: "POST",
+                                            data: { variable : variable },
+                                            cache: false,
+                                            success: function(data){
+                                              var element = "#".concat(variable);
+                                              $(element).html(data);
+                                              
+                                              //alert(data);
+                                            } 
+                                          });
+                                  }
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Energy (M.1)" id="energy_med1"> Energy (Meter 1)
-                        </label>
-                      </div>
-                    </div>
+                                  function ShowElectrical()
+                                  {
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Power (M.1)" id="power_med1"> Power (Meter 1)
-                        </label>
-                      </div>
-                    </div>
+                                    auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
+                                    auto_loadmed("power_med1");
+                                    auto_loadmed("energy_med1");
+                                    //auto_loadmed("gauge-text");
+                                    //auto_loadmed("goal-text");
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Latitude" id="latitude"> Latitude
-                        </label>
-                      </div>
-                    </div>
+                                    //auto_loadmed("fp_med1");
+                                    
+     
+                                  }
 
-                    <div class="col-md-3 col-sm-4 col-xs-12">
-                      <div class="checkbox">
-                        <label>
-                          <input type="checkbox" class="flat" name="toShow" value="Longitude" id="longitude"> Longitude
-                        </label>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12"></div>
-                    <div class="row">
-                      <div class="col-md-6 col-xs-6">
-                        <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                          <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                          <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
-                        </div>
-                      </div>
-                      <div class="col-md-6 col-xs-6">
-                        <div class="text-right">
-                          <label>
-                            <button id="sel-all-btn" value="Select All" onclick="SelectAll()" type="button" class="btn btn-success">Select All</button>
-                          </label>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div class="ln_solid"></div>
-                    </div>
-                    <div class="col-md-12 col-sm-12 col-xs-12">
-                      <div id="refreshTable">
-                        <table id="datatable" class="table table-striped table-bordered bulk_action" style="opacity:0;">
-                        </table>
-                      </div> <!-- closing id="refreshTable"-->
-                    </div> <!-- closing class="col-md-12 col-sm-12 col-xs-12" -->
-                  </div> <!-- closing class="x_content"-->
-                </div> <!-- closing class="x_panel"-->
-              </div> <!-- closing class="col-md-12 col-sm-12 col-xs-12"-->
-            </div> <!-- closing class="row"-->
-          </div> <!--closing class=""--> 
-        </div> <!-- closing class="right_col" role="main" --> 
+
+                                  $(document).ready(function(){
+                                    ShowElectrical();
+                                    ShowWheather();
+                                    setInterval(function(){
+                                      ShowWheather(); 
+                                      ShowElectrical();
+                                    },10000);
+                                                                   //Refresh auto_load() function after 10000 milliseconds
+                                  });
+                                   
+
+                                
+                                  </script>
+                <!-- end of weather widget -->
+              </div>
+            </div>
+          </div>
+        </div>
         <!-- /page content -->
+
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            © Copyright 2016, Power Tracking Services GmbH
+            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
           </div>
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
-      </div> <!-- closing class="main_container" --> 
-    </div> <!-- closing class="container body" -->
+      </div>
+    </div>
 
     <!-- jQuery -->
-    <script src="vendors/jquery/dist/jquery.min.js"></script>
+    <script src="../vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="vendors/fastclick/lib/fastclick.js"></script>
+    <script src="../vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="vendors/nprogress/nprogress.js"></script>
+    <script src="../vendors/nprogress/nprogress.js"></script>
+    <!-- Chart.js -->
+    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <!-- gauge.js -->
+    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
-    <script src="vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="vendors/iCheck/icheck.min.js"></script>
+    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <!-- Skycons -->
+    <script src="../vendors/skycons/skycons.js"></script>
+    <!-- Flot -->
+    <script src="../vendors/Flot/jquery.flot.js"></script>
+    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="../vendors/Flot/jquery.flot.time.js"></script>
+    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <!-- Flot plugins -->
+    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <!-- DateJS -->
+    <script src="../vendors/DateJS/build/date.js"></script>
+    <!-- JQVMap -->
+    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <!-- bootstrap-daterangepicker -->
     <script src="js/moment/moment.min.js"></script>
     <script src="js/datepicker/daterangepicker.js"></script>
-    <!-- bootstrap-wysiwyg -->
-    <script src="vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="vendors/google-code-prettify/src/prettify.js"></script>
-    <!-- jQuery Tags Input -->
-    <script src="vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
-    <!-- Switchery -->
-    <script src="vendors/switchery/dist/switchery.min.js"></script>
-    <!-- Select2 -->
-    <script src="vendors/select2/dist/js/select2.full.min.js"></script>
-    <!-- Parsley -->
-    <script src="vendors/parsleyjs/dist/parsley.min.js"></script>
-    <!-- Autosize -->
-    <script src="vendors/autosize/dist/autosize.min.js"></script>
-    <!-- jQuery autocomplete -->
-    <script src="vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
-    <!-- starrr -->
-    <script src="vendors/starrr/dist/starrr.js"></script>
-    <!-- Datatables -->
-    <script src="vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-    <script src="vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
-    <!--<script src="vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script> -->
-    <script src="vendors/jszip/dist/jszip.min.js"></script>
-    <script src="vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="vendors/pdfmake/build/vfs_fonts.js"></script>
+
     <!-- Custom Theme Scripts -->
-    <script src="build/js/custom.min.js"></script>
-    <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
-    <script src="build/js/manage_button.js"></script>
-    <script src="build/js/refreshTable.js"></script>
+    <script src="../build/js/custom.min.js"></script>
+
+    <!-- Flot -->
+    <script>
+      $(document).ready(function() {
+        var data1 = [
+          [gd(2012, 1, 1), 17],
+          [gd(2012, 1, 2), 74],
+          [gd(2012, 1, 3), 6],
+          [gd(2012, 1, 4), 39],
+          [gd(2012, 1, 5), 20],
+          [gd(2012, 1, 6), 85],
+          [gd(2012, 1, 7), 7]
+        ];
+
+        var data2 = [
+          [gd(2012, 1, 1), 82],
+          [gd(2012, 1, 2), 23],
+          [gd(2012, 1, 3), 66],
+          [gd(2012, 1, 4), 9],
+          [gd(2012, 1, 5), 119],
+          [gd(2012, 1, 6), 6],
+          [gd(2012, 1, 7), 9]
+        ];
+        $("#canvas_dahs").length && $.plot($("#canvas_dahs"), [
+          data1, data2
+        ], {
+          series: {
+            lines: {
+              show: false,
+              fill: true
+            },
+            splines: {
+              show: true,
+              tension: 0.4,
+              lineWidth: 1,
+              fill: 0.4
+            },
+            points: {
+              radius: 0,
+              show: true
+            },
+            shadowSize: 2
+          },
+          grid: {
+            verticalLines: true,
+            hoverable: true,
+            clickable: true,
+            tickColor: "#d5d5d5",
+            borderWidth: 1,
+            color: '#fff'
+          },
+          colors: ["rgba(38, 185, 154, 0.38)", "rgba(3, 88, 106, 0.38)"],
+          xaxis: {
+            tickColor: "rgba(51, 51, 51, 0.06)",
+            mode: "time",
+            tickSize: [1, "day"],
+            //tickLength: 10,
+            axisLabel: "Date",
+            axisLabelUseCanvas: true,
+            axisLabelFontSizePixels: 12,
+            axisLabelFontFamily: 'Verdana, Arial',
+            axisLabelPadding: 10
+          },
+          yaxis: {
+            ticks: 8,
+            tickColor: "rgba(51, 51, 51, 0.06)",
+          },
+          tooltip: false
+        });
+
+        function gd(year, month, day) {
+          return new Date(year, month - 1, day).getTime();
+        }
+      });
+    </script>
+    <!-- /Flot -->
+
+    <!-- JQVMap -->
+    <script>
+      $(document).ready(function(){
+        $('#world-map-gdp').vectorMap({
+            map: 'world_en',
+            backgroundColor: null,
+            color: '#ffffff',
+            hoverOpacity: 0.7,
+            selectedColor: '#666666',
+            enableZoom: true,
+            showTooltip: true,
+            values: sample_data,
+            scaleColors: ['#E6F2F0', '#149B7E'],
+            normalizeFunction: 'polynomial'
+        });
+      });
+    </script>
+    <!-- /JQVMap -->
+
+    <!-- Skycons -->
+    <script>
+      $(document).ready(function() {
+        var icons = new Skycons({
+            "color": "#73879C"
+          }),
+          list = [
+            "clear-day", "clear-night", "partly-cloudy-day",
+            "partly-cloudy-night", "cloudy", "rain", "sleet", "snow", "wind",
+            "fog"
+          ],
+          i;
+
+        for (i = list.length; i--;)
+          icons.set(list[i], list[i]);
+
+        icons.play();
+      });
+    </script>
+    <!-- /Skycons -->
+
+    <!-- Doughnut Chart -->
+    <script>
+      $(document).ready(function(){
+        var options = {
+          legend: false,
+          responsive: false
+        };
+
+        new Chart(document.getElementById("canvas1"), {
+          type: 'doughnut',
+          tooltipFillColor: "rgba(51, 51, 51, 0.55)",
+          data: {
+            labels: [
+              "Symbian",
+              "Blackberry",
+              "Other",
+              "Android",
+              "IOS"
+            ],
+            datasets: [{
+              data: [15, 20, 30, 10, 30],
+              backgroundColor: [
+                "#BDC3C7",
+                "#9B59B6",
+                "#E74C3C",
+                "#26B99A",
+                "#3498DB"
+              ],
+              hoverBackgroundColor: [
+                "#CFD4D8",
+                "#B370CF",
+                "#E95E4F",
+                "#36CAAB",
+                "#49A9EA"
+              ]
+            }]
+          },
+          options: options
+        });
+      });
+    </script>
+    <!-- /Doughnut Chart -->
+    
     <!-- bootstrap-daterangepicker -->
     <script>
       $(document).ready(function() {
+
         var cb = function(start, end, label) {
           console.log(start.toISOString(), end.toISOString(), label);
-          $('#calendar span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
+          $('#reportrange span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
         };
 
         var optionSet1 = {
-          startDate: moment().subtract(1, 'month'),
+          startDate: moment().subtract(29, 'days'),
           endDate: moment(),
-          minDate: '07/01/2016',
-          
+          minDate: '01/01/2012',
+          maxDate: '12/31/2015',
           dateLimit: {
-            days: 365
+            days: 60
           },
           showDropdowns: true,
           showWeekNumbers: true,
-          timePicker: true,
-          timePickerIncrement: 10,
-          timePicker12Hour: false,
+          timePicker: false,
+          timePickerIncrement: 1,
+          timePicker12Hour: true,
           ranges: {
             'Today': [moment(), moment()],
             'Yesterday': [moment().subtract(1, 'days'), moment().subtract(1, 'days')],
-            'Last 7 Days': [moment().subtract(7, 'days'), moment()],
-            'Last 30 Days': [moment().subtract(1, 'month'), moment()],
+            'Last 7 Days': [moment().subtract(6, 'days'), moment()],
+            'Last 30 Days': [moment().subtract(29, 'days'), moment()],
+            'This Month': [moment().startOf('month'), moment().endOf('month')],
             'Last Month': [moment().subtract(1, 'month').startOf('month'), moment().subtract(1, 'month').endOf('month')]
           },
-          opens: 'right',
+          opens: 'left',
           buttonClasses: ['btn btn-default'],
           applyClass: 'btn-small btn-primary',
           cancelClass: 'btn-small',
@@ -459,73 +680,58 @@
             firstDay: 1
           }
         };
-
-        $('#calendar span').html(moment().subtract(1, 'month').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
-
-        $('#calendar').daterangepicker(optionSet1, cb);
-
-        $('#calendar').on('apply.daterangepicker', function(ev, picker) {
-        });
-
-        $('#calendar').on('hide.daterangepicker', function(ev, picker) {
-          console.log("hide event fired");
-          picker_obj = picker;
-          //searching the date range insinde the table
-          drawTable();
-        });
-
-        $('#options1').click(function() {
-          $('#calendar').data('daterangepicker').setOptions(optionSet1, cb);
-        });
-
-        $('#options2').click(function() {
-          $('#calendar').data('daterangepicker').setOptions(optionSet2, cb);
-        });
-
-        $('#destroy').click(function() {
-          $('#calendar').data('daterangepicker').remove();
-        });
-
-        // Event listener to the two range filtering inputs to redraw on input
-        $('#calendar').on('show.daterangepicker', function() {
+        $('#reportrange span').html(moment().subtract(29, 'days').format('MMMM D, YYYY') + ' - ' + moment().format('MMMM D, YYYY'));
+        $('#reportrange').daterangepicker(optionSet1, cb);
+        $('#reportrange').on('show.daterangepicker', function() {
           console.log("show event fired");
-          
         });
-        
-        $('#calendar').on('cancel.daterangepicker', function(ev, picker) {
+        $('#reportrange').on('hide.daterangepicker', function() {
+          console.log("hide event fired");
+        });
+        $('#reportrange').on('apply.daterangepicker', function(ev, picker) {
+          console.log("apply event fired, start/end dates are " + picker.startDate.format('MMMM D, YYYY') + " to " + picker.endDate.format('MMMM D, YYYY'));
+        });
+        $('#reportrange').on('cancel.daterangepicker', function(ev, picker) {
           console.log("cancel event fired");
         });
-
-        //search and draw table function
-        function drawTable() {
-          if ((typeof (myTable) !== 'undefined') && ($("input#date_time").is(':checked'))) {
-            $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
-              if (typeof picker_obj === 'undefined'){
-                startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
-                enddate = moment().format('YYYY-MM-DD H:mm');
-              }
-              else{
-                startdate = picker_obj.startDate.format('YYYY-MM-DD H:mm');
-                enddate = picker_obj.endDate.format('YYYY-MM-DD H:mm');
-              }
-              if($("input#id").is(':checked')){
-               var date_column = data[1] || 0; // use data for the date/time column
-              }
-              else
-              {
-                var date_column = data[0] || 0; // use data for the date/time column
-              }
-              if (( min <= date_column && date_column <= max ))
-              {
-                return true;
-              }
-              return false;
-            });
-            myTable.draw();
-          }
-        }
+        $('#options1').click(function() {
+          $('#reportrange').data('daterangepicker').setOptions(optionSet1, cb);
+        });
+        $('#options2').click(function() {
+          $('#reportrange').data('daterangepicker').setOptions(optionSet2, cb);
+        });
+        $('#destroy').click(function() {
+          $('#reportrange').data('daterangepicker').remove();
+        });
       });
     </script>
+    <!-- /bootstrap-daterangepicker -->
+
+    <!-- gauge.js -->
+    <script>
+      var opts = {
+          lines: 12,
+          angle: 0,
+          lineWidth: 0.4,
+          pointer: {
+              length: 0.75,
+              strokeWidth: 0.042,
+              color: '#1D212A'
+          },
+          limitMax: 'false',
+          colorStart: '#1ABC9C',
+          colorStop: '#1ABC9C',
+          strokeColor: '#F0F3F3',
+          generateGradient: true
+      };
+      var target = document.getElementById('foo'),
+          gauge = new Gauge(target).setOptions(opts);
+
+      gauge.maxValue = 170;
+      gauge.animationSpeed = 32;
+      gauge.set(120);
+      gauge.setTextField(document.getElementById("gauge-text"));
+    </script>
+    <!-- /gauge.js -->
   </body>
 </html>
-

@@ -36,7 +36,7 @@
             </div>
 
             <div class="clearfix"></div>
-            
+
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
@@ -72,7 +72,7 @@
                   </li>
                   <li><a><i class="fa fa-download"></i> Export <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="index.php">Tables</a></li>
+                      <li><a href="export.php">Tables</a></li>
                     </ul>
                   </li>
                 </ul>
