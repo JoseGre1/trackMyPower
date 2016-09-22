@@ -210,12 +210,17 @@
                   </div>
                   <div class="x_content">
                     Please choose the fields to be shown/exported: </br>
-                    <div class="col-md-12 col-sm-12 col-xs-12"></div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      </br>
+                    </div>
                     <div class="col-md-12 col-sm-12 col-xs-12">
                      <div id="calendar" class="pull-left" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
                           <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
                           <span>December 30, 2014 - January 28, 2015</span> <b class="caret"></b>
                       </div>
+                    </div>
+                    <div class="col-md-12 col-sm-12 col-xs-12">
+                      </br>
                     </div>
                     <!-- JUST ANOTHER WAY TO ADD CHECKBOX IN BOOTSTRAP -->
                     <!--
