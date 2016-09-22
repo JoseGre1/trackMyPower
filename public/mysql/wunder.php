@@ -34,7 +34,8 @@ if ( preg_match('|<span class="wx-data" data-station="IATLNTIC4" data-variable="
 {   
         //echo $data // Va a la URL
         $temperature=$cap[1];
-        if ($temperature>=50){$temperature=($temperature-32)/1.8;}
+        if ($temperature>=50){$temperature=($temperature-32)/1.8;$temperature=round($temperature,2);}
+
         echo 'Temperature = '.$temperature.' C.'."<br>"; //Toma la variable Wind Speed, cap es un array que solo tiene 1 posición.
 } 
 
