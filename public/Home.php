@@ -65,17 +65,12 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Data Charts</a></li>
+                      <li><a href="charts.html">Data Charts</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-download"></i> Export <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="export/tables/index.php">Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-exclamation"></i> Notification Menu <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="Home.php">Notifications</a></li>
                     </ul>
                   </li>
                 </ul>
