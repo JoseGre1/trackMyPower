@@ -14,7 +14,7 @@ $row = mysqli_fetch_array($result);
 session_start();
 if (mysqli_num_rows($result) > 0 && $_POST['username']==$row['username'] && $_POST['password']==$row['password']) {
   
-    header("Location: Home.html");}
+    header("Location: Home.php");}
 else { 
 
 header("Location: index.html");
