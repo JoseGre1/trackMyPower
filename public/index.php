@@ -429,7 +429,7 @@
                                   }
 // Electrical data refresh
 
-                                        function auto_loadmed(variable){
+                                    function auto_loadmed(variable){
                                         //var variable = "temperature";
                                           $.ajax({
                                             url: "centraldata.php",
@@ -438,6 +438,7 @@
                                             cache: false,
                                             success: function(data){
                                               if(variable == "gauge-text"){
+                                                
                                                 gauge.set(parseFloat(data));
                                               }else{
                                               var element = "#".concat(variable);
@@ -447,16 +448,13 @@
                                             } 
                                           });
                                   }
-
                                   function ShowElectrical()
                                   {
-
                                     auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
                                     auto_loadmed("power_med1");
                                     auto_loadmed("energy_med1");
                                     auto_loadmed("gauge-text");
                                     //auto_loadmed("goal-text");
-
                                     //auto_loadmed("fp_med1");
                                     
      
