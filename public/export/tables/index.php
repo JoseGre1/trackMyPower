@@ -70,7 +70,7 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    <li><a href="../../index.php">Home</a></li>
+                    <li><a href="../../Home.php">Home</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
@@ -505,7 +505,7 @@
 
         //search and draw table function
         function drawTable() {
-          if ((typeof (myTable) !== 'undefined') && ($("input#date_time").is(':checked'))) {
+          if (typeof (myTable) !== 'undefined') {
             $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
               if (typeof picker_obj === 'undefined'){
                 startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
