@@ -333,7 +333,7 @@
 
 
 
-                          <div class="temperature"><b>Monday</b>, 07:30 AM
+                          <div class="temperature">
                             <span>F</span>
                             <span><b>C</b></span>
                           </div>
