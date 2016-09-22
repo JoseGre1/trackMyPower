@@ -413,7 +413,7 @@
                                             success: function(data){
                                               var element = "#".concat(variable);
                                               $(element).html(data);
-                                              alert(element);
+                                              //alert(element);
                                             } 
                                           });
                                   }
@@ -438,7 +438,7 @@
                                             cache: false,
                                             success: function(data){
                                               if(variable == "gauge-text"){
-                                                gauge.set(data);
+                                                gauge.set(parseFloat(data));
                                               }else{
                                               var element = "#".concat(variable);
                                               $(element).html(data);
@@ -454,7 +454,7 @@
                                     auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
                                     auto_loadmed("power_med1");
                                     auto_loadmed("energy_med1");
-                                    //auto_loadmed("gauge-text");
+                                    auto_loadmed("gauge-text");
                                     //auto_loadmed("goal-text");
 
                                     //auto_loadmed("fp_med1");
