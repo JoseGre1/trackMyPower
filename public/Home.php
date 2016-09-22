@@ -73,6 +73,11 @@
                       <li><a href="export/tables/index.php">Tables</a></li>
                     </ul>
                   </li>
+                  <li><a><i class="fa fa-exclamation"></i> Notification Menu <span class="fa fa-chevron-down"></span></a>
+                    <ul class="nav child_menu">
+                      <li><a href="Home.php">Notifications</a></li>
+                    </ul>
+                  </li>
                 </ul>
               </div>
               

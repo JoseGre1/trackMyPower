@@ -16,7 +16,7 @@ if (mysqli_num_rows($result) > 0 && $_POST['username']==$row['username'] && $_PO
   
     header("Location: Home.php");}
 else { 
-
-header("Location: index.html");
+header("Location: index.php");
+//echo "error en usuario y/o contraseña"
 }
  ?> 

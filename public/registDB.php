@@ -5,6 +5,6 @@ $password = $_POST["password"];
 $result = mysqli_query($connect_todb, "INSERT INTO `account` (`username`, `password`) VALUES ('$username', '$password');"
 	);
 
-header("Location: login2.html");
+header("Location: index.php");
 
  ?>
