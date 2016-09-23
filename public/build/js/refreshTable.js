@@ -125,10 +125,10 @@ function createTable(headers,dataSet){
         responsive: true,
         fixedHeader: true
     });
-    $("#datatable_wrapper").css("opacity",100);
-    $("table#datatable").css("opacity",100);
     //This comment
     drawTable();
+    $("#datatable_wrapper").css("opacity",100);
+    $("table#datatable").css("opacity",100);
     press_select_all = false;
     press_deselect_all = false;
 }
