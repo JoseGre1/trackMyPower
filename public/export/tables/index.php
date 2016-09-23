@@ -505,7 +505,7 @@
         });
 
         //search and draw table function
-        function drawTable() {
+        drawTable = function (){
           if (typeof (myTable) !== 'undefined') {
             $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
               
