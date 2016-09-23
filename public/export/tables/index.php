@@ -421,6 +421,55 @@
     <!-- bootstrap-daterangepicker -->
     <script>
       $(document).ready(function() {
+        //search and draw table function
+        drawTable = function (){
+          if (typeof (myTable) !== 'undefined') {
+            $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
+              
+              if (typeof picker_obj === 'undefined'){
+                startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
+                enddate = moment().format('YYYY-MM-DD H:mm');
+              }
+              else{
+                startdate = picker_obj.startDate.format('YYYY-MM-DD H:mm');
+                enddate = picker_obj.endDate.format('YYYY-MM-DD H:mm');
+              }
+
+              dateMin = startdate.substring(0,4) + startdate.substring(5,7) + startdate.substring(8,10) + startdate.substring(11,12)+startdate.substring(13,15);
+              dateMax = enddate.substring(0,4) + enddate.substring(5,7) + enddate.substring(8,10) + enddate.substring(11,12)+enddate.substring(13,15);
+              
+              if($("input#id").is(':checked')){
+               var date_column = data[1] || 0; // use data for the date/time column
+              }
+              else
+              {
+                var date_column = data[0] || 0; // use data for the date/time column
+              }
+
+              date_column = date_column.substring(0,4) + date_column.substring(5,7) + date_column.substring(8,10) + date_column.substring(11,12)+date_column.substring(13,15);
+              
+              if ( dateMin === "" && dateMax === "" )
+              {
+                return true;
+              }
+              else if ( dateMin <= date_column && dateMax === "")
+              {
+                return true;
+              }
+              else if ( dateMax >= date_column && dateMin === "")
+              {
+                return true;
+              }
+              else if (dateMin <= date_column && dateMax >= date_column)
+              {
+                return true;
+              }
+              return false;
+            });
+            myTable.draw();
+          }
+        }
+        
         var cb = function(start, end, label) {
           console.log(start.toISOString(), end.toISOString(), label);
           $('#calendar span').html(start.format('MMMM D, YYYY') + ' - ' + end.format('MMMM D, YYYY'));
@@ -503,55 +552,6 @@
         $('#calendar').on('cancel.daterangepicker', function(ev, picker) {
           console.log("cancel event fired");
         });
-
-        //search and draw table function
-        drawTable = function (){
-          if (typeof (myTable) !== 'undefined') {
-            $.fn.dataTable.ext.search.push(function( settings, data, dataIndex ) {
-              
-              if (typeof picker_obj === 'undefined'){
-                startdate = moment().subtract(1, 'month').format('YYYY-MM-DD H:mm');
-                enddate = moment().format('YYYY-MM-DD H:mm');
-              }
-              else{
-                startdate = picker_obj.startDate.format('YYYY-MM-DD H:mm');
-                enddate = picker_obj.endDate.format('YYYY-MM-DD H:mm');
-              }
-
-              dateMin = startdate.substring(0,4) + startdate.substring(5,7) + startdate.substring(8,10) + startdate.substring(11,12)+startdate.substring(13,15);
-              dateMax = enddate.substring(0,4) + enddate.substring(5,7) + enddate.substring(8,10) + enddate.substring(11,12)+enddate.substring(13,15);
-              
-              if($("input#id").is(':checked')){
-               var date_column = data[1] || 0; // use data for the date/time column
-              }
-              else
-              {
-                var date_column = data[0] || 0; // use data for the date/time column
-              }
-
-              date_column = date_column.substring(0,4) + date_column.substring(5,7) + date_column.substring(8,10) + date_column.substring(11,12)+date_column.substring(13,15);
-              
-              if ( dateMin === "" && dateMax === "" )
-              {
-                return true;
-              }
-              else if ( dateMin <= date_column && dateMax === "")
-              {
-                return true;
-              }
-              else if ( dateMax >= date_column && dateMin === "")
-              {
-                return true;
-              }
-              else if (dateMin <= date_column && dateMax >= date_column)
-              {
-                return true;
-              }
-              return false;
-            });
-            myTable.draw();
-          }
-        }
       });
     </script>
   </body>
