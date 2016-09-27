@@ -49,7 +49,6 @@
         margin-bottom: 50px;
         background: #eee;
       }
-      body { padding-top: 70px; }
     </style>
   </head>
 
@@ -126,7 +125,7 @@
         <!-- top navigation -->
         <div class="top_nav">
           <div class="nav_menu">
-            <nav class="navbar-fixed-top">
+            <nav>
               <div class="container">
                 <div class="nav toggle">
                   <a id="menu_toggle"><i class="fa fa-bars"></i></a>
