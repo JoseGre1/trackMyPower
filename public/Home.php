@@ -31,7 +31,7 @@
       .iframe-container{
         position: relative;
         width: 100%;
-        padding-bottom: 42.11%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+        padding-bottom: 35%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
       }
       .iframe-container > *{
         display: block;
