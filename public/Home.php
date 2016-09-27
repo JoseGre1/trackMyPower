@@ -31,7 +31,7 @@
       .iframe-container{
         position: relative;
         width: 100%;
-        padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+        padding-bottom: 42.11%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
       }
       .iframe-container > *{
         display: block;
@@ -124,8 +124,8 @@
 
         <!-- top navigation -->
         <div class="top_nav">
-          <div class="nav_menu navbar-fixed-top">
-            <nav>
+          <div class="navbar navbar-default navbar-fixed-top">
+            <nav class="navbar-fixed-top">
               <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
               </div>
