@@ -124,7 +124,7 @@
 
         <!-- top navigation -->
         <div class="top_nav">
-          <div class="navbar navbar-default navbar-fixed-top">
+          <div class="nav_menu">
             <nav class="navbar-fixed-top">
               <div class="nav toggle">
                 <a id="menu_toggle"><i class="fa fa-bars"></i></a>
