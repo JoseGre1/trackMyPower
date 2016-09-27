@@ -49,6 +49,7 @@
         margin-bottom: 50px;
         background: #eee;
       }
+      body { padding-top: 70px; }
     </style>
   </head>
 
