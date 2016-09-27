@@ -200,271 +200,287 @@
           </div>
           <!-- /top tiles -->
 
-          <!-- first row -->
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
-
-              <!-- Electrical widget-->
-              <div class="col-md-4 col-sm-6 col-xs-12">
-                <!--Panel -->
-                <div class="x_panel tile fixed_height_320">
-                  <!--Title -->
-                  <div class="x_title">
-                    <h2>Electrical info</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown"><a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>
-                  <!--/Title -->
-                  <!--Content -->
-                  <div class="x_content">
-                    <div class="dashboard-widget-content">
-                      <ul class="quick-list">
-                        <li><i class="fa fa-flash" id="voltage_med1"></i></li>
-                        <li><i class="fa fa-power-off" id="power_med1"></i></li>
-                        <li><i class="fa fa-plug" id="energy_med1"></i></li>
-                        <li><i class="fa fa-line-chart" id="fp_med1"></i>FP</li>                   
+             
+             <!-- Electrical widget-->
+            <div class="col-md-3 col-sm-4 col-xs-12">
+              <div class="x_panel tile fixed_height_320">
+                <div class="x_title">
+                  <h2>Electrical info</h2>
+                  <ul class="nav navbar-right panel_toolbox">
+                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                    </li>
+                    <li class="dropdown">
+                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                      <ul class="dropdown-menu" role="menu">
+ 
                       </ul>
-                      <div class="sidebar-widget">
-                        <h4>Power</h4>
-                        <canvas width="150" height="80" id="foo" class="" style="width: 160px; height: 100px;"></canvas>
-                        <div class="goal-wrapper">
-                          <span class="gauge-value pull-left"></span>
-                          <span id="gauge-text" class="gauge-value pull-left"></span>
-                          <span id="goal-text" class="goal-value pull-right">170</span>
-                        </div>
+                    </li>
+                    <li><a class="close-link"><i class="fa fa-close"></i></a>
+                    </li>
+                  </ul>
+                  <div class="clearfix"></div>
+                </div>
+                <div class="x_content">
+                  <div class="dashboard-widget-content">
+                    <ul class="quick-list">
+                      <li><i class="fa fa-flash" id="voltage_med1"></i></li>
+                      <li><i class="fa fa-power-off" id="power_med1"></i></li>
+                      <li><i class="fa fa-plug" id="energy_med1"></i></li>
+                      <li><i class="fa fa-line-chart" id="fp_med1"></i>FP</li>
+                    
+                    </ul>
+
+                    <div class="sidebar-widget">
+                      <h4>Power</h4>
+                      <canvas width="150" height="80" id="foo" class="" style="width: 160px; height: 100px;"></canvas>
+                      <div class="goal-wrapper">
+                        <span class="gauge-value pull-left"></span>
+                        <span id="gauge-text" class="gauge-value pull-left"></span>
+                        <span id="goal-text" class="goal-value pull-right">170</span>
                       </div>
                     </div>
-                  </div> <!-- /Content -->
-                </div> <!--/Panel -->
-              </div>
-              <!-- /Electrical widget -->
-
-              <!-- Map widget -->
-              <div class="col-md-8 col-sm-6 col-xs-12">
-                <!--Panel -->
-                <div class="x_panel">
-                  <!--Title -->
-                  <div class="x_title">
-                    <h2>Map<small>geo-presentation</small></h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                          <li><a href="#">Settings 1</a>
-                          </li>
-                          <li><a href="#">Settings 2</a>
-                          </li>
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
                   </div>
-                  <!--/Title -->
-                  <!--Content -->
-                  <div class="x_content">
-                    <div class="dashboard-widget-content">
-                      <div  style="height: 230px; width:650px; " id="map"></div>
-                      <script type="text/javascript">
-                        var map;
-                        function initMap() {
-                          var myLatLng = {lat: 11.020121, lng: -74.851302};
-                          map = new google.maps.Map(document.getElementById('map'), {
-                            center: {lat: 11.020121, lng: -74.851302},
-                            zoom: 18
-                          });
-                          var marker = new google.maps.Marker({
-                            position: myLatLng,
-                            map: map,
-                            title: 'Hello World!'
-                          });
-                          marker.setMap(map);
-                        }
-                      </script>
-                      <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBemXPT9yR9ExhHqV3ZxpNdUbEjRuLctPo&callback=initMap">
-                      </script>
-                    </div>
-                  </div> <!--/Content -->
-                </div> <!--/Panel -->
-              </div> <!-- /Map widget -->
+                </div>
+              </div>
             </div>
-          </div> 
-          <!-- /first row -->
 
-          <!-- second row -->
-          <div class="row">
-            <div class="col-md-12 col-sm-12 col-xs-12">
 
-              <!-- Weather widget -->
-              <div class="col-md-4 col-sm-4 col-xs-12">
-                <!--Panel -->
-                <div class="x_panel">
-                  <!--Title -->
-                  <div class="x_title">
-                    <h2>Weather Report</h2>
-                    <ul class="nav navbar-right panel_toolbox">
-                      <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                      </li>
-                      <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                        <ul class="dropdown-menu" role="menu">
-                        </ul>
-                      </li>
-                      <li><a class="close-link"><i class="fa fa-close"></i></a>
-                      </li>
-                    </ul>
-                    <div class="clearfix"></div>
-                  </div>                   
-                  <!--/Title -->
-                  <!--Content -->
-                  <div class="x_content">
-                    <div class="row">
-                      <div class="col-sm-12">
-                        <div class="temperature">
-                          <span>F</span>
-                          <span><b>C</b></span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-sm-4">
-                        <div class="weather-icon">
-                          <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
-                        </div>
-                      </div>
-                      <div class="col-sm-8">
-                        <div class="weather-text">
-                          <h2>Universidad del Norte <br><i>Km 5 Vía Pto Colombia</i></h2>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="col-sm-12">
-                      <div class="weather-text pull-right" id=temperature>
-                      </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    <div class="row weather-days">
-                      <div class="col-sm-3">
-                        <div class="daily-weather">
-                          <h2 class="day">UV<br> Index</h2>
-                          <h3 class=" " id=uv_index></h3>
-                          <canvas id="clear-day" width="32" height="32"></canvas>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="daily-weather">
-                          <h2 class="day">Solar w/m<sup>2</sup></h2>
-                          <h3 class=" " id=solar_radiation></h3>
-                          <i class="fa fa-sun-o fa-2x"></i>                           
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="daily-weather">
-                          <h2 class="day">Humidity %</h2>
-                          <h3 class=" " id=humidity></h3>
-                          <canvas height="32" width="32" id="sleet"></canvas>
-                        </div>
-                      </div>
-                      <div class="col-sm-3">
-                        <div class="daily-weather">
-                          <h2 class="day">Wind Km/h</h2>
-                          <h3 class="" id=wind_speed></h3>
-                          <canvas height="32" width="32" id="wind"></canvas>
-                        </div>
-                      </div>
+
+   
+                <div class="row">
+
+                <div class="col-md-8 col-sm-6 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Map<small>geo-presentation</small></h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Settings 1</a>
+                            </li>
+                            <li><a href="#">Settings 2</a>
+                            </li>
+                          </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                      </ul>
                       <div class="clearfix"></div>
                     </div>
-                  </div> <!--/Content -->
-                </div> <!--/Panel-->
-              </div>
-              <!-- /Weather Widget -->
+                    <div class="x_content">
+                      <div class="dashboard-widget-content">
+                        
+                              <div  style="height: 230px; width:650px; " id="map"></div>
+                                      <script type="text/javascript">
 
+                                  var map;
+                                  function initMap() {
+
+                                    var myLatLng = {lat: 11.020121, lng: -74.851302};
+                                    map = new google.maps.Map(document.getElementById('map'), {
+                                      center: {lat: 11.020121, lng: -74.851302},
+                                      zoom: 18
+                                    });
+
+                                      var marker = new google.maps.Marker({
+                                      position: myLatLng,
+                                      map: map,
+                                      title: 'Hello World!'
+                                    });
+                                    marker.setMap(map);
+                                  }
+
+                                      </script>
+                                    <script async defer
+                                      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBemXPT9yR9ExhHqV3ZxpNdUbEjRuLctPo&callback=initMap">
+                                    </script>
+
+                       
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+                
+
+                               
+                <!-- start of weather widget -->
+                <div class="col-md-4 col-sm-4 col-xs-12">
+                  <div class="x_panel">
+                    <div class="x_title">
+                      <h2>Weather Report</h2>
+                      <ul class="nav navbar-right panel_toolbox">
+                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
+                        </li>
+                        <li class="dropdown">
+                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
+                          <ul class="dropdown-menu" role="menu">
+                          </ul>
+                        </li>
+                        <li><a class="close-link"><i class="fa fa-close"></i></a>
+                        </li>
+                      </ul>
+                      <div class="clearfix"></div>
+                    </div>                    <div class="x_content">
+                      <div class="row">
+                        <div class="col-sm-12">
+
+
+
+                          <div class="temperature">
+                            <span>F</span>
+                            <span><b>C</b></span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-sm-4">
+                          <div class="weather-icon">
+                            <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
+                          </div>
+                        </div>
+                        <div class="col-sm-8">
+                          <div class="weather-text">
+                            <h2>Universidad del Norte <br><i>Km 5 Vía Pto Colombia</i></h2>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-sm-12">
+                        <div class="weather-text pull-right" id=temperature>
+                        </div>
+                          </div>
+
+                      <div class="clearfix"></div>
+
+                      <div class="row weather-days">
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">UV<br> Index</h2>
+                            <h3 class=" " id=uv_index></h3>
+                            <canvas id="clear-day" width="32" height="32"></canvas>
+                           
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">Solar w/m<sup>2</sup></h2>
+                            <h3 class=" " id=solar_radiation></h3>
+                            <i class="fa fa-sun-o fa-2x"></i>
+                            
+                           
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">Humidity %</h2>
+                            <h3 class=" " id=humidity></h3>
+                            <canvas height="32" width="32" id="sleet"></canvas>
+                            
+                          </div>
+                        </div>
+                        <div class="col-sm-3">
+                          <div class="daily-weather">
+                            <h2 class="day">Wind Km/h</h2>
+                            <h3 class="" id=wind_speed></h3>
+                            <canvas height="32" width="32" id="wind"></canvas>
+                           
+                          </div>
+                        </div>
+
+                        <div class="clearfix"></div>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                                                  <script type="text/javascript"
+                                      src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+                                  <script>
+                                      function auto_load(variable){
+                                        //var variable = "temperature";
+                                          $.ajax({
+
+                                            url: "loaddata.php",
+                                            method: "POST",
+                                            data: { variable : variable },
+                                            cache: false,
+                                            success: function(data){
+                                              var element = "#".concat(variable);
+                                              $(element).html(data);
+                                              //alert(element);
+                                            } 
+                                          });
+                                  }
+                                  function ShowWheather()
+                                  {
+
+                                    auto_load("temperature"); //Call auto_load() function when DOM is Ready
+                                    auto_load("humidity");
+                                    auto_load("wind_speed");
+                                    auto_load("uv_index");
+                                    auto_load("solar_radiation");
+     
+                                  }
+// Electrical data refresh
+
+                                    function auto_loadmed(variable){
+                                        //var variable = "temperature";
+                                          $.ajax({
+                                            url: "centraldata.php",
+                                            method: "POST",
+                                            data: { variable : variable },
+                                            cache: false,
+                                            success: function(data){
+                                              if(variable == "gauge-text"){
+                                                
+                                                gauge.set(parseFloat(data));
+                                              }else{
+                                              var element = "#".concat(variable);
+                                              $(element).html(data);
+                                              }
+                                              //alert(data);
+                                            } 
+                                          });
+                                  }
+                                  function ShowElectrical()
+                                  {
+                                    auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
+                                    auto_loadmed("power_med1");
+                                    auto_loadmed("energy_med1");
+                                    auto_loadmed("gauge-text");
+                                    //auto_loadmed("goal-text");
+                                    //auto_loadmed("fp_med1");
+                                    
+     
+                                  }
+
+
+                                  $(document).ready(function(){
+                                    ShowElectrical();
+                                    ShowWheather();
+                                    setInterval(function(){
+                                      ShowWheather(); 
+                                      ShowElectrical();
+                                    },10000);
+                                                                   //Refresh auto_load() function after 10000 milliseconds
+                                  });
+                                   
+
+                                
+                                  </script>
+                <!-- end of weather widget -->
+              </div>
             </div>
           </div>
-          <!-- /second row -->
-
-          <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
-          <script>
-            function auto_load(variable) {
-              //var variable = "temperature";
-              $.ajax({
-                url: "loaddata.php",
-                method: "POST",
-                data: {
-                  variable: variable
-                },
-                cache: false,
-                success: function(data) {
-                  var element = "#".concat(variable);
-                  $(element).html(data);
-                  //alert(element);
-                }
-              });
-            }
-
-            function ShowWheather() {
-              auto_load("temperature"); //Call auto_load() function when DOM is Ready
-              auto_load("humidity");
-              auto_load("wind_speed");
-              auto_load("uv_index");
-              auto_load("solar_radiation");
-            }
-            // Electrical data refresh
-
-            function auto_loadmed(variable) {
-              //var variable = "temperature";
-              $.ajax({
-                url: "centraldata.php",
-                method: "POST",
-                data: {
-                  variable: variable
-                },
-                cache: false,
-                success: function(data) {
-                  if (variable == "gauge-text") {
-                    gauge.set(parseFloat(data));
-                  } else {
-                    var element = "#".concat(variable);
-                    $(element).html(data);
-                  }
-                  //alert(data);
-                }
-              });
-            }
-
-            function ShowElectrical() {
-              auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
-              auto_loadmed("power_med1");
-              auto_loadmed("energy_med1");
-              auto_loadmed("gauge-text");
-              //auto_loadmed("goal-text");
-              //auto_loadmed("fp_med1");
-            }
-
-            $(document).ready(function() {
-              ShowElectrical();
-              ShowWheather();
-              setInterval(function() {
-                  ShowWheather();
-                  ShowElectrical();
-              }, 10000);
-              //Refresh auto_load() function after 10000 milliseconds
-            });
-          </script>
         </div>
         <!-- /page content -->
+
         <!-- footer content -->
         <footer>
           <div class="pull-right">
@@ -473,8 +489,8 @@
           <div class="clearfix"></div>
         </footer>
         <!-- /footer content -->
-      </div>  <!-- /container body -->
-    </div> <!-- /main_container -->
+      </div>
+    </div>
 
     <!-- jQuery -->
     <script src="../vendors/jquery/dist/jquery.min.js"></script>
