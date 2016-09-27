@@ -275,8 +275,8 @@
                   <!--/Title -->
                   <!--Content -->
                   <div class="x_content">
-                    <div class="dashboard-widget-content">
-                      <div  style="height: 230px; width:650px; " id="map"></div>
+                    <div class="dashboard-widget-content" id = "map">
+                      <!--<div  style="height: 230px; width:650px; " id="map"></div> -->
                       <script type="text/javascript">
                         var map;
                         function initMap() {
