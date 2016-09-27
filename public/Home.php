@@ -276,7 +276,7 @@
                   <!--Content -->
                   <div class="x_content">
                     <div class="dashboard-widget-content">
-                      <div class="col-md-8 col-sm-6 col-xs-12" id="map"></div>
+                      <div class="col-md-8 col-sm-6 col-xs-12 tile fixed_height_320"" id="map"></div>
                       <script type="text/javascript">
                         var map;
                         function initMap() {
