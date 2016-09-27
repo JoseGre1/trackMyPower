@@ -26,6 +26,30 @@
 
     <!-- Custom Theme Style -->
     <link href="../build/css/custom.min.css" rel="stylesheet">
+
+    <style>
+      .iframe-container{
+        position: relative;
+        width: 100%;
+        padding-bottom: 56.25%; /* Ratio 16:9 ( 100%/16*9 = 56.25% ) */
+      }
+      .iframe-container > *{
+        display: block;
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        width: 100%;
+      }
+      .iframe-container{
+        margin-bottom: 50px;
+        background: #eee;
+      }
+    </style>
   </head>
 
   <body class="nav-md">
@@ -276,7 +300,8 @@
                   <!--Content -->
                   <div class="x_content">
                     <div class="dashboard-widget-content">
-                      <div class="col-md-8 col-sm-6 col-xs-12 tile fixed_height_320"" id="map"></div>
+                      <div class="iframe-container" id="map">
+                      </div>
                       <script type="text/javascript">
                         var map;
                         function initMap() {
