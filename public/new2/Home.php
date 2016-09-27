@@ -367,13 +367,13 @@
                     <div class="row">
                       <div class="col-sm-4">
                         <div class="weather-icon">
-                          <canvas height="80%" width="80%" id="partly-cloudy-day"></canvas>
+                          <canvas height="80" width="80" id="partly-cloudy-day"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-8">
                         <div class="weather-text">
                           <h2>Universidad del Norte <br><i>Km 5 Vía Pto Colombia</i></h2>
-                          <canvas height="80%" width="80%" id="partly-cloudy-day"></canvas>
+
                         </div>
                       </div>
                     </div>
