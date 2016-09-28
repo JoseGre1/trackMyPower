@@ -1563,7 +1563,7 @@ span.right {
     position: absolute;
     left: 0;
     height: 65px;
-    border-left: 2px solid #ADB2B5;
+    border-right: 2px solid #ADB2B5;
     margin-top: 10px
 }
 @media (min-width: 992px) {
