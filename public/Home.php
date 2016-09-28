@@ -253,10 +253,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash" id="voltage_med1"></i></li>
-                        <li><i class="fa fa-power-off" id="power_med1"></i></li>
-                        <li><i class="fa fa-plug" id="energy_med1"></i></li>
-                        <li><i class="fa fa-line-chart" id="fp_med1"></i></li>                   
+                        <li id="voltage_med1"><i class="fa fa-flash"></i></li>
+                        <li id="power_med1"><i class="fa fa-power-off"></i></li>
+                        <li id="energy_med1"><i class="fa fa-plug"></i></li>
+                        <li id="fp_med1"><i class="fa fa-line-chart"></i></li>                   
                       </ul>
                       <div class="sidebar-widget">
                         <h4>Power</h4>
@@ -464,7 +464,7 @@
                   } else {
                     var element = "#".concat(variable);
                     //document.getElementById(variable).innerHTML = data;
-                    $(data).insertAfter(element);
+                    $(element).append(data);
                   }
                   //alert(data);
                 }
