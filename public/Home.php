@@ -413,7 +413,7 @@
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">Wind [ <i>km/h</i> ]</h2>
+                          <h2 class="day">Wind <br> [ <i>km/h</i> ]</h2>
                           <h3 class="" id=wind_speed style="text-align: center"></h3>
                           <canvas class="centered-canvas" height="32" width="32" id="wind"></canvas>
                         </div>
