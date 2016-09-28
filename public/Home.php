@@ -253,10 +253,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash"></i><p id="voltage_med1"></div></li>
-                        <li><i class="fa fa-power-off"></i><p id="power_med1"></div></li>
-                        <li><i class="fa fa-plug"></i><p id="energy_med1"></div></li>
-                        <li><i class="fa fa-line-chart"></i><p id="fp_med1"></div></li>                   
+                        <li><i class="fa fa-flash"></i><p id="voltage_med1"></p></li>
+                        <li><i class="fa fa-power-off"></i><p id="power_med1"></p></li>
+                        <li><i class="fa fa-plug"></i><p id="energy_med1"></p></li>
+                        <li><i class="fa fa-line-chart"></i><p id="fp_med1"></p></li>                   
                       </ul>
                       <div class="sidebar-widget">
                         <h4>Power</h4>
