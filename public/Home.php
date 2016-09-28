@@ -235,7 +235,7 @@
                 <div class="x_panel tile fixed_height_320">
                   <!--Title -->
                   <div class="x_title">
-                    <h2>Electrical info</h2>
+                    <h2>Electrical Variables</h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -252,19 +252,21 @@
                   <!--Content -->
                   <div class="x_content">
                     <div class="dashboard-widget-content">
-                      <ul class="quick-list">
-                        <li><i class="fa fa-flash" id="voltage_med1"></i></li>
-                        <li><i class="fa fa-power-off" id="power_med1"></i></li>
-                        <li><i class="fa fa-plug" id="energy_med1"></i></li>
-                        <li><i class="fa fa-line-chart" id="fp_med1"></i>FP</li>                   
-                      </ul>
-                      <div class="sidebar-widget">
-                        <h4>Power</h4>
-                        <canvas width="150" height="80" id="foo" class="" style="width: 100%; height: 100%;"></canvas>
-                        <div class="goal-wrapper">
-                          <span class="gauge-value pull-left"></span>
-                          <span id="gauge-text" class="gauge-value pull-left"></span>
-                          <span id="goal-text" class="goal-value pull-right">170</span>
+                      <div class="iframe-container">
+                        <ul class="quick-list">
+                          <li><i class="fa fa-flash" id="voltage_med1"></i></li>
+                          <li><i class="fa fa-power-off" id="power_med1"></i></li>
+                          <li><i class="fa fa-plug" id="energy_med1"></i></li>
+                          <li><i class="fa fa-line-chart" id="fp_med1"></i>FP</li>                   
+                        </ul>
+                        <div class="sidebar-widget">
+                          <h4>Power</h4>
+                          <canvas width="150" height="80" id="foo" class="" style="width: 100%; height: 100%;"></canvas>
+                          <div class="goal-wrapper">
+                            <span class="gauge-value pull-left"></span>
+                            <span id="gauge-text" class="gauge-value pull-left"></span>
+                            <span id="goal-text" class="goal-value pull-right">170</span>
+                          </div>
                         </div>
                       </div>
                     </div>
@@ -279,7 +281,7 @@
                 <div class="x_panel">
                   <!--Title -->
                   <div class="x_title">
-                    <h2>Map<small>geo-presentation</small></h2>
+                    <h2>Location<small>My Hybrid-Energy Station</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -309,7 +311,7 @@
                           var myLatLng = {lat: 11.020121, lng: -74.851302};
                           map = new google.maps.Map(document.getElementById('map'), {
                             center: {lat: 11.020121, lng: -74.851302},
-                            zoom: 5
+                            zoom: 10
                           });
                           var marker = new google.maps.Marker({
                             position: myLatLng,
