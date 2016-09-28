@@ -21,6 +21,8 @@
     <link href="vendors/bootstrap-progressbar/css/bootstrap-progressbar-3.3.4.min.css" rel="stylesheet">
     <!-- JQVMap -->
     <link href="vendors/jqvmap/dist/jqvmap.min.css" rel="stylesheet"/>
+    <!-- Weather Incons -->
+    <link href="vendors/weather-icons/css/weather-icons.min.css" rel="stylesheet">
     <!-- favicon icon -->
     <link rel="icon" href="favicon.png" type="image/png">
 
@@ -245,10 +247,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash"></i><span id="voltage_med1" class="pull-right"></span></li>
-                        <li><i class="fa fa-power-off"></i><span id="power_med1" class="pull-right"></span></li>
-                        <li><i class="fa fa-plug"></i><span id="energy_med1" class="pull-right"></span></li>
-                        <li><i class="fa fa-line-chart"></i><span id="fp_med1" class="pull-right"></span></li>                   
+                        <li><i class="fa fa-flash"></i>Voltage: <span id="voltage_med1" class="pull-right"></span></li></br>
+                        <li><i class="fa fa-power-off"></i> Power: <span id="power_med1" class="pull-right"></span></li></br>
+                        <li><i class="fa fa-plug"></i> Energy: <span id="energy_med1" class="pull-right"></span></li></br>
+                        <li><i class="fa fa-line-chart"> PF: </i><span id="fp_med1" class="pull-right"></span></li></br>                   
                       </ul>
                       <div class="sidebar-widget" style="margin-top:0">
                         <h4>Energy</h4>
