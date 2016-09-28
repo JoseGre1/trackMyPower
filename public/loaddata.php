@@ -9,7 +9,7 @@
   $result = mysqli_query($connect_todb, "SELECT $variable FROM `wundergrounddata` ORDER BY id DESC LIMIT 1");
   $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
   if($variable=="temperature"){
-  $output .='<h3 class="degrees">'.$row[$variable].'</h3>';
+  $output .= $row[$variable];
   echo $output;}
   else{
     $output .='<h3 class="">'.$row[$variable].'</h3>';
