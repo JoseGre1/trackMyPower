@@ -252,21 +252,19 @@
                   <!--Content -->
                   <div class="x_content">
                     <div class="dashboard-widget-content">
-                      <div class="iframe-container">
-                        <ul class="quick-list">
-                          <li><i class="fa fa-flash" id="voltage_med1"></i></li>
-                          <li><i class="fa fa-power-off" id="power_med1"></i></li>
-                          <li><i class="fa fa-plug" id="energy_med1"></i></li>
-                          <li><i class="fa fa-line-chart" id="fp_med1"></i>FP</li>                   
-                        </ul>
-                        <div class="sidebar-widget">
-                          <h4>Power</h4>
-                          <canvas width="150" height="80" id="foo" class="" style="width: 100%; height: 100%;"></canvas>
-                          <div class="goal-wrapper">
-                            <span class="gauge-value pull-left"></span>
-                            <span id="gauge-text" class="gauge-value pull-left"></span>
-                            <span id="goal-text" class="goal-value pull-right">170</span>
-                          </div>
+                      <ul class="quick-list">
+                        <li><i class="fa fa-flash" id="voltage_med1"></i></li>
+                        <li><i class="fa fa-power-off" id="power_med1"></i></li>
+                        <li><i class="fa fa-plug" id="energy_med1"></i></li>
+                        <li><i class="fa fa-line-chart" id="fp_med1"></i>FP</li>                   
+                      </ul>
+                      <div class="sidebar-widget">
+                        <h4>Power</h4>
+                        <canvas width="150" height="80" id="foo" class="" style="width: 100%; height: 100%;"></canvas>
+                        <div class="goal-wrapper">
+                          <span class="gauge-value pull-left"></span>
+                          <span id="gauge-text" class="gauge-value pull-left"></span>
+                          <span id="goal-text" class="goal-value pull-right">170</span>
                         </div>
                       </div>
                     </div>
