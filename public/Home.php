@@ -265,10 +265,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash"></i><span id="voltage_med1"></div></li>
-                        <li><i class="fa fa-power-off"></i><span id="power_med1"></div></li>
-                        <li><i class="fa fa-plug"></i><span id="energy_med1"></div></li>
-                        <li><i class="fa fa-line-chart"></i><span id="fp_med1"></div></li>                   
+                        <li><i class="fa fa-flash"></i><span id="voltage_med1"></span></li>
+                        <li><i class="fa fa-power-off"></i><span id="power_med1"></span></li>
+                        <li><i class="fa fa-plug"></i><span id="energy_med1"></span></li>
+                        <li><i class="fa fa-line-chart"></i><span id="fp_med1"></span></li>                   
                       </ul>
                       <div class="sidebar-widget">
                         <h4>Power</h4>
