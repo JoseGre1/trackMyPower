@@ -461,12 +461,27 @@
                 success: function(data) {
                   if (variable == "gauge-text") {
                     gauge.set(parseFloat(data));
-                  } else {
+                  } 
+                  else {
+                    var append_element;
+                    switch(variable){
+                      case 'voltage_med1':
+                        append_element='<i class="fa fa-flash"></i> ' + data;
+                        break;
+                      case 'power_med1':
+                        append_element='<i class="fa fa-power-off"></i> ' + data;
+                        break;
+                      case 'energy_med1':
+                        append_element='<i class="fa fa-plug"></i> ' + data;
+                        break;
+                      case 'fp_med1':
+                        append_element='<i class="fa fa-line-chart"></i> ' + data;
+                        break;
+                    }
                     var element = "#".concat(variable);
-                    //document.getElementById(variable).innerHTML = data;
-                    $(element).append(data);
+                    document.getElementById(variable).innerHTML = data;
+                    //$(element).append(data);   
                   }
-                  //alert(data);
                 }
               });
             }
