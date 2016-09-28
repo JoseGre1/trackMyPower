@@ -348,7 +348,7 @@
               <!-- Weather widget -->
               <div class="col-md-4 col-sm-4 col-xs-12">
                 <!--Panel -->
-                <div class="x_panel">
+                <div class="x_panel tile fixed_height_320">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Weather Report</h2>
@@ -385,8 +385,6 @@
                       <div class="col-sm-8">
                         <h1 id="temperature" style="text-align: right;"></h1>
                       </div>
-                    </div>
-                    <div class="col-sm-12">
                     </div>
                     <div class="clearfix"></div>
                     <div class="row weather-days">
