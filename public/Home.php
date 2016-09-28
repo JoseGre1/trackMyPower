@@ -434,7 +434,7 @@
                 cache: false,
                 success: function(data) {
                   var element = "#".concat(variable);
-                  $(element).html(data);
+                  document.getElementById(variable).innerHTML = data;
                   //alert(element);
                 }
               });
@@ -463,7 +463,7 @@
                     gauge.set(parseFloat(data));
                   } else {
                     var element = "#".concat(variable);
-                    $(element).html(data);
+                    document.getElementById(variable).innerHTML = data;
                   }
                   //alert(data);
                 }
