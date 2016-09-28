@@ -253,10 +253,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash"></i><p id="voltage_med1"></p></li>
-                        <li><i class="fa fa-power-off"></i><p id="power_med1"></p></li>
-                        <li><i class="fa fa-plug"></i><p id="energy_med1"></p></li>
-                        <li><i class="fa fa-line-chart"></i><p id="fp_med1"></p></li>                   
+                        <li><i class="fa fa-flash" id="voltage_med1"></i></li>
+                        <li><i class="fa fa-power-off" id="power_med1"></i></li>
+                        <li><i class="fa fa-plug" id="energy_med1"></i></li>
+                        <li><i class="fa fa-line-chart" id="fp_med1"></i></li>                   
                       </ul>
                       <div class="sidebar-widget">
                         <h4>Power</h4>
@@ -463,7 +463,8 @@
                     gauge.set(parseFloat(data));
                   } else {
                     var element = "#".concat(variable);
-                    document.getElementById(variable).innerHTML = data;
+                    //document.getElementById(variable).innerHTML = data;
+                    $(data).insertAfter(element);
                   }
                   //alert(data);
                 }
