@@ -270,8 +270,8 @@
                         <li><i class="fa fa-plug"></i><span id="energy_med1" class="pull-right"></span></li>
                         <li><i class="fa fa-line-chart"></i><span id="fp_med1" class="pull-right"></span></li>                   
                       </ul>
-                      <div class="sidebar-widget">
-                        <h4>Power</h4>
+                      <div class="sidebar-widget" style="margin-top:0">
+                        <h4>Energy</h4>
                         <canvas width="150" height="80" id="foo" class="" style="width: 100%; height: 100%;"></canvas>
                         <div class="goal-wrapper">
                           <span class="gauge-value pull-left"></span>
@@ -371,8 +371,8 @@
                     <div class="row">
                       <div class="col-sm-12">
                         <div class="temperature">
-                          <span>F</span>
-                          <span><b>C</b></span>
+                          <a id="fahrenheit" onclick="unitsTemperature(this)" href="javascript:void(0);"><span id="spanF">F</span></a>
+                          <a id="celsius" onclick="" href="javascript:void(0);"><span id="spanC" style="font-weight: bold">C</span></a>
                         </div>
                       </div>
                     </div>
@@ -390,28 +390,28 @@
                     <div class="row weather-days">
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>UV</b><br> [<i> Index </i>]</h2>
+                          <h2 class="day"><b>UV</b><br> [ Index ]</h2>
                           <h3 class=" " id=uv_index style="text-align: center;"></h3>
                           <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>Solar</b> <br>[ <i>W/m<sup>2</sup></i> ]</h2>
+                          <h2 class="day"><b>Solar</b> <br>[ W/m<sup>2</sup> ]</h2>
                           <h3 class=" " id=solar_radiation style="text-align: center;"></h3>
                           <i class="fa fa-sun-o fa-2x centered-ico"></i>                           
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>Humidity</b> <br> [<i> % </i>]</h2>
+                          <h2 class="day"><b>Humidity</b> <br>[ % ]</h2>
                           <h3 class=" " id=humidity style="text-align: center;"></h3>
                           <canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>Wind</b> <br> [ <i>km/h</i> ]</h2>
+                          <h2 class="day"><b>Wind</b> <br>[ km/h ]</h2>
                           <h3 class="" id=wind_speed style="text-align: center"></h3>
                           <canvas class="centered-canvas" height="32" width="32" id="wind"></canvas>
                         </div>
@@ -474,22 +474,6 @@
                   } 
                   else {
                     var append_element;
-                    /*
-                    switch(variable){
-                      case 'voltage_med1':
-                        append_element='<i class="fa fa-flash"></i> ' + data + ' V';
-                        break;
-                      case 'power_med1':
-                        append_element='<i class="fa fa-power-off"></i> ' + data + ' W';
-                        break;
-                      case 'energy_med1':
-                        append_element='<i class="fa fa-plug"></i> ' + data + ' kWh';
-                        break;
-                      case 'fp_med1':
-                        append_element='<i class="fa fa-line-chart"></i> ' + data;
-                        break;
-                    }
-                    */
                     switch(variable){
                       case 'voltage_med1':
                         append_element= data + ' V';
@@ -506,7 +490,6 @@
                     }
                     var element = "#".concat(variable);
                     document.getElementById(variable).innerHTML = append_element;
-                    //$(element).append(data);   
                   }
                 }
               });
@@ -585,6 +568,50 @@
     <!-- Custom Theme Scripts -->
     <script src="../build/js/custom.min.js"></script>
 
+    <!--Custom User Scripts By: JoseGre1 -->
+    <!-- Temperature Units Change -->
+    <script>
+    current_unit = "celsius";
+    var temp_before, temp_after;
+    function unitsTemperature(element){
+      if(element.id == "celsius")
+      {
+        if(current_unit == "fahrenheit")
+        {
+          temp_before = parseFloat(($("h1#temperature").text()).split("°")[0]);
+          temp_after = (temp_before - 32) * 5/9;
+          var newtext = "".concat(temp_after,"°");
+          $('h1#temperautre').text(newtext);
+          $("#".concat(element.id)).attr("onclick","");
+          $("#fahrenheit").attr("onclick","unitsTemperature(this)");
+          $("#spanC").css("font-weight","bold");
+          $("#spanF").css("font-weight","normal");
+          current_unit = "celsius";
+        }
+      }
+      else if (element.id == "fahrenheit")
+      {
+        if(current_unit == "celsius")
+        {
+          temp_before = parseFloat(($("h1#temperature").text()).split("°")[0]);
+          temp_after = temp_before*9/5 + 32;
+          var newtext = "".concat(temp_after,"°");
+          $('h1#temperautre').text(newtext);
+          $("#".concat(element.id)).attr("onclick","");
+          $("#celsius").attr("onclick","unitsTemperature(this)");
+          $("#spanC").css("font-weight","normal");
+          $("#spanF").css("font-weight","bold");
+          current_unit = "fahrenheit";
+        }
+      }
+      else
+      {
+        return;
+      }
+    }
+    </script>
+    <!--/Temperature Units Change -->
+    
     <!-- Flot -->
     <script>
       $(document).ready(function() {
