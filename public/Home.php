@@ -265,10 +265,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash"></i><span id="voltage_med1"></span></li>
-                        <li><i class="fa fa-power-off"></i><span id="power_med1"></span></li>
-                        <li><i class="fa fa-plug"></i><span id="energy_med1"></span></li>
-                        <li><i class="fa fa-line-chart"></i><span id="fp_med1"></span></li>                   
+                        <li><i class="fa fa-flash"></i><span id="voltage_med1" class="pull-right"></span></li>
+                        <li><i class="fa fa-power-off"></i><span id="power_med1" class="pull-right"></span></li>
+                        <li><i class="fa fa-plug"></i><span id="energy_med1" class="pull-right"></span></li>
+                        <li><i class="fa fa-line-chart"></i><span id="fp_med1" class="pull-right"></span></li>                   
                       </ul>
                       <div class="sidebar-widget">
                         <h4>Power</h4>
@@ -390,28 +390,28 @@
                     <div class="row weather-days">
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">UV<br> [<i> Index </i>]</h2>
+                          <h2 class="day"><b>UV</b><br> [<i> Index </i>]</h2>
                           <h3 class=" " id=uv_index style="text-align: center;"></h3>
                           <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">Solar <br>[ <i>W/m<sup>2</sup></i> ]</h2>
+                          <h2 class="day"><b>Solar</b> <br>[ <i>W/m<sup>2</sup></i> ]</h2>
                           <h3 class=" " id=solar_radiation style="text-align: center;"></h3>
                           <i class="fa fa-sun-o fa-2x centered-ico"></i>                           
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">Humidity <br> [<i> % </i>]</h2>
+                          <h2 class="day"><b>Humidity</b> <br> [<i> % </i>]</h2>
                           <h3 class=" " id=humidity style="text-align: center;"></h3>
                           <canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">Wind <br> [ <i>km/h</i> ]</h2>
+                          <h2 class="day"><b>Wind</b> <br> [ <i>km/h</i> ]</h2>
                           <h3 class="" id=wind_speed style="text-align: center"></h3>
                           <canvas class="centered-canvas" height="32" width="32" id="wind"></canvas>
                         </div>
