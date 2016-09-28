@@ -371,28 +371,28 @@
                     <div class="row weather-days">
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>UV</b><br> [ Index ]</h2>
+                          <h2 class="day"><b>UV</b><br><small>[ Index ]</small></h2>
                           <h3 class=" " id=uv_index style="text-align: center;"></h3>
                           <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>Solar</b> <br>[ W/m<sup>2</sup> ]</h2>
+                          <h2 class="day"><b>Solar</b> <br><small>[ W/m<sup>2</sup> ]</small></h2>
                           <h3 class=" " id=solar_radiation style="text-align: center;"></h3>
                           <i class="fa fa-sun-o fa-2x centered-ico"></i>                           
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>Humidity</b> <br>[ % ]</h2>
+                          <h2 class="day"><b>Humidity</b> <br><small>[ % ]</small></h2>
                           <h3 class=" " id=humidity style="text-align: center;"></h3>
                           <canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day"><b>Wind</b> <br>[ km/h ]</h2>
+                          <h2 class="day"><b>Wind</b> <br><small>[ km/h ]</small></h2>
                           <h3 class="" id=wind_speed style="text-align: center"></h3>
                           <canvas class="centered-canvas" height="32" width="32" id="wind"></canvas>
                         </div>
