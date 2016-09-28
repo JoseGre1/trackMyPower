@@ -11,7 +11,7 @@
     else{
     $result = mysqli_query($connect_todb, "SELECT $variable FROM `metcentraldata` ORDER BY `id` DESC LIMIT 1");
     $row = mysqli_fetch_array($result,MYSQLI_ASSOC);
-    $output .="&nbsp;&nbsp;&nbsp;&nbsp;".$row[$variable];
+    $output = $row[$variable];
     echo $output; 
     }
 ?>

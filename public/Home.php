@@ -265,10 +265,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li id="voltage_med1"><i class="fa fa-flash"></i></li>
-                        <li id="power_med1"><i class="fa fa-power-off"></i></li>
-                        <li id="energy_med1"><i class="fa fa-plug"></i></li>
-                        <li id="fp_med1"><i class="fa fa-line-chart"></i></li>                   
+                        <li><i class="fa fa-flash"></i><div id="voltage_med1"></div></li>
+                        <li><i class="fa fa-power-off"></i><div id="power_med1"></div></li>
+                        <li><i class="fa fa-plug"></i><div id="energy_med1"></div></li>
+                        <li><i class="fa fa-line-chart"></i><div id="fp_med1"></div></li>                   
                       </ul>
                       <div class="sidebar-widget">
                         <h4>Power</h4>
@@ -474,6 +474,7 @@
                   } 
                   else {
                     var append_element;
+                    /*
                     switch(variable){
                       case 'voltage_med1':
                         append_element='<i class="fa fa-flash"></i> ' + data + ' V';
@@ -486,6 +487,21 @@
                         break;
                       case 'fp_med1':
                         append_element='<i class="fa fa-line-chart"></i> ' + data;
+                        break;
+                    }
+                    */
+                    switch(variable){
+                      case 'voltage_med1':
+                        append_element= data + ' V';
+                        break;
+                      case 'power_med1':
+                        append_element= data + ' W';
+                        break;
+                      case 'energy_med1':
+                        append_element= data + ' kWh';
+                        break;
+                      case 'fp_med1':
+                        append_element= data;
                         break;
                     }
                     var element = "#".concat(variable);
