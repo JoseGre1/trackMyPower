@@ -484,7 +484,7 @@
                         append_element='<i class="fa fa-power-off"></i> ' + data + ' W';
                         break;
                       case 'energy_med1':
-                        append_element='<i class="fa fa-plug"></i> ' + data + 'kWh';
+                        append_element='<i class="fa fa-plug"></i> ' + data + ' kWh';
                         break;
                       case 'fp_med1':
                         append_element='<i class="fa fa-line-chart"></i> ' + data;
@@ -522,7 +522,7 @@
         <!-- footer content -->
         <footer>
           <div class="pull-right">
-            Gentelella - Bootstrap Admin Template by <a href="https://colorlib.com">Colorlib</a>
+            © Copyright 2016, Power Tracking Services GmbH
           </div>
           <div class="clearfix"></div>
         </footer>
