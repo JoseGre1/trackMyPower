@@ -580,8 +580,8 @@
         {
           temp_before = parseFloat(($("h1#temperature").text()).split("°")[0]);
           temp_after = (temp_before - 32) * 5/9;
-          var newtext = "".concat(temp_after,"°");
-          $('h1#temperautre').text(newtext);
+          var newtext = "".concat(temp_after.toFixed(2),"°");
+          document.getElementById("temperature").innerHTML = newtext;
           $("#".concat(element.id)).attr("onclick","");
           $("#fahrenheit").attr("onclick","unitsTemperature(this)");
           $("#spanC").css("font-weight","bold");
@@ -595,8 +595,8 @@
         {
           temp_before = parseFloat(($("h1#temperature").text()).split("°")[0]);
           temp_after = temp_before*9/5 + 32;
-          var newtext = "".concat(temp_after,"°");
-          $('h1#temperautre').text(newtext);
+          var newtext = "".concat(temp_after.toFixed(2),"°");
+          document.getElementById("temperature").innerHTML = newtext;
           $("#".concat(element.id)).attr("onclick","");
           $("#celsius").attr("onclick","unitsTemperature(this)");
           $("#spanC").css("font-weight","normal");
