@@ -383,7 +383,7 @@
                         </div>
                       </div>
                       <div class="col-sm-8">
-                        <h1 id="temperature" style="text-align: right;"></h1><h1>°</h1>
+                        <h1 id="temperature" style="text-align: right;"></h1>
                       </div>
                     </div>
                     <div class="col-sm-12">
@@ -442,7 +442,11 @@
                 cache: false,
                 success: function(data) {
                   var element = "#".concat(variable);
-                  document.getElementById(variable).innerHTML = data;
+                  var putthis = data;
+                  if (variable == "temperature"){
+                    putthis = data + '°';
+                  }
+                  document.getElementById(variable).innerHTML = putthis;
                   //alert(element);
                 }
               });
