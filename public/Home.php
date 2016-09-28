@@ -278,7 +278,7 @@
               <!-- Map widget -->
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <!--Panel -->
-                <div class="x_panel">
+                <div class="x_panel tile fixed_height_320">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Location<small>My Hybrid-Energy Station</small></h2>
@@ -311,7 +311,7 @@
                           var myLatLng = {lat: 11.020121, lng: -74.851302};
                           map = new google.maps.Map(document.getElementById('map'), {
                             center: {lat: 11.020121, lng: -74.851302},
-                            zoom: 10
+                            zoom: 12
                           });
                           var marker = new google.maps.Marker({
                             position: myLatLng,
