@@ -276,7 +276,8 @@
                         <div class="goal-wrapper">
                           <span class="gauge-value pull-left"></span>
                           <span id="gauge-text" class="gauge-value pull-left"></span>
-                          <span id="goal-text" class="goal-value pull-right">170</span>
+                          <span id="goal-text" class="goal-value pull-right" style="float: left;">170</span>                        
+                          <span style="font-weight: bold;text-align: center;display: block;">kWh</span>
                         </div>
                       </div>
                     </div>
