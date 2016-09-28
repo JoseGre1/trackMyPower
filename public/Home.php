@@ -479,7 +479,7 @@
                         break;
                     }
                     var element = "#".concat(variable);
-                    document.getElementById(variable).innerHTML = data;
+                    document.getElementById(variable).innerHTML = append_element;
                     //$(element).append(data);   
                   }
                 }
