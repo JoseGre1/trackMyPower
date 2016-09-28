@@ -49,6 +49,18 @@
         margin-bottom: 25px;
         background: #eee;
       }
+      .centered-canvas{
+        padding-left: 0;
+        padding-right: 0;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+      }
+      .centered-ico{
+        text-align: center;
+        display: block;  
+      }
+      
     </style>
   </head>
 
@@ -279,7 +291,7 @@
                 <div class="x_panel tile fixed_height_320">
                   <!--Title -->
                   <div class="x_title">
-                    <h2>Location<small>My Hybrid-Energy Station</small></h2>
+                    <h2>Location<small>My HRE Station</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
@@ -371,43 +383,39 @@
                         </div>
                       </div>
                       <div class="col-sm-8">
-                        <div class="weather-text">
-                          <h2>Universidad del Norte <br><i>Km 5 Vía Pto Colombia</i></h2>
-                        </div>
+                        <h1 id="temperature" style="text-align: right;"></h1><h1>°</h1>
                       </div>
                     </div>
                     <div class="col-sm-12">
-                      <div class="weather-text pull-right" id=temperature>
-                      </div>
                     </div>
                     <div class="clearfix"></div>
                     <div class="row weather-days">
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">UV<br> Index</h2>
-                          <h3 class=" " id=uv_index></h3>
-                          <canvas id="clear-day" width="32" height="32"></canvas>
+                          <h2 class="day">UV<br> [<i> Index </i>]</h2>
+                          <h3 class=" " id=uv_index style="text-align: center;"></h3>
+                          <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">Solar w/m<sup>2</sup></h2>
-                          <h3 class=" " id=solar_radiation></h3>
-                          <i class="fa fa-sun-o fa-2x"></i>                           
+                          <h2 class="day">Solar <br>[ <i>W/m<sup>2</sup></i> ]</h2>
+                          <h3 class=" " id=solar_radiation style="text-align: center;"></h3>
+                          <i class="fa fa-sun-o fa-2x centered-ico"></i>                           
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">Humidity %</h2>
-                          <h3 class=" " id=humidity></h3>
-                          <canvas height="32" width="32" id="sleet"></canvas>
+                          <h2 class="day">Humidity <br> [<i> % </i>]</h2>
+                          <h3 class=" " id=humidity style="text-align: center;"></h3>
+                          <canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
-                          <h2 class="day">Wind Km/h</h2>
-                          <h3 class="" id=wind_speed></h3>
-                          <canvas height="32" width="32" id="wind"></canvas>
+                          <h2 class="day">Wind [ <i>km/h</i> ]</h2>
+                          <h3 class="" id=wind_speed style="text-align: center"></h3>
+                          <canvas class="centered-canvas" height="32" width="32" id="wind"></canvas>
                         </div>
                       </div>
                       <div class="clearfix"></div>
@@ -466,13 +474,13 @@
                     var append_element;
                     switch(variable){
                       case 'voltage_med1':
-                        append_element='<i class="fa fa-flash"></i> ' + data;
+                        append_element='<i class="fa fa-flash"></i> ' + data + ' V';
                         break;
                       case 'power_med1':
-                        append_element='<i class="fa fa-power-off"></i> ' + data;
+                        append_element='<i class="fa fa-power-off"></i> ' + data + ' W';
                         break;
                       case 'energy_med1':
-                        append_element='<i class="fa fa-plug"></i> ' + data;
+                        append_element='<i class="fa fa-plug"></i> ' + data + 'kWh';
                         break;
                       case 'fp_med1':
                         append_element='<i class="fa fa-line-chart"></i> ' + data;
