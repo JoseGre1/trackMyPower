@@ -47,6 +47,21 @@ if ( preg_match('|<span class="wx-data" data-station="IATLNTIC4" data-variable="
         echo 'Humidity = '.$humidity.'%.'."<br>"; //Toma la variable Wind Speed, cap es un array que solo tiene 1 posición.
 }
 
+
+$data = file_get_contents("https://www.wunderground.com/cgi-bin/findweather/getForecast?query=10.9759642,-74.7997319");
+
+//WIND DIRECTION
+//if ( preg_match('|<div id="windCompass" class="wx-data" data-station="IATLNTIC4" data-variable="wind_dir_degrees" data-update-effect="wind-compass" style="transform:rotate('.'.*'.'deg);">|is', $data , $cap ) )
+if ( preg_match('|<div id="windCompass" class="wx-data" data-station="IATLNTIC4" data-variable="wind_dir_degrees" data-update-effect="wind-compass" style="transform:rotate(.*?deg)|is', $data , $cap ) )
+{       
+        //echo $data // Va a la URL
+        $waux=$cap[1];
+        $wdir=substr($waux,1,3);
+
+        echo 'Wind_Dir = '.$wdir.'.'; //Toma la variable Wind Speed, cap es un array que solo tiene 1 posición.
+}
+
+
 //CONECTION TO DB 
 $user='mpardo';
 $pssd='pardo1234';
