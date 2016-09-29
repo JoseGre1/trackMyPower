@@ -205,15 +205,15 @@
         <!-- page content -->
         <div class="right_col" role="main">
           <!-- top tiles -->
-          <div class="row tile_count">
+          <div class="row tile_count" style="margin-bottom: 0px;">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-              <div class="count">2,315</div>
+              <span class="count_top"><i class="wi wi-thermometer"></i> Internal Temperature</span>
+              <div class="count">35°</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right">
-              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-              <div class="count">7,325</div>
+              <span class="count_top"><i class="wi wi-humidity"></i> Internal Humidity</span>
+              <div class="count">80%</div>
               <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
             </div>
           </div>
@@ -249,7 +249,6 @@
                       <ul class="quick-list">
                         <li><i class="fa fa-flash"></i>Voltage: </br><span id="voltage_med1"></span></li></br>
                         <li><i class="fa fa-power-off"></i> Power: </br><span id="power_med1"></span></li></br>
-                        <li><i class="fa fa-plug"></i> Energy: </br><span id="energy_med1"></span></li></br>
                         <li><i class="fa fa-line-chart"></i> PF: </br><span id="fp_med1">0</span></li></br>                   
                       </ul>
                       <div class="sidebar-widget" style="margin-top:0">
@@ -275,7 +274,7 @@
                 <div class="x_panel tile fixed_height_320">
                   <!--Title -->
                   <div class="x_title">
-                    <h2>Location<small>My HRE Station</small></h2>
+                    <h2>Location<small>Uninorte km5 - Bloque K - Mapuka</small></h2>
                     <ul class="nav navbar-right panel_toolbox">
                       <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
                       </li>
