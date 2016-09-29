@@ -444,8 +444,8 @@
 
       // Line chart
       function createChart(object){
-        var time = getcol(object.dataSet,1);
-        var y_data = getcol(object.dataSet,5);
+        var time = getCol(object.dataSet,1);
+        var y_data = getCol(object.dataSet,5);
         var ctx = document.getElementById("lineChart");
         var lineChart = new Chart(ctx, {
           type: 'line',
