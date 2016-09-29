@@ -75,7 +75,7 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="../../charts.html">Data Charts</a></li>
+                      <li><a href="../../charts/charts/">Data Charts</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-download"></i> Export <span class="fa fa-chevron-down"></span></a>

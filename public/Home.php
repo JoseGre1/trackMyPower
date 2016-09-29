@@ -107,12 +107,12 @@
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="charts.html">Data Charts</a></li>
+                      <li><a href="charts/data/">Data Charts</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-download"></i> Export <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="export/tables/index.php">Tables</a></li>
+                      <li><a href="export/tables/">Tables</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -342,7 +342,7 @@
             </div>
           </div> 
           <!-- /first row -->
-
+          <div class="clearfix"></div>
           <!-- second row -->
           <div class="row">
             <div class="col-md-12 col-sm-12 col-xs-12">
