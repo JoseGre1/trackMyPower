@@ -68,7 +68,7 @@ $pssd='pardo1234';
 $connect_todb = new mysqli('127.5.177.130:3306',$user,$pssd,'trackmypower');
 
 $query = "SET  SESSION time_zone = '-5:00';";
-$query .= "INSERT INTO `wundergrounddata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `uv_index`, `solar_radiation`) VALUES (NULL, NOW(), '$temperature', '$humidity', '$windspeed', '$uvindex', '$solarradiation');";
+$query .= "INSERT INTO `wundergrounddata` (`id`, `date_time`, `temperature`, `humidity`, `wind_speed`, `uv_index`, `solar_radiation`,`wind_dir`) VALUES (NULL, NOW(), '$temperature', '$humidity', '$windspeed', '$uvindex', '$solarradiation','$wdir');";
 
 $result = mysqli_multi_query($connect_todb,$query);
 }
