@@ -509,7 +509,7 @@
                         document.getElementById(variable).innerHTML = append_element;     
                         //var element = "#".concat(variable+"2");
                         // para intemp date_time2
-                        document.getElementById(variable+"2").innerHTML = append_element.substring(0,19); 
+                        document.getElementById(variable+"2").innerHTML = append_element.substring(0,18); 
                     }
                     else{
                         // para las otras variables queda igual
