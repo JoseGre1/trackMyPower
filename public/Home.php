@@ -206,12 +206,12 @@
         <div class="right_col" role="main">
           <!-- top tiles -->
           <div class="row tile_count" style="margin-bottom: 0px;">
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-thermometer"></i> Internal Temperature</span>
               <div class="count" style="text-align:center">35°</div>
               <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
             </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right">
+            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-humidity"></i> Internal Humidity</span>
               <div class="count" style="text-align:center">80%</div>
               <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
