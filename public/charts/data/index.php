@@ -230,8 +230,8 @@
                     </ul>
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content">
-                    <canvas id="mybarChart"></canvas>
+                  <div class="x_content2">
+                    <div id="graph_line" style="width:100%; height:300px;"></div>
                   </div>
                 </div>
               </div>
@@ -437,8 +437,15 @@
       function getCol(matrix, col){
        var column = [];
        for(var i=0; i<matrix.length; i++){
-          column.push(matrix[i][col]);
-        }
+         if (col == 5)
+         {
+            column.push(parseFloat(matrix[i][col]));
+         }
+         else
+         {
+            column.push(matrix[i][col]);
+         }
+       }
         return column;
       }
 
@@ -468,6 +475,26 @@
 
       // Morris chart
 
+      Morris.Line({
+          element: 'graph_line',
+          xkey: 'year',
+          ykeys: ['value'],
+          labels: ['Value'],
+          hideHover: 'auto',
+          lineColors: ['#26B99A', '#34495E', '#ACADAC', '#3498DB'],
+          data: [
+            {year: '2012', value: 20},
+            {year: '2013', value: 10},
+            {year: '2014', value: 5},
+            {year: '2015', value: 5},
+            {year: '2016', value: 20}
+          ],
+          resize: true
+        });
+
+        $MENU_TOGGLE.on('click', function() {
+          $(window).resize();
+        }
 
       // Doughnut chart
       var ctx = document.getElementById("canvasDoughnut");
