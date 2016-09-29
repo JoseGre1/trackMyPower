@@ -247,10 +247,10 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash"></i>Voltage: <span id="voltage_med1" class="pull-right"></span></li></br>
-                        <li><i class="fa fa-power-off"></i> Power: <span id="power_med1" class="pull-right"></span></li></br>
-                        <li><i class="fa fa-plug"></i> Energy: <span id="energy_med1" class="pull-right"></span></li></br>
-                        <li><i class="fa fa-line-chart"> PF: </i><span id="fp_med1" class="pull-right"></span></li></br>                   
+                        <li><i class="fa fa-flash"></i>Voltage: </br><span id="voltage_med1"></span></li></br>
+                        <li><i class="fa fa-power-off"></i> Power: </br><span id="power_med1"></span></li></br>
+                        <li><i class="fa fa-plug"></i> Energy: </br><span id="energy_med1"></span></li></br>
+                        <li><i class="fa fa-line-chart"></i> PF: </br><span id="fp_med1"></span></li></br>                   
                       </ul>
                       <div class="sidebar-widget" style="margin-top:0">
                         <h4>Energy</h4>
@@ -258,7 +258,8 @@
                         <div class="goal-wrapper">
                           <span class="gauge-value pull-left"></span>
                           <span id="gauge-text" class="gauge-value pull-left"></span>
-                          <span id="goal-text" class="goal-value pull-right" style="float: left;">170</span>                        
+                          <span id="goal-text" class="goal-value pull-right" style="float: left;">170</span>
+                          </br>
                           <span style="font-weight: bold;text-align: center;display: block;">kWh</span>
                         </div>
                       </div>
