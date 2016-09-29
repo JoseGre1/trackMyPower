@@ -384,6 +384,10 @@
     <script>
       $(document).ready(function()
       {
+        Chart.defaults.global.legend = {
+          enabled: false
+        };
+
         $.post('mysql/exportTable.php', function(phpdata){
           processJSON(phpdata);
         });
@@ -391,43 +395,74 @@
 
       function processJSON(phpdata){
         eval(phpdata);
-        array_object = JSON2Array(checked_ids);
-        createTable(array_object.headers,array_object.dataSet);
+        var selected_ids = ["date_time","voltage_med1"];
+        array_object = JSON2Array(selected_ids);
+        createChart(array_object);
+        //createChart(array_object.headers,array_object.dataSet);
       }
 
-      Chart.defaults.global.legend = {
-        enabled: false
-      };
+      var JSON2Array = function (ids_array){
+        var position;
+        //keys: "headers" of the JSON Object e.g. "id", "date_time", ...
+        var JSONkeys = Object.keys(JData[0]); 
+        var keys_array= [];
+        //Getting positions in "keys" array where the id's are
+        //Getting name of the checked keys (title of the columns)
+        for (i = 0; i < ids_array.length; i++) {
+            position = JSONkeys.indexOf(ids_array[i]);
+            keys_array.push(JSONkeys[position]);
+        }
+        //Getting data set from the JSON Object
+        var dataSet = [];
+        for(i = 0; i < JData.length; i++){
+             var new_row = [];
+             for(j = 0; j < keys_array.length; j++){
+                new_row.push(JData[i][keys_array[j]]);
+             }
+             dataSet.push(new_row);
+        }
+        //Getting the headers --> inputs of DataTable() function
+        var headers = [];
+        var c_title;
+        for (i = 0; i < keys_array.length; i++){
+            c_title = $("#"+keys_array[i]).attr("value");
+            headers.push({title: c_title});
+        }
+        return {
+            headers: headers,
+            dataSet: dataSet
+        };
+      }
+
+      function getColumn(array,col)
+      {
+        var column = [];
+        for (var i=0;i<)
+      }
 
       // Line chart
-      var ctx = document.getElementById("lineChart");
-      var lineChart = new Chart(ctx, {
-        type: 'line',
-        data: {
-          labels: ["January", "February", "March", "April", "May", "June", "July"],
-          datasets: [{
-            label: "My First dataset",
-            backgroundColor: "rgba(38, 185, 154, 0.31)",
-            borderColor: "rgba(38, 185, 154, 0.7)",
-            pointBorderColor: "rgba(38, 185, 154, 0.7)",
-            pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(220,220,220,1)",
-            pointBorderWidth: 1,
-            data: [31, 74, 6, 39, 20, 85, 7]
-          }, {
-            label: "My Second dataset",
-            backgroundColor: "rgba(3, 88, 106, 0.3)",
-            borderColor: "rgba(3, 88, 106, 0.70)",
-            pointBorderColor: "rgba(3, 88, 106, 0.70)",
-            pointBackgroundColor: "rgba(3, 88, 106, 0.70)",
-            pointHoverBackgroundColor: "#fff",
-            pointHoverBorderColor: "rgba(151,187,205,1)",
-            pointBorderWidth: 1,
-            data: [82, 23, 66, 9, 99, 4, 2]
-          }]
-        },
-      });
+      function createChart(object){
+        var time = object.dataSet;
+        var y_data = object.dataSet;
+        var ctx = document.getElementById("lineChart");
+        var lineChart = new Chart(ctx, {
+          type: 'line',
+          data: {
+            labels: ["January", "February", "March", "April", "May", "June", "July"],
+            datasets: [{
+              label: "Voltage",
+              backgroundColor: "rgba(38, 185, 154, 0.31)",
+              borderColor: "rgba(38, 185, 154, 0.7)",
+              pointBorderColor: "rgba(38, 185, 154, 0.7)",
+              pointBackgroundColor: "rgba(38, 185, 154, 0.7)",
+              pointHoverBackgroundColor: "#fff",
+              pointHoverBorderColor: "rgba(220,220,220,1)",
+              pointBorderWidth: 1,
+              data: [31, 74, 6, 39, 20, 85, 7]
+            }]
+          },
+        });
+      }
 
       // Morris chart
 

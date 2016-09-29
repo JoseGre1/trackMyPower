@@ -10,32 +10,32 @@
     <title>Power Tracking Services</title>
 
     <!-- Bootstrap -->
-    <link href="../../vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
-    <link href="../../vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
+    <link href="/vendors/font-awesome/css/font-awesome.min.css" rel="stylesheet">
     <!-- NProgress -->
-    <link href="../../vendors/nprogress/nprogress.css" rel="stylesheet">
+    <link href="/vendors/nprogress/nprogress.css" rel="stylesheet">
     <!-- iCheck -->
-    <link href="../../vendors/iCheck/skins/flat/green.css" rel="stylesheet">
+    <link href="/vendors/iCheck/skins/flat/green.css" rel="stylesheet">
     <!-- Datatables -->
-    <link href="../../vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
-    <link href="../../vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
-    <link href="../../vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
-    <link href="../../vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
-    <link href="../../vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-bs/css/dataTables.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-buttons-bs/css/buttons.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-fixedheader-bs/css/fixedHeader.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-responsive-bs/css/responsive.bootstrap.min.css" rel="stylesheet">
+    <link href="/vendors/datatables.net-scroller-bs/css/scroller.bootstrap.min.css" rel="stylesheet">
     <!-- bootstrap-wysiwyg -->
-    <link href="../../vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
+    <link href="/vendors/google-code-prettify/bin/prettify.min.css" rel="stylesheet">
     <!-- Select2 -->
-    <link href="../../vendors/select2/dist/css/select2.min.css" rel="stylesheet">
+    <link href="/vendors/select2/dist/css/select2.min.css" rel="stylesheet">
     <!-- Switchery -->
-    <link href="../../vendors/switchery/dist/switchery.min.css" rel="stylesheet">
+    <link href="/vendors/switchery/dist/switchery.min.css" rel="stylesheet">
     <!-- starrr -->
-    <link href="../../vendors/starrr/dist/starrr.css" rel="stylesheet">
+    <link href="/vendors/starrr/dist/starrr.css" rel="stylesheet">
     <!-- favicon icon -->
-    <link rel="icon" href="../../favicon.png" type="image/png">
+    <link rel="icon" href="/favicon.png" type="image/png">
 
     <!-- Custom Theme Style -->
-    <link href="../../build/css/custom.min.css" rel="stylesheet">
+    <link href="/build/css/custom.min.css" rel="stylesheet">
   </head>
 
   <body class="nav-md">
@@ -44,7 +44,7 @@
         <div class="col-md-3 left_col menu_fixed">
           <div class="left_col scroll-view">
             <div class="navbar nav_title" style="border: 0;">
-              <a href="../../Home.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
+              <a href="/Home.php" class="site_title"><i class="fa fa-bolt"></i> <span>TrackMyPower</span></a>
             </div>
 
             <div class="clearfix"></div>
@@ -52,7 +52,7 @@
             <!-- menu profile quick info -->
             <div class="profile">
               <div class="profile_pic">
-                <img src="../../images/pardo.jpg" alt="..." class="img-circle profile_img">
+                <img src="/images/pardo.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
                 <span>Welcome,</span>
@@ -118,24 +118,24 @@
 
               <ul class="nav navbar-nav navbar-right">
                 <li class="">
-                  <a href="../../javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
-                    <img src="../../images/pardo.jpg" alt="">Mauricio
+                  <a href="javascript:;" class="user-profile dropdown-toggle" data-toggle="dropdown" aria-expanded="false">
+                    <img src="/images/pardo.jpg" alt="">Mauricio
                     <span class=" fa fa-angle-down"></span>
                   </a>
                   <ul class="dropdown-menu dropdown-usermenu pull-right">
-                    <li><a href="../../javascript:;"> Profile</a></li>
+                    <li><a href="javascript:;"> Profile</a></li>
                     <li>
-                      <a href="../../javascript:;">
+                      <a href="javascript:;">
                         <span>Settings</span>
                       </a>
                     </li>
-                     <li><a href="../../javascript:;">Help</a></li>
-                    <li><a href="../../index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                     <li><a href="javascript:;">Help</a></li>
+                    <li><a href="/index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul> 
                 </li>
 
                 <li role="presentation" class="dropdown">
-                  <a href="../../javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
+                  <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                     <i class="fa fa-envelope-o"></i>
                    <!-- <span class="badge bg-green">1</span> -->
                   </a>
@@ -143,7 +143,7 @@
                     <!--
                     <li>
                       <a>
-                        <span class="image"><img src="../../images/diego.jpg" alt="Profile Image" /></span>
+                        <span class="image"><img src="/images/diego.jpg" alt="Profile Image" /></span>
                         <span>
                           <span>Diego Gómez</span>
                           <span class="time">1 hour ago</span>
@@ -366,56 +366,56 @@
     </div> <!-- closing class="container body" -->
 
     <!-- jQuery -->
-    <script src="../../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="../../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../../vendors/nprogress/nprogress.js"></script>
+    <script src="/vendors/nprogress/nprogress.js"></script>
     <!-- bootstrap-progressbar -->
-    <script src="../../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="../../vendors/iCheck/icheck.min.js"></script>
+    <script src="/vendors/iCheck/icheck.min.js"></script>
     <!-- bootstrap-daterangepicker -->
-    <script src="../../js/moment/moment.min.js"></script>
-    <script src="../../js/datepicker/daterangepicker.js"></script>
+    <script src="/js/moment/moment.min.js"></script>
+    <script src="/js/datepicker/daterangepicker.js"></script>
     <!-- bootstrap-wysiwyg -->
-    <script src="../../vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
-    <script src="../../vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
-    <script src="../../vendors/google-code-prettify/src/prettify.js"></script>
+    <script src="/vendors/bootstrap-wysiwyg/js/bootstrap-wysiwyg.min.js"></script>
+    <script src="/vendors/jquery.hotkeys/jquery.hotkeys.js"></script>
+    <script src="/vendors/google-code-prettify/src/prettify.js"></script>
     <!-- jQuery Tags Input -->
-    <script src="../../vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
+    <script src="/vendors/jquery.tagsinput/src/jquery.tagsinput.js"></script>
     <!-- Switchery -->
-    <script src="../../vendors/switchery/dist/switchery.min.js"></script>
+    <script src="/vendors/switchery/dist/switchery.min.js"></script>
     <!-- Select2 -->
-    <script src="../../vendors/select2/dist/js/select2.full.min.js"></script>
+    <script src="/vendors/select2/dist/js/select2.full.min.js"></script>
     <!-- Parsley -->
-    <script src="../../vendors/parsleyjs/dist/parsley.min.js"></script>
+    <script src="/vendors/parsleyjs/dist/parsley.min.js"></script>
     <!-- Autosize -->
-    <script src="../../vendors/autosize/dist/autosize.min.js"></script>
+    <script src="/vendors/autosize/dist/autosize.min.js"></script>
     <!-- jQuery autocomplete -->
-    <script src="../../vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
+    <script src="/vendors/devbridge-autocomplete/dist/jquery.autocomplete.min.js"></script>
     <!-- starrr -->
-    <script src="../../vendors/starrr/dist/starrr.js"></script>
+    <script src="/vendors/starrr/dist/starrr.js"></script>
     <!-- Datatables -->
-    <script src="../../vendors/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../../vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
-    <script src="../../vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../../vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
-    <script src="../../vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="../../vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="../../vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="../../vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
-    <script src="../../vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="../../vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../../vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
+    <script src="/vendors/datatables.net/js/jquery.dataTables.min.js"></script>
+    <script src="/vendors/datatables.net-bs/js/dataTables.bootstrap.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
+    <script src="/vendors/datatables.net-buttons-bs/js/buttons.bootstrap.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/buttons.flash.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/buttons.html5.min.js"></script>
+    <script src="/vendors/datatables.net-buttons/js/buttons.print.min.js"></script>
+    <script src="/vendors/datatables.net-fixedheader/js/dataTables.fixedHeader.min.js"></script>
+    <script src="/vendors/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
+    <script src="/vendors/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
+    <script src="/vendors/datatables.net-responsive-bs/js/responsive.bootstrap.js"></script>
     <!--<script src="vendors/datatables.net-scroller/js/datatables.scroller.min.js"></script> -->
-    <script src="../../vendors/jszip/dist/jszip.min.js"></script>
-    <script src="../../vendors/pdfmake/build/pdfmake.min.js"></script>
-    <script src="../../vendors/pdfmake/build/vfs_fonts.js"></script>
+    <script src="/vendors/jszip/dist/jszip.min.js"></script>
+    <script src="/vendors/pdfmake/build/pdfmake.min.js"></script>
+    <script src="/vendors/pdfmake/build/vfs_fonts.js"></script>
     <!-- Custom Theme Scripts -->
-    <script src="../../build/js/custom.min.js"></script>
+    <script src="/build/js/custom.min.js"></script>
     <!-- Custom User Scripts and Functions / CREATED BY: JoseGre1 -->
     <script src="js/manage_button.js"></script>
     <script src="js/refreshTable.js"></script>

@@ -50,7 +50,8 @@ $(document).ready(function()
 
 function processJSON(phpdata){
     eval(phpdata);
-    array_object = JSON2Array(checked_ids);
+    var selected_ids = ["date_time","voltage_med1"];
+    array_object = JSON2Array(selected_ids);
     createTable(array_object.headers,array_object.dataSet);
 }
 

@@ -257,7 +257,7 @@
                       <ul class="quick-list">
                         <li><i class="fa fa-flash"></i>Voltage: </br><span id="voltage_med1"></span></li></br>
                         <li><i class="fa fa-power-off"></i> Power: </br><span id="power_med1"></span></li></br>
-                        <li><span aria-hidden="true" data-icon="Φ" style="padding-right:10px;color:#757679;font-size: 18px;font-weight: 400;"></span> PF: </br><span id="fp_med1">0.5</span></li></br>
+                        <li><span aria-hidden="true" data-icon="Φ" style="padding-right:10px;color:#757679;font-size: 18px;font-weight: 400;"></span> PF: </br><span id="fp_med1">1.0</span></li></br>
                       </ul>
                       <div class="sidebar-widget" style="margin-top:0">
                         <h4>Energy</h4>
