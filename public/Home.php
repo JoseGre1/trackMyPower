@@ -389,7 +389,8 @@
                         <div class="daily-weather">
                           <h2 class="day"><b>Humidity</b> <br><small>[ % ]</small></h2>
                           <h3 class=" " id=humidity style="text-align: center;"></h3>
-                          <canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas>
+                          <!--<canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas> -->
+                          <i class="wi wi-humidity wi-2x centered-ico"></i>
                         </div>
                       </div>
                       <div class="col-sm-3">
