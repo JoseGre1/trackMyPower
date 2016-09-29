@@ -165,9 +165,11 @@
                   <li role="presentation" class="dropdown">
                     <a href="javascript:;" class="dropdown-toggle info-number" data-toggle="dropdown" aria-expanded="false">
                       <i class="fa fa-envelope-o"></i>
-                      <span class="badge bg-green">1</span>
+                      <!--
+                      <span class="badge bg-green">1</span> -->
                     </a>
                     <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                      <!--
                       <li>
                         <a>
                           <span class="image"><img src="images/diego.jpg" alt="Profile Image" /></span>
@@ -185,6 +187,7 @@
                           </span>
                         </a>
                       </li>
+
                       <li>
                         <div class="text-center">
                           <a>
@@ -193,6 +196,7 @@
                           </a>
                         </div>
                       </li>
+                      -->
                     </ul>
                   </li>
                 </ul>
