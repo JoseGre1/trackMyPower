@@ -216,13 +216,13 @@
           <div class="row tile_count" style="margin-bottom: 0px;">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-thermometer"></i> Internal Temperature</span>
-              <div class="count" style="text-align:center">35°</div>
-              <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
+              <div id="intemperature" class="count" style="text-align:center"></div>
+              <span id="in_last_refresh" class="count_bottom"></span>-
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-humidity"></i> Internal Humidity</span>
-              <div class="count" style="text-align:center">80%</div>
-              <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
+              <div id="inhumidity" class="count" style="text-align:center"></div>
+              <span id="in_last_refresh2" class="count_bottom"></span>
             </div>
           </div>
           <!-- /top tiles -->
@@ -479,9 +479,33 @@
                       case 'fp_med1':
                         append_element= data;
                         break;
+                      case 'date_time':              // obtener fecha
+                        append_element= data;
+                        variable = "in_last_refresh";
+                        break;
+                      case 'humidity':               // obtener humedad interna
+                        append_element= data + '%';
+                        variable="inhumidity";
+                        break;
+                      case 'temperature':            // obtener temperatura interna
+                        append_element= data + '°C';
+                        variable="intemperature";
+                        break;  
                     }
-                    var element = "#".concat(variable);
-                    document.getElementById(variable).innerHTML = append_element;
+                    //Para colocar las dos fechas en intemperature y inhumiditu
+                    if (variable=="in_last_refresh"){  
+                        //var element = "#".concat(variable);
+                        // para inhum date_time
+                        document.getElementById(variable).innerHTML = append_element;     
+                        //var element = "#".concat(variable+"2");
+                        // para intemp date_time2
+                        document.getElementById(variable+"2").innerHTML = append_element; 
+                    }
+                    else{
+                        // para las otras variables queda igual
+                        //var element = "#".concat(variable); 
+                        document.getElementById(variable).innerHTML = append_element; 
+                    }
                   }
                 }
               });
@@ -491,6 +515,9 @@
               auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
               auto_loadmed("power_med1");
               auto_loadmed("gauge-text");
+              auto_loadmed("date_time");    // pide 
+              auto_loadmed("humidity");     // los datos  
+              auto_loadmed("temperature");  // internos 
               //auto_loadmed("goal-text");
               //auto_loadmed("fp_med1");
             }
