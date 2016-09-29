@@ -23,6 +23,15 @@ wunder();
 $date_time = date("Y-m-d h:i:s", strtotime($timestamp));
 echo $date_time . "\n";
 //mysql query --> insert data into db
+
+if($voltage_med1 == 1){
+
+	$voltage_med1 = 0;
+	$current_med1 = 0;
+	$energy_med1 = 0;
+	$power_med1 =  0;
+}
+
 if ($timestamp == 0) {
 	echo 'Wrong date-time received from Arduino'."<br>";
 	$query = "SET  SESSION time_zone = '-5:00';";
