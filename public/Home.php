@@ -315,7 +315,7 @@
                             zoom: 12
                           });
 
-                          var  var iconBase = '/images/icons/markers/';
+                          var iconBase = '/images/icons/markers/';
                           
                           var icons = {
                             station: {
