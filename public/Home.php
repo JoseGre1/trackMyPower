@@ -216,12 +216,12 @@
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-thermometer"></i> Internal Temperature</span>
               <div id="intemperature" class="count" style="text-align:center"></div>
-              <span id="in_last_refresh" class="count_bottom"></span>
+              <span id="in_last_refresh" class="count_bottom" style="display: block; text-align: center;"></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-humidity"></i> Internal Humidity</span>
               <div id="inhumidity" class="count" style="text-align:center"></div>
-              <span id="in_last_refresh2" class="count_bottom"></span>
+              <span id="in_last_refresh2" class="count_bottom" style="display: block; text-align: center;"></span>
             </div>
           </div>
           <!-- /top tiles -->
