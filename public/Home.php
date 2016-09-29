@@ -102,17 +102,17 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-home"></i> Home <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                    <li><a href="Home.php">Home</a></li>
+                    <li><a href="/Home.php">Home</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-bar-chart-o"></i> Charts and Stats<span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="charts/data/">Data Charts</a></li>
+                      <li><a href="/charts/data/">Data Charts</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-download"></i> Export <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="export/tables/">Tables</a></li>
+                      <li><a href="/export/tables/">Tables</a></li>
                     </ul>
                   </li>
                 </ul>
