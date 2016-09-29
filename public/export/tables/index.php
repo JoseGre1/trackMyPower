@@ -140,6 +140,7 @@
                     <span class="badge bg-green">1</span>
                   </a>
                   <ul id="menu1" class="dropdown-menu list-unstyled msg_list" role="menu">
+                    <!--
                     <li>
                       <a>
                         <span class="image"><img src="../../images/diego.jpg" alt="Profile Image" /></span>
@@ -164,7 +165,7 @@
                           <i class="fa fa-angle-right"></i>
                         </a>
                       </div>
-                    </li>
+                    </li> -->
                   </ul>
                 </li>
               </ul>

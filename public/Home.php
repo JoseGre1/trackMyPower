@@ -317,13 +317,11 @@
 
                           var iconBase = '/images/icons/markers/';
                           
-                          var icons = {
-                            station: {
-                              url: iconBase + 'marker.png',
-                              size: new google.maps.Size(32, 32),
-                              origin: new google.maps.Point(0, 0),
-                              anchor: new google.maps.Point(16, 16)
-                            }
+                          var station = {
+                            url: iconBase + 'marker.png',
+                            size: new google.maps.Size(32, 32),
+                            origin: new google.maps.Point(0, 0),
+                            anchor: new google.maps.Point(16, 16)
                           };
 
                           var marker = new google.maps.Marker({
