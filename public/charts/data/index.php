@@ -434,16 +434,18 @@
         };
       }
 
-      function getColumn(array,col)
-      {
-        var column = [];
-        for (var i=0;i<)
+      function getCol(matrix, col){
+       var column = [];
+       for(var i=0; i<matrix.length; i++){
+          column.push(matrix[i][col]);
+        }
+        return column;
       }
-
+      
       // Line chart
       function createChart(object){
-        var time = object.dataSet;
-        var y_data = object.dataSet;
+        var time = getcol(object.dataSet,0);
+        var y_data = getcol(object.dataSet,1);
         var ctx = document.getElementById("lineChart");
         var lineChart = new Chart(ctx, {
           type: 'line',
