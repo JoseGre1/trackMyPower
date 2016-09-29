@@ -216,7 +216,7 @@
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-thermometer"></i> Internal Temperature</span>
               <div id="intemperature" class="count" style="text-align:center"></div>
-              <span id="in_last_refresh" class="count_bottom"></span>-
+              <span id="in_last_refresh" class="count_bottom"></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-humidity"></i> Internal Humidity</span>
@@ -506,10 +506,10 @@
                     if (variable=="in_last_refresh"){  
                         //var element = "#".concat(variable);
                         // para inhum date_time
-                        document.getElementById(variable).innerHTML = append_element.substring(0,19);  
+                        document.getElementById(variable).innerHTML = append_element;
                         //var element = "#".concat(variable+"2");
                         // para intemp date_time2
-                        document.getElementById(variable+"2").innerHTML = append_element.substring(0,19); 
+                        document.getElementById(variable+"2").innerHTML = append_element;
                     }
                     else{
                         // para las otras variables queda igual
