@@ -62,7 +62,11 @@
         text-align: center;
         display: block;  
       }
-      
+      [data-icon]:before {
+        font-family: icons; /* BYO icon font, mapped smartly */
+        content: attr(data-icon);
+        speak: none; /* Not to be trusted, but hey. */
+      }
     </style>
   </head>
 
