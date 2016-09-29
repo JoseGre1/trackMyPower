@@ -207,14 +207,14 @@
           <!-- top tiles -->
           <div class="row tile_count" style="margin-bottom: 0px;">
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right">
-              <span class="count_top"><i class="wi wi-thermometer"></i> Internal Temperature</span>
-              <div class="count">35°</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-thermometer"></i> Internal Temperature</span>
+              <div class="count" style="text-align:center">35°</div>
+              <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right">
-              <span class="count_top"><i class="wi wi-humidity"></i> Internal Humidity</span>
-              <div class="count">80%</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-humidity"></i> Internal Humidity</span>
+              <div class="count" style="text-align:center">80%</div>
+              <!--<span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>-->
             </div>
           </div>
           <!-- /top tiles -->
@@ -249,7 +249,7 @@
                       <ul class="quick-list">
                         <li><i class="fa fa-flash"></i>Voltage: </br><span id="voltage_med1"></span></li></br>
                         <li><i class="fa fa-power-off"></i> Power: </br><span id="power_med1"></span></li></br>
-                        <li><i class="fa fa-line-chart"></i> PF: </br><span id="fp_med1">0</span></li></br>                   
+                        <li><i class="fa fa-line-chart"></i> PF: </br><span id="fp_med1">0.5</span></li></br>                   
                       </ul>
                       <div class="sidebar-widget" style="margin-top:0">
                         <h4>Energy</h4>
