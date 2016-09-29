@@ -481,7 +481,6 @@
             function ShowElectrical() {
               auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
               auto_loadmed("power_med1");
-              auto_loadmed("energy_med1");
               auto_loadmed("gauge-text");
               //auto_loadmed("goal-text");
               //auto_loadmed("fp_med1");
