@@ -314,10 +314,20 @@
                             center: {lat: 11.020121, lng: -74.851302},
                             zoom: 12
                           });
+
+                          var  var iconBase = '/images/icons/markers/';
+                          
+                          var icons = {
+                            station: {
+                              icon: iconBase + 'marker.png'
+                            }
+                          };
+
                           var marker = new google.maps.Marker({
                             position: myLatLng,
+                            icon: icons['station'].icon,
                             map: map,
-                            title: 'Hello World!'
+                            title: 'Uninorte km5 - Bloque K - Mapuka'
                           });
                           marker.setMap(map);
                         }
