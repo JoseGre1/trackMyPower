@@ -256,7 +256,9 @@
                       <ul class="quick-list">
                         <li><i class="fa fa-power-off"></i>Voltage: </br><span id="voltage_med1"></span></li></br>
                         <li><i class="fa fa-flash"></i> Power: </br><span id="power_med1"></span></li></br>
-                        <li><span aria-hidden="true" data-icon="Φ" style="padding-right:10px;color:#757679;font-size: 18px;font-weight: 400;"></span> PF: </br><span id="fp_med1">1.0</span></li></br>
+                        <li><!--<span aria-hidden="true" data-icon="Φ" style="padding-right:10px;color:#757679;font-size: 18px;font-weight: 400;"></span>-->
+                          <i class="fa fa-tachometer"></i> PF: </br><span id="fp_med1">1.0</span>
+                        </li></br>
                       </ul>
                       <div class="sidebar-widget" style="margin-top:0">
                         <h4>Energy</h4>
@@ -393,7 +395,7 @@
                         <div class="daily-weather">
                           <h2 class="day"><b>UV</b><br><small>[ Index ]</small></h2>
                           <h3 class=" " id="uv_index" style="text-align: center;"></h3>
-                          <h3><i class="wi wi-hot centered-ico"></i></h3>
+                          <h2 style="font-size: 32px;"><i class="wi wi-hot centered-ico"></i></h2>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -407,7 +409,7 @@
                         <div class="daily-weather">
                           <h2 class="day"><b>Humidity</b> <br><small>[ % ]</small></h2>
                           <h3 class=" " id="humidity" style="text-align: center;"></h3>
-                          <h3><i class="wi wi-humidity centered-ico"></i></h3>
+                          <h2 style="font-size: 32px;"><i class="wi wi-raindrops centered-ico"></i></h2>
                         </div>
                       </div>
                       <div class="col-sm-3">
