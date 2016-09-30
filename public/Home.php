@@ -5,7 +5,7 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <!--<meta name="viewport" content="width=device-width, initial-scale=1">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1">-
 
     <title>Power Tracking Services</title>
 
@@ -260,7 +260,7 @@
                           <i class="fa fa-tachometer"></i> PF: </br><span id="fp_med1">1.0</span>
                         </li></br>
                       </ul>
-                      <div class="sidebar-widget" style="margin-top:0">
+                      <div class="sidebar-widget" style="margin-top:0; width=100%; height=100%">
                         <h4>Energy</h4>
                         <canvas id="foo" class="" style="width: 100%; height: 100%;"></canvas>
                         <div class="goal-wrapper">
