@@ -392,23 +392,22 @@
                       <div class="col-sm-3">
                         <div class="daily-weather">
                           <h2 class="day"><b>UV</b><br><small>[ Index ]</small></h2>
-                          <h3 class=" " id=uv_index style="text-align: center;"></h3>
-                          <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>
+                          <h3 class=" " id="uv_index" style="text-align: center;"></h3>
+                          <h3><i class="wi wi-hot centered-ico"></i></h3>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
                           <h2 class="day"><b>Solar</b> <br><small>[ W/m<sup>2</sup> ]</small></h2>
-                          <h3 class=" " id=solar_radiation style="text-align: center;"></h3>
-                          <i class="fa fa-sun-o fa-2x centered-ico"></i>                           
+                          <h3 class=" " id="solar_radiation" style="text-align: center;"></h3>
+                          <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>                           
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
                           <h2 class="day"><b>Humidity</b> <br><small>[ % ]</small></h2>
-                          <h3 class=" " id=humidity style="text-align: center;"></h3>
-                          <!--<canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas> -->
-                          <h3><i class="wi wi-humidity centered-ico"></i></h3>
+                          <h3 class=" " id="humidity" style="text-align: center;"></h3>
+                          <h3><i class="wi wi-raindrops centered-ico"></i></h3>
                         </div>
                       </div>
                       <div class="col-sm-3">
