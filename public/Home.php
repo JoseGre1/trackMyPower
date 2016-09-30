@@ -44,7 +44,7 @@
         left: 0;
         margin: 0;
         padding: 0;
-        height: 60%;
+        height: 100%;
         width: 100%;
       }
       .iframe-container{
@@ -305,7 +305,7 @@
                   <!--Content -->
                   <div class="x_content" style="height:100%;width:100%;"> 
                     <div class="dashboard-widget-content">
-                      <div class="iframe-container" id="map" style="position: relative;overflow: hidden;margin-bottom: 0px;">
+                      <div class="iframe-container" id="map" style="position: relative;overflow: hidden;margin-bottom: 0px;f">
                       </div>
                       <script type="text/javascript">
                         var map;
