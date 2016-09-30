@@ -233,7 +233,7 @@
               <!-- Electrical widget-->
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <!--Panel -->
-                <div class="x_panel tile">
+                <div div="panel_electrical" class="x_panel tile">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Electrical Variables</h2>
@@ -278,7 +278,7 @@
               <!-- Map widget -->
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <!--Panel -->
-                <div class="x_panel tile">
+                <div div="panel_map" class="x_panel tile">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Location<small>Uninorte km5 - Bloque K - Mapuka</small></h2>
@@ -763,5 +763,32 @@
       gauge.setTextField(document.getElementById("gauge-text"));
     </script>
     <!-- /gauge.js -->
+    
+    <!-- Responsive size of panels -->
+    <script>
+      $(document).ready(function() {
+        var map_height = parseFloat($("div#panel_map").css("height"));
+        var electrical_height = parseFloat($("div#panel_electrical").css("height"));
+        if (electrical_height>map_height){
+          $("div#panel_map").css("height",electrical_height);
+        }
+        else
+        {
+          $("div#panel_electrical").css("height",map_height);
+        }
+      });
+      
+      $(window).resize(function() {
+        var map_height = parseFloat($("div#panel_map").css("height"));
+        var electrical_height = parseFloat($("div#panel_electrical").css("height"));
+        if (electrical_height>map_height){
+          $("div#panel_map").css("height",electrical_height);
+        }
+        else
+        {
+          $("div#panel_electrical").css("height",map_height);
+        }
+      });
+    </script>
   </body>
 </html>
