@@ -233,7 +233,7 @@
               <!-- Electrical widget-->
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <!--Panel -->
-                <div div="panel_electrical" class="x_panel tile">
+                <div id="panel_electrical" class="x_panel tile">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Electrical Variables</h2>
@@ -278,7 +278,7 @@
               <!-- Map widget -->
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <!--Panel -->
-                <div div="panel_map" class="x_panel tile">
+                <div id="panel_map" class="x_panel tile">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Location<small>Uninorte km5 - Bloque K - Mapuka</small></h2>
