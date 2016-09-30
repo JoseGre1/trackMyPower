@@ -305,7 +305,7 @@
                   <!--Content -->
                   <div class="x_content">
                     <div class="dashboard-widget-content">
-                      <div class="iframe-container" id="map">
+                      <div class="iframe-container" id="map" style="position: relative;overflow: hidden;margin-bottom: 0px;padding-bottom: 60%;">
                       </div>
                       <script type="text/javascript">
                         var map;
