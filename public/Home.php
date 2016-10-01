@@ -777,6 +777,8 @@
         {
           $("div#panel_electrical").css("height",map_height);
         }
+        $("canvas#foo").css("height","100%");
+        $("canvas#foo").css("width","100%");
       });
       
       $(window).resize(function() {
