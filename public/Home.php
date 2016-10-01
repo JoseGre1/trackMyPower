@@ -262,7 +262,7 @@
                       </ul>
                       <div class="sidebar-widget" style="margin-top:0; width=100%; height=100%">
                         <h4>Energy</h4>
-                        <canvas id="foo" class="" style="width: 100%; height: 100%;" ClipToBounds="True"></canvas>
+                        <canvas id="foo2"></canvas>
                         <div class="goal-wrapper">
                           <span class="gauge-value pull-left"></span>
                           <span id="gauge-text" class="gauge-value pull-left"></span>
@@ -755,7 +755,7 @@
           strokeColor: '#F0F3F3',
           generateGradient: true
       };
-      var target = document.getElementById('foo'),
+      var target = document.getElementById('foo2'),
           gauge = new Gauge(target).setOptions(opts);
 
       gauge.maxValue = 170;
