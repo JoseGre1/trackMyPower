@@ -768,6 +768,8 @@
     <!-- Responsive size of panels -->
     <script>
       $(document).ready(function() {
+        $("canvas#foo2").css("height","100%");
+        $("canvas#foo2").css("width","100%");
         var map_height = parseFloat($("div#panel_map").css("height"));
         var electrical_height = parseFloat($("div#panel_electrical").css("height"));
         if (electrical_height>map_height){
@@ -777,8 +779,6 @@
         {
           $("div#panel_electrical").css("height",map_height);
         }
-        $("canvas#foo2").css("height","100%");
-        $("canvas#foo2").css("width","100%");
       });
       
       $(window).resize(function() {
