@@ -303,9 +303,9 @@
                   </div>
                   <!--/Title -->
                   <!--Content -->
-                  <div class="x_content" style="height:100%;width:100%;"> 
+                  <div class="x_content"> 
                     <div class="dashboard-widget-content">
-                      <div class="iframe-container" style="position: relative;overflow: hidden;margin-bottom: 0px;f">
+                      <div class="iframe-container" style="position: relative;overflow: hidden;margin-bottom: 0px; display: inline-block; white-space: nowrap;">
                         <div id="map"></div>
                       </div>
                       <script type="text/javascript">
@@ -781,7 +781,7 @@
           $("div#panel_electrical").css("height",map_height);
         }
       });
-      
+      /*
       $(window).resize(function() {
         var map_height = parseFloat($("div#panel_map").css("height"));
         var electrical_height = parseFloat($("div#panel_electrical").css("height"));
@@ -793,6 +793,7 @@
           $("div#panel_electrical").css("height",map_height);
         }
       });
+      */
     </script>
   </body>
 </html>
