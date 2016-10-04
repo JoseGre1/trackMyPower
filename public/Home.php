@@ -598,7 +598,7 @@
     <!-- Custom Theme Scripts -->
     <script src="/build/js/custom.min.js"></script>
 
-    <!--Custom User Scripts By: JoseGre1 -->
+    <!--Custom User Scripts By: JoseGre -->
     <!-- Temperature Units Change -->
     <script>
     current_unit = "celsius";
