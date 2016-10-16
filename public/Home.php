@@ -5,7 +5,7 @@
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1">-
 
     <title>Power Tracking Services</title>
 
@@ -44,7 +44,7 @@
         left: 0;
         margin: 0;
         padding: 0;
-        height: 60%;
+        height: 100%;
         width: 100%;
       }
       .iframe-container{
@@ -60,7 +60,7 @@
       }
       .centered-ico{
         text-align: center;
-        display: block;  
+        display: block;
       }
       [data-icon]:before {
         font-family: icons; /* BYO icon font, mapped smartly */
@@ -117,7 +117,6 @@
                   </li>
                 </ul>
               </div>
-              
             </div>
             <!-- /sidebar menu -->
 
@@ -163,7 +162,7 @@
                       </li>
                       <li><a href="javascript:;">Help</a></li>
                       <li><a href="index.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
-                    </ul> 
+                    </ul>
                   </li>
 
                   <li role="presentation" class="dropdown">
@@ -204,7 +203,7 @@
                     </ul>
                   </li>
                 </ul>
-              </div>  
+              </div>
             </nav>
           </div>
         </div>
@@ -217,12 +216,12 @@
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-thermometer"></i> Internal Temperature</span>
               <div id="intemperature" class="count" style="text-align:center"></div>
-              <span id="in_last_refresh" class="count_bottom"></span>-
+              <span id="in_last_refresh" class="count_bottom" style="display: block; text-align: center;"></span>
             </div>
             <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count pull-right" style="padding-bottom: 0px;">
               <span class="count_top" style="text-align:center; display:block;margin: 0 auto;"><i class="wi wi-humidity"></i> Internal Humidity</span>
               <div id="inhumidity" class="count" style="text-align:center"></div>
-              <span id="in_last_refresh2" class="count_bottom"></span>
+              <span id="in_last_refresh2" class="count_bottom" style="display: block; text-align: center;"></span>
             </div>
           </div>
           <!-- /top tiles -->
@@ -234,7 +233,7 @@
               <!-- Electrical widget-->
               <div class="col-md-4 col-sm-6 col-xs-12">
                 <!--Panel -->
-                <div class="x_panel tile fixed_height_320">
+                <div id="panel_electrical" class="x_panel tile">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Electrical Variables</h2>
@@ -255,13 +254,16 @@
                   <div class="x_content">
                     <div class="dashboard-widget-content">
                       <ul class="quick-list">
-                        <li><i class="fa fa-flash"></i>Voltage: </br><span id="voltage_med1"></span></li></br>
-                        <li><i class="fa fa-power-off"></i> Power: </br><span id="power_med1"></span></li></br>
-                        <li><span aria-hidden="true" data-icon="Φ" style="padding-right:10px;color:#757679;font-size: 18px;font-weight: 400;"></span> PF: </br><span id="fp_med1">1.0</span></li></br>
+                        <li><i class="fa fa-power-off"></i>Voltage: </br><span id="voltage_med1"></span></li></br>
+                        <li><i class="fa fa-flash"></i> Power: </br><span id="power_med1"></span></li></br>
+                        <li><!--<span aria-hidden="true" data-icon="Φ" style="padding-right:10px;color:#757679;font-size: 18px;font-weight: 400;"></span>-->
+                          <i class="fa fa-tachometer"></i> PF: </br><span id="fp_med1">1.0</span>
+                        </li></br>
                       </ul>
-                      <div class="sidebar-widget" style="margin-top:0">
+                      <div class="sidebar-widget" style="margin-top:0; width=100%; height=100%">
                         <h4>Energy</h4>
                         <canvas width="150" height="80" id="foo" class="" style="width: 100%; height: 100%;"></canvas>
+                        <canvas id="foo2"></canvas>
                         <div class="goal-wrapper">
                           <span class="gauge-value pull-left"></span>
                           <span id="gauge-text" class="gauge-value pull-left"></span>
@@ -279,7 +281,7 @@
               <!-- Map widget -->
               <div class="col-md-8 col-sm-6 col-xs-12">
                 <!--Panel -->
-                <div class="x_panel tile fixed_height_320">
+                <div id="panel_map" class="x_panel tile">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Location<small>Uninorte km5 - Bloque K - Mapuka</small></h2>
@@ -304,7 +306,8 @@
                   <!--Content -->
                   <div class="x_content">
                     <div class="dashboard-widget-content">
-                      <div class="iframe-container" id="map">
+                      <div class="iframe-container" style="position: relative;overflow: hidden;margin-bottom: 0px; display: inline-block; white-space: nowrap;">
+                        <div id="map"></div>
                       </div>
                       <script type="text/javascript">
                         var map;
@@ -316,7 +319,7 @@
                           });
 
                           var iconBase = '/images/icons/markers/';
-                          
+
                           var station = {
                             url: iconBase + 'marker.png',
                             scaledSize: new google.maps.Size(32, 32),
@@ -340,7 +343,7 @@
                 </div> <!--/Panel -->
               </div> <!-- /Map widget -->
             </div>
-          </div> 
+          </div>
           <!-- /first row -->
           <div class="clearfix"></div>
           <!-- second row -->
@@ -350,7 +353,7 @@
               <!-- Weather widget -->
               <div class="col-md-4 col-sm-4 col-xs-12">
                 <!--Panel -->
-                <div class="x_panel tile fixed_height_320">
+                <div class="x_panel tile">
                   <!--Title -->
                   <div class="x_title">
                     <h2>Weather Report</h2>
@@ -366,7 +369,7 @@
                       </li>
                     </ul>
                     <div class="clearfix"></div>
-                  </div>                   
+                  </div>
                   <!--/Title -->
                   <!--Content -->
                   <div class="x_content">
@@ -393,23 +396,22 @@
                       <div class="col-sm-3">
                         <div class="daily-weather">
                           <h2 class="day"><b>UV</b><br><small>[ Index ]</small></h2>
-                          <h3 class=" " id=uv_index style="text-align: center;"></h3>
-                          <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>
+                          <h3 class=" " id="uv_index" style="text-align: center;"></h3>
+                          <h2 style="font-size: 32px;"><i class="wi wi-hot centered-ico"></i></h2>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
                           <h2 class="day"><b>Solar</b> <br><small>[ W/m<sup>2</sup> ]</small></h2>
-                          <h3 class=" " id=solar_radiation style="text-align: center;"></h3>
-                          <i class="fa fa-sun-o fa-2x centered-ico"></i>                           
+                          <h3 class=" " id="solar_radiation" style="text-align: center;"></h3>
+                          <canvas class="centered-canvas" id="clear-day" width="32" height="32"></canvas>
                         </div>
                       </div>
                       <div class="col-sm-3">
                         <div class="daily-weather">
                           <h2 class="day"><b>Humidity</b> <br><small>[ % ]</small></h2>
-                          <h3 class=" " id=humidity style="text-align: center;"></h3>
-                          <!--<canvas class="centered-canvas" height="32" width="32" id="sleet"></canvas> -->
-                          <h3><i class="wi wi-humidity centered-ico"></i></h3>
+                          <h3 class=" " id="humidity" style="text-align: center;"></h3>
+                          <h2 style="font-size: 32px;"><i class="wi wi-raindrops centered-ico"></i></h2>
                         </div>
                       </div>
                       <div class="col-sm-3">
@@ -474,7 +476,7 @@
                 success: function(data) {
                   if (variable == "gauge-text") {
                     gauge.set(parseFloat(data));
-                  } 
+                  }
                   else {
                     var append_element;
                     switch(variable){
@@ -501,21 +503,21 @@
                       case 'temperature':            // obtener temperatura interna
                         append_element= data + '°C';
                         variable="intemperature";
-                        break;  
+                        break;
                     }
                     //Para colocar las dos fechas en intemperature y inhumiditu
-                    if (variable=="in_last_refresh"){  
+                    if (variable=="in_last_refresh"){
                         //var element = "#".concat(variable);
                         // para inhum date_time
-                        document.getElementById(variable).innerHTML = append_element;     
+                        document.getElementById(variable).innerHTML = append_element;
                         //var element = "#".concat(variable+"2");
                         // para intemp date_time2
-                        document.getElementById(variable+"2").innerHTML = append_element; 
+                        document.getElementById(variable+"2").innerHTML = append_element;
                     }
                     else{
                         // para las otras variables queda igual
-                        //var element = "#".concat(variable); 
-                        document.getElementById(variable).innerHTML = append_element; 
+                        //var element = "#".concat(variable);
+                        document.getElementById(variable).innerHTML = append_element;
                     }
                   }
                 }
@@ -526,9 +528,9 @@
               auto_loadmed("voltage_med1"); //Call auto_load() function when DOM is Ready
               auto_loadmed("power_med1");
               auto_loadmed("gauge-text");
-              auto_loadmed("date_time");    // pide 
-              auto_loadmed("humidity");     // los datos  
-              auto_loadmed("temperature");  // internos 
+              auto_loadmed("date_time");    // pide
+              auto_loadmed("humidity");     // los datos
+              auto_loadmed("temperature");  // internos
               //auto_loadmed("goal-text");
               //auto_loadmed("fp_med1");
             }
@@ -557,47 +559,47 @@
     </div> <!-- /main_container -->
 
     <!-- jQuery -->
-    <script src="../vendors/jquery/dist/jquery.min.js"></script>
+    <script src="/vendors/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap -->
-    <script src="../vendors/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script src="/vendors/bootstrap/dist/js/bootstrap.min.js"></script>
     <!-- FastClick -->
-    <script src="../vendors/fastclick/lib/fastclick.js"></script>
+    <script src="/vendors/fastclick/lib/fastclick.js"></script>
     <!-- NProgress -->
-    <script src="../vendors/nprogress/nprogress.js"></script>
+    <script src="/vendors/nprogress/nprogress.js"></script>
     <!-- Chart.js -->
-    <script src="../vendors/Chart.js/dist/Chart.min.js"></script>
+    <script src="/vendors/Chart.js/dist/Chart.min.js"></script>
     <!-- gauge.js -->
-    <script src="../vendors/gauge.js/dist/gauge.min.js"></script>
+    <script src="/vendors/gauge.js/dist/gauge.min.js"></script>
     <!-- bootstrap-progressbar -->
-    <script src="../vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
+    <script src="/vendors/bootstrap-progressbar/bootstrap-progressbar.min.js"></script>
     <!-- iCheck -->
-    <script src="../vendors/iCheck/icheck.min.js"></script>
+    <script src="/vendors/iCheck/icheck.min.js"></script>
     <!-- Skycons -->
-    <script src="../vendors/skycons/skycons.js"></script>
+    <script src="/vendors/skycons/skycons.js"></script>
     <!-- Flot -->
-    <script src="../vendors/Flot/jquery.flot.js"></script>
-    <script src="../vendors/Flot/jquery.flot.pie.js"></script>
-    <script src="../vendors/Flot/jquery.flot.time.js"></script>
-    <script src="../vendors/Flot/jquery.flot.stack.js"></script>
-    <script src="../vendors/Flot/jquery.flot.resize.js"></script>
+    <script src="/vendors/Flot/jquery.flot.js"></script>
+    <script src="/vendors/Flot/jquery.flot.pie.js"></script>
+    <script src="/vendors/Flot/jquery.flot.time.js"></script>
+    <script src="/vendors/Flot/jquery.flot.stack.js"></script>
+    <script src="/vendors/Flot/jquery.flot.resize.js"></script>
     <!-- Flot plugins -->
-    <script src="../vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
-    <script src="../vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
-    <script src="../vendors/flot.curvedlines/curvedLines.js"></script>
+    <script src="/vendors/flot.orderbars/js/jquery.flot.orderBars.js"></script>
+    <script src="/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
+    <script src="/vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="../vendors/DateJS/build/date.js"></script>
+    <script src="/vendors/DateJS/build/date.js"></script>
     <!-- JQVMap -->
-    <script src="../vendors/jqvmap/dist/jquery.vmap.js"></script>
-    <script src="../vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
-    <script src="../vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
+    <script src="/vendors/jqvmap/dist/jquery.vmap.js"></script>
+    <script src="/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
+    <script src="/vendors/jqvmap/examples/js/jquery.vmap.sampledata.js"></script>
     <!-- bootstrap-daterangepicker -->
     <script src="js/moment/moment.min.js"></script>
     <script src="js/datepicker/daterangepicker.js"></script>
 
     <!-- Custom Theme Scripts -->
-    <script src="../build/js/custom.min.js"></script>
+    <script src="/build/js/custom.min.js"></script>
 
-    <!--Custom User Scripts By: JoseGre1 -->
+    <!--Custom User Scripts By: JoseGre -->
     <!-- Temperature Units Change -->
     <script>
     current_unit = "celsius";
@@ -640,7 +642,7 @@
     }
     </script>
     <!--/Temperature Units Change -->
-    
+
     <!-- Flot -->
     <script>
       $(document).ready(function() {
@@ -755,7 +757,7 @@
           strokeColor: '#F0F3F3',
           generateGradient: true
       };
-      var target = document.getElementById('foo'),
+      var target = document.getElementById('foo2'),
           gauge = new Gauge(target).setOptions(opts);
 
       gauge.maxValue = 170;
@@ -764,5 +766,35 @@
       gauge.setTextField(document.getElementById("gauge-text"));
     </script>
     <!-- /gauge.js -->
+
+    <!-- Responsive size of panels -->
+    <script>
+      $(document).ready(function() {
+        $("canvas#foo2").css("height","100%");
+        $("canvas#foo2").css("width","100%");
+        var map_height = parseFloat($("div#panel_map").css("height"));
+        var electrical_height = parseFloat($("div#panel_electrical").css("height"));
+        if (electrical_height>map_height){
+          $("div#panel_map").css("height",electrical_height);
+        }
+        else
+        {
+          $("div#panel_electrical").css("height",map_height);
+        }
+      });
+      /*
+      $(window).resize(function() {
+        var map_height = parseFloat($("div#panel_map").css("height"));
+        var electrical_height = parseFloat($("div#panel_electrical").css("height"));
+        if (electrical_height>map_height){
+          $("div#panel_map").css("height",electrical_height);
+        }
+        else
+        {
+          $("div#panel_electrical").css("height",map_height);
+        }
+      });
+      */
+    </script>
   </body>
 </html>
